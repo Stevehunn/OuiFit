@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OuiFit</string>
+    <string name="Exercices">Exercices</string>
+    <string name="Courses">Courses</string>
+    <string name="Stat">Stats</string>
+
+    <string name="strConnect">Connection</string>
+    <string name="strLogin">Identifiant :</string>
+    <string name="strPassword">Mot de passe :</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>
