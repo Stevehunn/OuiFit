@@ -7,6 +7,11 @@
     <string name="strConnect">Connection</string>
     <string name="strLogin">Identifiant :</string>
     <string name="strPassword">Mot de passe :</string>
+
+    <string name="exo1">Exercice 1</string>
+    <string name="exo2">Exercice 2</string>
+    <string name="exo3">Exercice 3</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>
