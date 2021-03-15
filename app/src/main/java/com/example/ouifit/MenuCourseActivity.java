@@ -14,6 +14,8 @@ public class MenuCourseActivity extends Activity {
 
 
         Button buttonStat = (Button)findViewById(R.id.btversStat2);
+        Button buttonExercice = (Button)findViewById(R.id.btversExercice2);
+
         buttonStat.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MenuCourseActivity.this, MenuStatActivity.class);
@@ -21,7 +23,6 @@ public class MenuCourseActivity extends Activity {
             }
         });
 
-        Button buttonExercice = (Button)findViewById(R.id.btversExercice2);
         buttonExercice.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MenuCourseActivity.this, MenuExercicesActivity.class);

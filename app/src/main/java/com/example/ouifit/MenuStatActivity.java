@@ -13,10 +13,9 @@ public class MenuStatActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_stat);
 
-
-
-
         Button buttonExercice = (Button)findViewById(R.id.btversExercice3);
+        Button buttonCourse = (Button)findViewById(R.id.btversCourse3);
+
         buttonExercice.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MenuStatActivity.this, MenuExercicesActivity.class);
@@ -24,7 +23,6 @@ public class MenuStatActivity extends Activity {
             }
         });
 
-        Button buttonCourse = (Button)findViewById(R.id.btversCourse3);
         buttonCourse.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MenuStatActivity.this, MenuCourseActivity.class);
