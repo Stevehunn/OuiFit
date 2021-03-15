@@ -1,5 +1,6 @@
 package com.example.ouifit;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -29,7 +30,7 @@ public class ConnectionActivity extends Fragment {
        txtLogin =(EditText) rootView.findViewById(R.id.login);
        txtPassword = (EditText) rootView.findViewById(R.id.password);
 
-       btnConnect = (Button) rootView.findViewById(R.id.button);
+       btnConnect = (Button) rootView.findViewById(R.id.btConnection);
        btnConnect.setOnClickListener(btnConnectListener);
 
 
@@ -39,8 +40,11 @@ public class ConnectionActivity extends Fragment {
     private View.OnClickListener btnConnectListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            //TODO intend i + start activity
-
+            //TODO redirection vers MainActivity
+            /*
+            Intent i = new Intent(ConnectionActivity.this, MainActivity.class);
+            startActivity(i);
+            */
         }
     };
 
