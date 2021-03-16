@@ -55,23 +55,18 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:weightSum="5">
 
                     <Button
                         android:id="@+id/btversStat1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Stat"
-                        tools:layout_editor_absoluteX="93dp"
-                        tools:layout_editor_absoluteY="609dp" />
+                        style="@style/btBasGauche"
+                        android:text="@string/Stat" />
 
                     <Button
                         android:id="@+id/btversCourse1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Courses"
-                        tools:layout_editor_absoluteX="247dp"
-                        tools:layout_editor_absoluteY="609dp" />
+                        style="@style/btBasDroit"
+                        android:text="@string/Courses" />
 
                 </LinearLayout>
             </LinearLayout>

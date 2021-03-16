@@ -37,14 +37,12 @@ TODO Google map etc
 
             <Button
                 android:id="@+id/btversStat2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/btBasGauche"
                 android:text="@string/Stat" />
 
             <Button
                 android:id="@+id/btversExercice2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/btBasDroit"
                 android:text="@string/Exercices" />
 
 
