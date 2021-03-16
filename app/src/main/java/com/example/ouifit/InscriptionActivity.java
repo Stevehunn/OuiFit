@@ -1,5 +1,6 @@
 package com.example.ouifit;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,7 +8,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class InscriptionActivity extends AppCompatActivity {
+public class InscriptionActivity extends Activity {
 
     private EditText identifiant;
     private EditText email;
@@ -20,7 +21,7 @@ public class InscriptionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inscription);
     }
-
+/*
     public void onClick(View view)
     {
         if(view.getId() == R.id.btId)
@@ -48,4 +49,6 @@ public class InscriptionActivity extends AppCompatActivity {
             }
         }
     }
+
+ */
 }

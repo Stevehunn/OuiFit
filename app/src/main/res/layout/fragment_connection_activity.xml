@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConnectionActivity"
+    tools:context=".ConnectionFragment"
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btRetourStat"
+        android:id="@+id/btRetourConnection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/retour" />

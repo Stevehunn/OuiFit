@@ -14,10 +14,10 @@ import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ConnectionActivity#newInstance} factory method to
+ * Use the {@link ConnectionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ConnectionActivity extends Fragment {
+public class ConnectionFragment extends Fragment {
     private EditText txtLogin;
     private EditText txtPassword;
     private Button btnConnect;
@@ -33,18 +33,16 @@ public class ConnectionActivity extends Fragment {
        btnConnect = (Button) rootView.findViewById(R.id.btConnection);
        btnConnect.setOnClickListener(btnConnectListener);
 
-
-
         return rootView;
     }
     private View.OnClickListener btnConnectListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             //TODO redirection vers MainActivity
-            /*
-            Intent i = new Intent(ConnectionActivity.this, MainActivity.class);
+/*
+            Intent i = new Intent(ConnectionFragment.this, MainActivity.class);
             startActivity(i);
-            */
+*/
         }
     };
 
