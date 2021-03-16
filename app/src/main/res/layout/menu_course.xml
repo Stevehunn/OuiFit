@@ -15,7 +15,7 @@
             android:background="@drawable/image_retour"/>
 
         <TextView
-            style="@style/titre"
+            style="@style/titreMenu"
             android:text="@string/Courses" />
 
     <LinearLayout

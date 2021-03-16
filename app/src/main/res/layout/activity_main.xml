@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:layout_margin="20dp">
+    android:background="@drawable/image_fond">
 
     <TextView
         style="@style/titre"
@@ -15,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="50dp"
+        android:layout_margin="70dp"
         android:orientation="vertical">
 
         <!--

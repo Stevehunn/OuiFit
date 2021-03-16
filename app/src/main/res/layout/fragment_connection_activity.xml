@@ -16,7 +16,7 @@
 
     <TextView
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        style="@style/titre"
+        style="@style/titreMenu"
         android:id="@+id/textView"
         android:text="@string/ConnectionTitre"/>
 
