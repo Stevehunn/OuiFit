@@ -12,6 +12,12 @@
     <string name="exo2">Exercice 2</string>
     <string name="exo3">Exercice 3</string>
 
+    <string name="emailInscription">Email :</string>
+    <string name="ConfirmPassword">Confirmez :</string>
+    <string name="boutonInscription">S'inscrire</string>
+    <string name="InscriptionTitre">Inscription</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>
