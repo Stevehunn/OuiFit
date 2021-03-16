@@ -46,7 +46,7 @@
 
                     <Button
                         android:id="@+id/btversExercice3"
-                       style="@style/btBasGauche"
+                        style="@style/btBasGauche"
                         android:text="@string/Exercices" />
 
                     <Button
