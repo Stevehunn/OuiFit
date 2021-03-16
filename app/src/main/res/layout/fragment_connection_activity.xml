@@ -6,6 +6,21 @@
     tools:context=".ConnectionActivity"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/btRetourStat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retour" />
+
+    <TextView
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ConnectionTitre"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"

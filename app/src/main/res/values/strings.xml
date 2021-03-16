@@ -16,6 +16,9 @@
     <string name="ConfirmPassword">Confirmez :</string>
     <string name="boutonInscription">S'inscrire</string>
     <string name="InscriptionTitre">Inscription</string>
+    <string name="ConnectionTitre">Se Connecter</string>
+
+    <string name="retour">Retour</string>
     <!-- TODO: Remove or change this placeholder text -->
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -15,6 +15,12 @@
         android:layout_margin="50dp"
         android:layout_marginBottom="50dp"
         >
+        <Button
+            android:id="@+id/btRetourInscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retour" />
+
 
         <TextView
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
