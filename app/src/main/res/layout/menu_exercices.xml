@@ -6,71 +6,82 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btRetourEx"
-        android:layout_width="90px"
-        android:layout_height="120px"
-        android:background="@drawable/image_retour"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/Exercices"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="20dp"
-        android:layout_gravity="center">
-    <Button
-        android:id="@+id/btexo1"
-        android:layout_margin="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/image_abdos"
-        android:text="@string/exo1" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btexo2"
-        android:layout_margin="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/image_bras"
-        android:text="@string/exo2" />
-
-    <Button
-        android:id="@+id/btexo3"
-        android:layout_margin="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/image_dos"
-        android:text="@string/exo3" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/btversStat1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Stat"
-            tools:layout_editor_absoluteX="93dp"
-            tools:layout_editor_absoluteY="609dp" />
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/btversCourse1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Courses"
-            tools:layout_editor_absoluteX="247dp"
-            tools:layout_editor_absoluteY="609dp" />
+            <Button
+                android:id="@+id/btRetourEx"
+                style="@style/btRetour"
+                android:background="@drawable/image_retour" />
 
-    </LinearLayout>
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/Exercices"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btexo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/image_abdos"
+                    android:text="@string/exo1" />
+
+                <Button
+                    android:id="@+id/btexo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/image_bras"
+                    android:text="@string/exo2" />
+
+                <Button
+                    android:id="@+id/btexo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/image_dos"
+                    android:text="@string/exo3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btversStat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Stat"
+                        tools:layout_editor_absoluteX="93dp"
+                        tools:layout_editor_absoluteY="609dp" />
+
+                    <Button
+                        android:id="@+id/btversCourse1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Courses"
+                        tools:layout_editor_absoluteX="247dp"
+                        tools:layout_editor_absoluteY="609dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

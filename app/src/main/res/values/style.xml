@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="btRetour">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_width">90px</item>
+        <item name="android:layout_height">120px</item>
+    </style>
+
+
+
+
+
+
+
+
+
+</resources>

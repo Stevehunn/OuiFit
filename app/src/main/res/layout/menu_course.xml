@@ -7,17 +7,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/btRetourCourse"
-            android:layout_width="90px"
-            android:layout_height="120px"
-            android:background="@drawable/image_retour"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp" />
-
+            style="@style/btRetour"
+            android:background="@drawable/image_retour"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,9 +25,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+<!--
 
-
-
+TODO Google map etc
+-->
 
     </LinearLayout>
         <LinearLayout
@@ -43,16 +39,13 @@
                 android:id="@+id/btversStat2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Stat"
-             />
+                android:text="@string/Stat" />
 
             <Button
                 android:id="@+id/btversExercice2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Exercices"
-                />
-
+                android:text="@string/Exercices" />
 
 
 
