@@ -21,10 +21,9 @@ public class InscriptionActivity extends AppCompatActivity {
         setContentView(R.layout.inscription);
     }
 
-    @Override
     public void onClick(View view)
     {
-        if(view.getId() == R.id.boutonID)
+        if(view.getId() == R.id.btId)
         {
             String identifiantText = identifiant.getText().toString();
             String emailText = email.getText().toString();
@@ -42,6 +41,9 @@ public class InscriptionActivity extends AppCompatActivity {
                     email.setText(null);
                     mdp1.setText(null);
                     mdp2.setText(null);
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         }
