@@ -8,18 +8,16 @@
     <string name="strLogin">Identifiant :</string>
     <string name="strPassword">Mot de passe :</string>
 
-    <string name="exo1">Exercice 1</string>
-    <string name="exo2">Exercice 2</string>
-    <string name="exo3">Exercice 3</string>
+    <string name="exo1">Exercice Abdominaux</string>
+    <string name="exo2">Exercice Bras</string>
+    <string name="exo3">Exercice Dos</string>
 
     <string name="emailInscription">Email :</string>
     <string name="ConfirmPassword">Confirmez :</string>
     <string name="boutonInscription">S\'inscrire</string>
     <string name="InscriptionTitre">Inscription</string>
-    <string name="ConnectionTitre">Se Connecter</string>
 
-    <string name="retour">Retour</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ConnectionTitre">Se Connecter</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

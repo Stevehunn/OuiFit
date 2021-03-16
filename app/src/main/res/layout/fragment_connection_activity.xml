@@ -8,9 +8,11 @@
 
     <Button
         android:id="@+id/btRetourConnection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/retour" />
+        android:layout_width="90px"
+        android:layout_height="120px"
+        android:background="@drawable/image_retour"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp" />
 
     <TextView
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
