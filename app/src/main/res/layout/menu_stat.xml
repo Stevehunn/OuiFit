@@ -24,11 +24,8 @@
                     android:background="@drawable/image_retour" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/Stat"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                    style="@style/titre"
+                    android:text="@string/Stat" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
