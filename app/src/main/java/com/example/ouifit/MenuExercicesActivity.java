@@ -22,6 +22,15 @@ public class MenuExercicesActivity extends Activity {
             }
         });
 
+        //Bouton pour aller vers l'exercice Abdominaux
+        Button buttonExoAbdos = (Button)findViewById(R.id.btexoAbdo);
+        buttonExoAbdos.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(MenuExercicesActivity.this, Exercice1AbdoActivity.class);
+                startActivity(i);
+            }
+        });
+
         //Bouton pour aller vers le menu stat
         Button buttonStat = (Button)findViewById(R.id.btversStat1);
         buttonStat.setOnClickListener(new View.OnClickListener() {
