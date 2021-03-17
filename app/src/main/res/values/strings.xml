@@ -18,6 +18,7 @@
     <string name="InscriptionTitre">Inscription</string>
 
     <string name="ConnectionTitre">Se Connecter</string>
+    <string name="SeConnecterSincrire">S\'inscrire / Se Connecter</string>
     <string name="suivant">Suivant</string>
 
     <!-- TODO: Remove or change this placeholder text -->
