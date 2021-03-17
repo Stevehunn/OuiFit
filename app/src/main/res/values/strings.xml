@@ -8,9 +8,18 @@
     <string name="strLogin">Identifiant :</string>
     <string name="strPassword">Mot de passe :</string>
 
-    <string name="exo1">Exercice Abdominaux</string>
-    <string name="exo2">Exercice Bras</string>
-    <string name="exo3">Exercice Dos</string>
+    <string name="exo1Abdo">Exercice Abdominaux</string>
+    <string name="exo2Bras">Exercice Bras</string>
+    <string name="exo3Dos">Exercice Dos</string>
+
+    <string name="exo1">Exercice 1</string>
+    <string name="exo2">Exercice 2</string>
+    <string name="exo3">Exercice 3</string>
+
+    <string name="temps">Temps : </string>
+    <string name="temps1"> 30s</string>
+    <string name="temps2"> 2x30s</string>
+    <string name="temps3"> 60s</string>
 
     <string name="emailInscription">Email :</string>
     <string name="ConfirmPassword">Confirmez :</string>
@@ -18,7 +27,8 @@
     <string name="InscriptionTitre">Inscription</string>
 
     <string name="ConnectionTitre">Se Connecter</string>
-    <string name="SeConnecterSinscrire">S\'inscrire / Se connecter</string>
+    <string name="SeConnecterSincrire">S\'inscrire / Se Connecter</string>
+    <string name="suivant">Suivant</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

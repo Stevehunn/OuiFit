@@ -18,6 +18,20 @@
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
     </style>
 
+    <style name="image">
+
+
+
+
+    </style>
+
+    <style name="temps">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+
     <style name="btRetour">
         <item name="android:layout_marginLeft">5dp</item>
         <item name="android:layout_marginTop">5dp</item>
@@ -48,6 +62,15 @@
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:layout_marginBottom">20dp</item>
         <item name="android:layout_weight">2</item>
+    </style>
+
+    <style name="btSuivant">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">right</item>
+        <!-- <item name="android:layout_weight">2</item> -->
+
+
     </style>
 
 
