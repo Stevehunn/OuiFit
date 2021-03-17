@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class BDD extends SQLiteOpenHelper {
+
+
     private static final String DB_NAME= "Sportifs";
 
 private static final String TABLE_NAME = "Personne";
@@ -54,6 +56,9 @@ private static final String TABLE_NAME2 = "Stats" ;
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.d
+      //  db.d
     }
+
+
+
 }

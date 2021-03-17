@@ -26,7 +26,7 @@ public class MenuExercicesActivity extends Activity {
         Button buttonExoAbdos = (Button)findViewById(R.id.btexoAbdo);
         buttonExoAbdos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(MenuExercicesActivity.this, Exercice1AbdoActivity.class);
+                Intent i = new Intent(MenuExercicesActivity.this, ExerciceAbdoActivity.class);
                 startActivity(i);
             }
         });
