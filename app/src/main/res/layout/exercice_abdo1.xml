@@ -45,7 +45,7 @@
                     </LinearLayout>
 
                     <Button
-                        android:id="@+id/btVersExo2Abdo"
+                        android:id="@+id/btExoVersExo2Abdo"
                         style="@style/btSuivant"
                         android:text="@string/suivant" />
 
