@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,11 +19,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Bouton pour aller vers le menu stat
-        Button buttonStat = (Button)findViewById(R.id.btversInscription);
-        buttonStat.setOnClickListener(new View.OnClickListener() {
+        //Bouton pour aller vers la page de connection
+        Button buttonConnection = (Button)findViewById(R.id.btVersConnection);
+        buttonConnection.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.i("MainActivity","connection");
+                Intent i = new Intent(MainActivity.this, ConnectionActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //Bouton pour aller vers la page d'incription
+        Button buttonInscription = (Button)findViewById(R.id.btversInscription);
+        buttonInscription.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
-            Intent i = new Intent(MainActivity.this, MenuStatActivity.class);
+            Log.i("MainActivity","inscription");
+            Intent i = new Intent(MainActivity.this, InscriptionActivity.class);
             startActivity(i);
             }
         });
@@ -31,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonExercice = (Button)findViewById(R.id.btversExercice0);
         buttonExercice.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
+            Log.i("MainActivity","menu exercice");
             Intent i = new Intent(MainActivity.this, MenuExercicesActivity.class);
             startActivity(i);
             }
@@ -40,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonCourse = (Button)findViewById(R.id.btversCourse0);
         buttonCourse.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
+            Log.i("MainActivity","menu course");
             Intent i = new Intent(MainActivity.this, MenuCourseActivity.class);
             startActivity(i);
             }

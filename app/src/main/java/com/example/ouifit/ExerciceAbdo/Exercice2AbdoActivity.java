@@ -29,7 +29,7 @@ public class Exercice2AbdoActivity extends Activity {
         Button buttonSuivant = (Button)findViewById(R.id.btExoVersExo3Abdo);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 2","execute");
                 Intent i = new Intent(Exercice2AbdoActivity.this, Exercice3AbdoActivity.class);
                 startActivity(i);
             }
@@ -39,7 +39,7 @@ public class Exercice2AbdoActivity extends Activity {
         Button buttonRetour = (Button)findViewById(R.id.btRetourAbdoEx2);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 2","execute");
                 Intent i = new Intent(Exercice2AbdoActivity.this, Exercice1AbdoActivity.class);
                 startActivity(i);
             }

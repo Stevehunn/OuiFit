@@ -28,6 +28,9 @@
 
     <string name="ConnectionTitre">Se Connecter</string>
     <string name="SeConnecterSincrire">S\'inscrire / Se Connecter</string>
+    <string name="dejainscrit">Déjà inscrit ?</string>
+    <string name="SeConnecter">Se Connecter</string>
+    <string name="Sinscription">S\'inscrire</string>
     <string name="suivant">Suivant</string>
     <string name="fini">Fini</string>
 

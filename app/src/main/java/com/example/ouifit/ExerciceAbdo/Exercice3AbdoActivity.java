@@ -31,7 +31,7 @@ public class Exercice3AbdoActivity extends Activity {
         Button buttonSuivant = (Button)findViewById(R.id.btExoVersMenuAbdo);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 3","execute");
                 Intent i = new Intent(Exercice3AbdoActivity.this, MenuExercicesActivity.class);
                 startActivity(i);
             }
@@ -41,7 +41,7 @@ public class Exercice3AbdoActivity extends Activity {
         Button buttonRetour = (Button)findViewById(R.id.btRetourAbdoEx3);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 3","execute");
                 Intent i = new Intent(Exercice3AbdoActivity.this, Exercice2AbdoActivity.class);
                 startActivity(i);
             }

@@ -8,9 +8,20 @@
     android:orientation="vertical"
     android:background="@drawable/image_fond">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btVersConnection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SeConnecter" />
+
+    </LinearLayout>
     <TextView
         style="@style/titre"
         android:text="@string/app_name" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +45,7 @@
             android:id="@+id/btversInscription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/SeConnecterSincrire" />
+            android:text="@string/Sinscription" />
 <!--
         <TextView
             android:layout_width="wrap_content"

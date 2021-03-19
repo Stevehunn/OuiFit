@@ -13,46 +13,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.ouifit.ExerciceAbdo.Exercice1AbdoActivity;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 
-public class InscriptionActivity extends Activity {
+import java.sql.Connection;
 
-    private EditText identifiant;
-    private EditText email;
-    private EditText mdp1;
-    private EditText mdp2;
-    private Button bouton;
+public class ConnectionActivity extends Activity {
+
+    private EditText txtLogin;
+    private EditText txtPassword;
+    private Button btnConnect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inscription);
+        setContentView(R.layout.connection);
+
+        txtLogin =(EditText) findViewById(R.id.login);
+        txtPassword = (EditText) findViewById(R.id.password);
+
+        //Bouton pour aller vers le menu principal connecté
+        btnConnect = (Button) findViewById(R.id.btConnection);
+        btnConnect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("Bt connection","execute");
+                Intent i = new Intent(ConnectionActivity.this, MainConnectActivity.class);
+                startActivity(i);
+            }
+        });
 
         //Bouton de retour pour aller vers le menu Principal
         Button buttonRetour = (Button)findViewById(R.id.btRetourInscription);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
-                Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
-                startActivity(i);
-            }
-        });
-
-
-        //Bouton pour aller vers la page connection
-        Button buttonVersConnection = (Button)findViewById(R.id.btConnection);
-        buttonVersConnection.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
-                Intent i = new Intent(InscriptionActivity.this, ConnectionActivity.class);
-                startActivity(i);
-            }
-        });
-
-        //Bouton pour aller vers la page MainConnectActivity
-        Button buttonVersMainConnect = (Button)findViewById(R.id.btId);
-        buttonVersMainConnect.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
-                Intent i = new Intent(InscriptionActivity.this, MainConnectActivity.class);
+                Log.i("Bt retour connection","execute");
+                Intent i = new Intent(ConnectionActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });

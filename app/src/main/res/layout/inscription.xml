@@ -8,21 +8,19 @@
     android:background="@color/white"
     android:textColor="@color/black">
 
+    <Button
+        android:id="@+id/btRetourInscription"
+        style="@style/btRetour"
+        android:background="@drawable/image_retour" />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="50dp"
+       android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginBottom="50dp"
         >
-        <Button
-            android:id="@+id/btRetourInscription"
-            android:layout_width="90px"
-            android:layout_height="120px"
-            android:background="@drawable/image_retour"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp" />
-
 
         <TextView
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -123,6 +121,20 @@
             android:layout_marginTop="30dp"
             android:text="@string/boutonInscription" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dejainscrit" />
+
+        <Button
+            android:id="@+id/btVersConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="@string/SeConnecter" />
+
+    </LinearLayout>
     </LinearLayout>
 
