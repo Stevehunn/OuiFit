@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.ouifit.Menu.MenuCourseActivity;
+import com.example.ouifit.Menu.MenuExercicesActivity;
+import com.example.ouifit.Menu.MenuStatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
