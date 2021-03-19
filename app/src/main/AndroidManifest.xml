@@ -29,6 +29,7 @@
         <activity android:name=".Menu.MenuStatActivity"
             android:label="@string/app_name">
         </activity>
+
         <activity android:name=".ExerciceAbdo.Exercice1AbdoActivity"
             android:label="@string/app_name">
         </activity>
@@ -36,6 +37,26 @@
             android:label="@string/app_name">
         </activity>
         <activity android:name=".ExerciceAbdo.Exercice3AbdoActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity android:name=".ExerciceBras.Exercice1BrasActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".ExerciceBras.Exercice2BrasActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".ExerciceBras.Exercice3BrasActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity android:name=".ExerciceDos.Exercice1DosActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".ExerciceDos.Exercice2DosActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".ExerciceDos.Exercice3DosActivity"
             android:label="@string/app_name">
         </activity>
 
