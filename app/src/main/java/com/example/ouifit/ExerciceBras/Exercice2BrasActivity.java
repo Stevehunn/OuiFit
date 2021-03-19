@@ -1,4 +1,4 @@
-package com.example.ouifit.ExerciceBras.;
+package com.example.ouifit.ExerciceBras;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.R;
 
 import static com.example.ouifit.R.drawable.image_abdo1;
+import static com.example.ouifit.R.drawable.image_bras2;
 
 public class Exercice2BrasActivity extends Activity {
 
@@ -22,7 +23,7 @@ public class Exercice2BrasActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exercice_bras);
+        setContentView(R.layout.exercice_bras2);
 
         screenView =findViewById(R.id.imageExoBras);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(),image_bras2));

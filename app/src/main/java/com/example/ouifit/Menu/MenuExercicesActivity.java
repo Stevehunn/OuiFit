@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.ouifit.ExerciceAbdo.Exercice1AbdoActivity;
+import com.example.ouifit.ExerciceBras.Exercice1BrasActivity;
+import com.example.ouifit.ExerciceDos.Exercice1DosActivity;
 import com.example.ouifit.MainActivity;
 import com.example.ouifit.R;
 
@@ -31,6 +33,24 @@ public class MenuExercicesActivity extends Activity {
         buttonExoAbdos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MenuExercicesActivity.this, Exercice1AbdoActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //Bouton pour aller vers l'exercice Bras
+        Button buttonExoBras = (Button)findViewById(R.id.btexoBras);
+        buttonExoBras.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(MenuExercicesActivity.this, Exercice1BrasActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //Bouton pour aller vers l'exercice Dos
+        Button buttonExoDos = (Button)findViewById(R.id.btexoDos);
+        buttonExoDos.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(MenuExercicesActivity.this, Exercice1DosActivity.class);
                 startActivity(i);
             }
         });

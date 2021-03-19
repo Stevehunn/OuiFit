@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.core.content.ContextCompat;
 
 import com.example.ouifit.MainActivity;
+import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.R;
 
 import static com.example.ouifit.R.drawable.image_abdo3;
@@ -31,7 +32,7 @@ public class Exercice3AbdoActivity extends Activity {
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("Bouton exo 1","execute");
-                Intent i = new Intent(Exercice3AbdoActivity.this, MainActivity.class);
+                Intent i = new Intent(Exercice3AbdoActivity.this, MenuExercicesActivity.class);
                 startActivity(i);
             }
         });

@@ -27,7 +27,7 @@
             android:id="@+id/imageExoDos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/image_abdo1" />
+            app:srcCompat="@drawable/image_dos1" />
 
         <LinearLayout
             android:layout_width="match_parent"

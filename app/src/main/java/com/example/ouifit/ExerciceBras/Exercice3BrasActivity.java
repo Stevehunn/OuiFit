@@ -1,4 +1,4 @@
-package com.example.ouifit.ExerciceBras.;
+package com.example.ouifit.ExerciceBras;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.R;
 
 import static com.example.ouifit.R.drawable.image_abdo1;
+import static com.example.ouifit.R.drawable.image_bras3;
 
 public class Exercice3BrasActivity extends Activity {
 

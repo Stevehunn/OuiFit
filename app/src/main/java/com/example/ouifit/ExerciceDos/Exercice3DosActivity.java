@@ -1,4 +1,4 @@
-package com.example.ouifit.ExerciceDos.;
+package com.example.ouifit.ExerciceDos;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,10 +19,10 @@ public class Exercice3DosActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercice_dos3);
-
-        screenView =findViewById(R.id.imageExoBras);
+/*
+        screenView =findViewById(R.id.imageExoDos);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(),image_dos3));
-
+*/
 
         //Bouton pour aller vers l'exercice 2
         Button buttonSuivant = (Button)findViewById(R.id.btExoVersExo3Dos);
