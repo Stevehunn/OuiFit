@@ -7,40 +7,36 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class BDD extends SQLiteOpenHelper {
+    private static final String BDD_NOM = "InscritEtStats";
+    public static SQLiteDatabase maBDD;
+    private int version =0;
 
-
-    private static final String DB_NAME= "Sportifs";
-
-private static final String TABLE_NAME = "Personne";
-private static final String IDENTIFIANT = "Identifiant";
-private static final int IDENTIFIANT_ID = 0;
-private static final String NOM_PERSONNE = "Prénom";
-private static final int NOM_PERSONNE_ID = 1;
-private static final String EMAIL = "Adresse email";
-private static final int EMAIL_ID = 2;
-private static final String PASSWORD = "Password";
+    //le nom de la table
+    public static final String TABLE_NAME = "Inscrit";
+//Instanciation des éléments du tableau avec leurs positions
+    public static final String IDENTIFIANT = "Identifiant";
+    private static final int IDENTIFIANT_ID = 0;
+    public static final String NOM_PERSONNE = "Prénom";
+    private static final int NOM_PERSONNE_ID = 1;
+    public static final String EMAIL = "Adresse email";
+    private static final int EMAIL_ID = 2;
+    public static final String PASSWORD = "Password";
     private static final int PASSWORD_ID = 3;
-
-private static final String TABLE_NAME2 = "Stats" ;
-    private static final int IDENTIFIANT_ID2 = 0;
     private static final String POIDS = "Poids";
-    private static final int POIDS_ID= 1;
+    private static final int POIDS_ID= 4;
     private static final String TAILLE ="Taille";
-    private static final int TAILLE_ID = 2;
+    private static final int TAILLE_ID = 5;
     private static final String TPS_ENTRAINEMENT = "Temps d'entraînement par semaine";
-    private static final int TPS_ENTRAINEMENT_ID = 3;
+    private static final int TPS_ENTRAINEMENT_ID = 6;
     private static final String CALORIE_PERDU = "Calorie perdu par semaine";
-    private static final int CALORIE_PERDU_ID = 4;
+    private static final int CALORIE_PERDU_ID = 7;
 
-    private static final String REQUETE_CREA_DB = "CREATE DATABASE " + DB_NAME +";";
-
+//requête de création de la BDD
     private static final String REQUETE_CREA_TABLE1 = "CREATE TABLE " + TABLE_NAME + " ( " + IDENTIFIANT +
-            " integer primary key autoincrement, " + NOM_PERSONNE + " text not null, " + EMAIL + "text not null, " + PASSWORD + " text not null"+" );";
+            " integer primary key autoincrement, " + NOM_PERSONNE + " text not null, " + EMAIL + "text not null, " + PASSWORD + " text not null, "
+            + POIDS + " integer, " + TAILLE + " integer, " + TPS_ENTRAINEMENT + " integer, " + CALORIE_PERDU + " integer );";
 
-    private static final String REQUETE_CREA_TABLE2 = "CREATE TABLE " + TABLE_NAME2 + "(" + IDENTIFIANT +
-            " integer primary key autoincrement, " + POIDS + " integer, " + TAILLE + " integer, " + TPS_ENTRAINEMENT + " integer, " + CALORIE_PERDU + " integer );";
-
-    private SQLiteDatabase maBDD;
+    private BDD baseHelper;
 
     public BDD(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -48,17 +44,31 @@ private static final String TABLE_NAME2 = "Stats" ;
 
     //Création d'une BDD avec deux tables
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        //db.execSQL(REQUETE_CREA_DB);
+    public void onCreate(SQLiteDatabase db)
+    {
         db.execSQL(REQUETE_CREA_TABLE1);
-        db.execSQL(REQUETE_CREA_TABLE2);
+        version++;
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-      //  db.d
+        version=newVersion;
     }
 
+    public void InscritAdaptateur(Context ctx)
+    {
+        baseHelper = new BDD(ctx, BDD_NOM ,null, version);
+    }
 
+    public SQLiteDatabase openE()
+    {
+        maBDD = baseHelper.getWritableDatabase();
+        return maBDD;
+    }
 
+    public void newInscrit()
+    {
+        openE();
+
+    }
 }

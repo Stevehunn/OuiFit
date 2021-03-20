@@ -38,6 +38,7 @@ public class ConnectionFragment extends Fragment {
     private View.OnClickListener btnConnectListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
             //TODO redirection vers MainActivity
 /*
             Intent i = new Intent(ConnectionFragment.this, MainActivity.class);

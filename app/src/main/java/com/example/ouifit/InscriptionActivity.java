@@ -2,6 +2,8 @@ package com.example.ouifit;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,10 +17,13 @@ import com.example.ouifit.Menu.MenuExercicesActivity;
 
 public class InscriptionActivity extends Activity {
 
-    private EditText identifiant;
-    private EditText email;
+
+    private int identifiant =0;
+    public EditText nom;
+    public EditText email;
     private EditText mdp1;
     private EditText mdp2;
+    private Button btId;
     private Button bouton;
 
     @Override
@@ -58,12 +63,12 @@ public class InscriptionActivity extends Activity {
         });
 
     }
-/*
+
     public void onClick(View view)
     {
         if(view.getId() == R.id.btId)
         {
-            String identifiantText = identifiant.getText().toString();
+            String nomText = nom.getText().toString();
             String emailText = email.getText().toString();
             String MDP1Text = mdp1.getText().toString();
             String MDP2Text = mdp2.getText().toString();
@@ -71,14 +76,18 @@ public class InscriptionActivity extends Activity {
             if (concordance)
             {
                 try {
-                    User user = new User(identifiantText,emailText,MDP1Text);// on doit créer un objet User permettant de sauvegarder les données d'un utilisateur
-                    //On doit ajouter les utilisateurs à la BDD
+                    identifiant++;
+                    //ajout d'un nouvel utilisateur à la BDD
+                    BDD.maBDD.execSQL("Insert Into " + BDD.TABLE_NAME + "( " + BDD.IDENTIFIANT +", "+ BDD.NOM_PERSONNE +", "+ BDD.EMAIL +", "+ BDD.PASSWORD + ") " +
+                            "VALUES ( '" + identifiant +"', '"+ nomText  +"', '"+ emailText +"', '"+  MDP1Text +"');" );
 
-                    //remise à zéro des champs du formaulaire
-                    identifiant.setText(null);
+                    //remise à zéro des champs du formulaire
+                    nom.setText(null);
                     email.setText(null);
                     mdp1.setText(null);
                     mdp2.setText(null);
+                    Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
+                    startActivity(i);
                 }
                 catch (Exception e) {
                     e.printStackTrace();
@@ -87,5 +96,6 @@ public class InscriptionActivity extends Activity {
         }
     }
 
- */
+
+
 }
