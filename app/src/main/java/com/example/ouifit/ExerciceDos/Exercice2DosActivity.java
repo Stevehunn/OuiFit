@@ -20,16 +20,16 @@ public class Exercice2DosActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exercice_abdo2);
+        setContentView(R.layout.exercice2);
 
-        screenView = findViewById(R.id.imageExoAbdo);
+        screenView = findViewById(R.id.imageExo);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_dos2));
 
         TextView titleview = (TextView) findViewById(R.id.titreExo2);
         titleview.setText(R.string.exoDos);
 
         //Bouton pour aller vers l'exercice 3
-        Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo3Abdo);
+        Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo3);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("Bouton exo 2", "execute");
@@ -39,7 +39,7 @@ public class Exercice2DosActivity extends Activity {
         });
 
         //Bouton de rerour pour aller vers l'exercice 1
-        Button buttonRetour = (Button) findViewById(R.id.btRetourAbdoEx2);
+        Button buttonRetour = (Button) findViewById(R.id.btRetourEx2);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("Bouton exo 2", "execute");

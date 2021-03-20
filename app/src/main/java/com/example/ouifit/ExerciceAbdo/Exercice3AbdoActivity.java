@@ -21,16 +21,16 @@ public class Exercice3AbdoActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exercice_abdo3);
+        setContentView(R.layout.exercice3);
 
-        screenView = findViewById(R.id.imageExoAbdo);
+        screenView = findViewById(R.id.imageExo);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_abdo3));
 
         TextView titleview = (TextView) findViewById(R.id.titreExo3);
         titleview.setText(R.string.exoAbdo);
 
         //Bouton pour aller vers le menu principal
-        Button buttonSuivant = (Button) findViewById(R.id.btExoVersMenuAbdo);
+        Button buttonSuivant = (Button) findViewById(R.id.btExoVersMenu);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("Bouton exo 3", "execute");
@@ -40,7 +40,7 @@ public class Exercice3AbdoActivity extends Activity {
         });
 
         //Bouton de rerour pour aller vers l'exercice 2
-        Button buttonRetour = (Button)findViewById(R.id.btRetourAbdoEx3);
+        Button buttonRetour = (Button) findViewById(R.id.btRetourEx3);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("Bouton exo 3","execute");

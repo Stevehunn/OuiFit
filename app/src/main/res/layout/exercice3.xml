@@ -6,12 +6,12 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btRetourAbdoEx1"
+        android:id="@+id/btRetourEx3"
         style="@style/btRetour"
         android:background="@drawable/image_retour" />
 
     <TextView
-        android:id="@+id/titreExo1"
+        android:id="@+id/titreExo3"
         style="@style/titreMenu"
         android:text="@string/exoAbdo" />
 
@@ -23,10 +23,10 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageExoAbdo"
+            android:id="@+id/imageExo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/image_abdo1" />
+            app:srcCompat="@drawable/image_abdo3" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,15 +38,16 @@
                 android:text="@string/temps" />
 
             <TextView
+                android:id="@+id/temps"
                 style="@style/temps"
                 android:text="@string/temps1" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/btExoVersExo2Abdo"
+            android:id="@+id/btExoVersMenu"
             style="@style/btSuivant"
-            android:text="@string/suivant" />
+            android:text="@string/fini" />
 
     </LinearLayout>
 </LinearLayout>
