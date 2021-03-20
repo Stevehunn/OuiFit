@@ -21,34 +21,36 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".InscriptionActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity android:name=".ConnectionActivity"
-            android:label="@string/app_name">
-        </activity>
         <activity android:name=".MainConnectActivity"
             android:label="@string/app_name">
         </activity>
         <!--Activité pour les Menus -->
-        <activity android:name=".Menu.MenuCourseActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity android:name=".Menu.MenuExercicesActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity android:name=".Menu.MenuStatActivity"
-            android:label="@string/app_name">
-        </activity>
+        <activity
+            android:name=".Menu.MenuCourseActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".Menu.MenuExercicesActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".Menu.MenuStatActivity"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name=".InscriptionActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".LangueActivity"
+            android:label="@string/app_name"></activity>
 
         <!--Activité pour les exercices des Abdominaux -->
-        <activity android:name=".ExerciceAbdo.Exercice1AbdoActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity android:name=".ExerciceAbdo.Exercice2AbdoActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity android:name=".ExerciceAbdo.Exercice3AbdoActivity"
+        <activity
+            android:name=".ExerciceAbdo.Exercice1AbdoActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ExerciceAbdo.Exercice2AbdoActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ExerciceAbdo.Exercice3AbdoActivity"
             android:label="@string/app_name">
         </activity>
 

@@ -34,6 +34,8 @@
     <string name="suivant">Suivant</string>
     <string name="strNom">"Nom : "</string>
     <string name="fini">Fini</string>
+    <string name="valide">Valider</string>
+
 
     <string name="communiquer">Communiquer</string>
     <string name="profil">Profil</string>
@@ -44,6 +46,7 @@
     <string name="home">Accueil</string>
     <string name="conenction">Connexion</string>
     <string name="parametre">Paramètre</string>
+    <string name="selectlanguage">Selectionnez la langue: </string>
 
     <string name="navigation_drawer_ouverture">Ouvre le Menu</string>
     <string name="navigation_drawer_fermeture">Ferme le Menu</string>

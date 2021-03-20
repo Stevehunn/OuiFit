@@ -2,18 +2,11 @@ package com.example.ouifit;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.ouifit.ExerciceAbdo.Exercice1AbdoActivity;
-import com.example.ouifit.Menu.MenuExercicesActivity;
 
 public class InscriptionActivity extends Activity {
 
@@ -41,7 +34,7 @@ public class InscriptionActivity extends Activity {
             }
         });
 
-
+/*
         //Bouton pour aller vers la page connection
         Button buttonVersConnection = (Button)findViewById(R.id.btConnection);
         buttonVersConnection.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +44,7 @@ public class InscriptionActivity extends Activity {
                 startActivity(i);
             }
         });
-
+*/
         //Bouton pour aller vers la page MainConnectActivity
         Button buttonVersMainConnect = (Button)findViewById(R.id.btId);
         buttonVersMainConnect.setOnClickListener(new View.OnClickListener() {
