@@ -35,6 +35,14 @@
     <string name="strNom">"Nom : "</string>
     <string name="fini">Fini</string>
 
+    <string name="communiquer">Communiquer</string>
+    <string name="profil">Profil</string>
+    <string name="Sedeconnecter">Déconnexion</string>
+    <string name="langue">Langue</string>
+    <string name="option">Option</string>
+    <string name="contact">Nous contacter</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>
