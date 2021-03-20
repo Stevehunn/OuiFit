@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
@@ -22,15 +23,17 @@ public class Exercice1AbdoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercice_abdo1);
 
-        screenView =findViewById(R.id.imageExoAbdo);
-        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(),image_abdo1));
+        screenView = findViewById(R.id.imageExoAbdo);
+        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_abdo1));
 
+        TextView titleview = (TextView) findViewById(R.id.titreExo1);
+        titleview.setText(R.string.exoAbdo);
 
         //Bouton pour aller vers l'exercice 2
-        Button buttonSuivant = (Button)findViewById(R.id.btExoVersExo2Abdo);
+        Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo2Abdo);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(Exercice1AbdoActivity.this, Exercice2AbdoActivity.class);
                 startActivity(i);
             }

@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.example.ouifit.MainActivity;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.R;
 
@@ -23,15 +23,17 @@ public class Exercice3AbdoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercice_abdo3);
 
-        screenView =findViewById(R.id.imageExoAbdo);
-        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(),image_abdo3));
+        screenView = findViewById(R.id.imageExoAbdo);
+        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_abdo3));
 
+        TextView titleview = (TextView) findViewById(R.id.titreExo3);
+        titleview.setText(R.string.exoAbdo);
 
         //Bouton pour aller vers le menu principal
-        Button buttonSuivant = (Button)findViewById(R.id.btExoVersMenuAbdo);
+        Button buttonSuivant = (Button) findViewById(R.id.btExoVersMenuAbdo);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 3","execute");
+                Log.i("Bouton exo 3", "execute");
                 Intent i = new Intent(Exercice3AbdoActivity.this, MenuExercicesActivity.class);
                 startActivity(i);
             }
