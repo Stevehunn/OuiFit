@@ -11,37 +11,39 @@ import androidx.core.content.ContextCompat;
 
 import com.example.ouifit.R;
 
+import static com.example.ouifit.R.drawable.image_abdo2;
+
 public class Exercice2DosActivity extends Activity {
 
     View screenView;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exercice_dos2);
-/*
-        screenView =findViewById(R.id.imageExoDos);
-        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(),image_dos2));
-*/
+        setContentView(R.layout.exercice_abdo2);
 
-        //Bouton pour aller vers l'exercice 2
-        Button buttonSuivant = (Button)findViewById(R.id.btExoVersExo2Bras);
+        screenView = findViewById(R.id.imageExoAbdo);
+        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_abdo2));
+
+
+        //Bouton pour aller vers l'exercice 3
+        Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo3Abdo);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton retour exo 1","execute");
+                Log.i("Bouton exo 2", "execute");
                 Intent i = new Intent(Exercice2DosActivity.this, Exercice3DosActivity.class);
                 startActivity(i);
             }
         });
 
-        //Bouton de rerour pour aller vers le menu Exercice
-        Button buttonRetour = (Button)findViewById(R.id.btRetourDosEx2);
+        //Bouton de rerour pour aller vers l'exercice 1
+        Button buttonRetour = (Button) findViewById(R.id.btRetourAbdoEx2);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 2", "execute");
                 Intent i = new Intent(Exercice2DosActivity.this, Exercice1DosActivity.class);
                 startActivity(i);
             }
         });
-    }
 
+    }
 }

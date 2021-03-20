@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat;
 
 import com.example.ouifit.R;
 
-import static com.example.ouifit.R.drawable.image_bras2;
+import static com.example.ouifit.R.drawable.image_abdo2;
 
 public class Exercice2BrasActivity extends Activity {
 
@@ -19,34 +19,31 @@ public class Exercice2BrasActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.exercice_abdo2);
 
-        Log.d("EX2BRAS", "onCreate");
-
-        setContentView(R.layout.exercice_bras2);
-
-        screenView = findViewById(R.id.imageExoBras);
-        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_bras2));
+        screenView = findViewById(R.id.imageExoAbdo);
+        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_abdo2));
 
 
-        //Bouton pour aller vers l'exercice 2
-        Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo3Bras);
+        //Bouton pour aller vers l'exercice 3
+        Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo3Abdo);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton retour exo 1", "execute");
+                Log.i("Bouton exo 2", "execute");
                 Intent i = new Intent(Exercice2BrasActivity.this, Exercice3BrasActivity.class);
                 startActivity(i);
             }
         });
 
-        //Bouton de retour pour aller vers le menu Exercice
-        Button buttonRetour = (Button) findViewById(R.id.btRetourBrasEx2);
+        //Bouton de rerour pour aller vers l'exercice 1
+        Button buttonRetour = (Button) findViewById(R.id.btRetourAbdoEx2);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1", "execute");
+                Log.i("Bouton exo 2", "execute");
                 Intent i = new Intent(Exercice2BrasActivity.this, Exercice1BrasActivity.class);
                 startActivity(i);
             }
         });
-    }
 
+    }
 }
