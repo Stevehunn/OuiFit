@@ -8,13 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.ouifit.ExerciceAbdo.Exercice1AbdoActivity;
-import com.example.ouifit.Menu.MenuExercicesActivity;
-
-import java.sql.Connection;
-
 public class ConnectionActivity extends Activity {
 
     private EditText txtLogin;
@@ -34,17 +27,17 @@ public class ConnectionActivity extends Activity {
         btnConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("Bt connection","execute");
+                Log.i("Bt connection", "execute");
                 Intent i = new Intent(ConnectionActivity.this, MainConnectActivity.class);
                 startActivity(i);
             }
         });
 
-        //Bouton de retour pour aller vers le menu Principal
-        Button buttonRetour = (Button)findViewById(R.id.btRetourInscription);
-        buttonRetour.setOnClickListener(new View.OnClickListener() {
+        //Bouton de rerour pour aller vers le menu Exercice
+        Button buttonRetourConnection = (Button) findViewById(R.id.btRetourConnection);
+        buttonRetourConnection.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bt retour connection","execute");
+                Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(ConnectionActivity.this, MainActivity.class);
                 startActivity(i);
             }

@@ -2,47 +2,62 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+        <item android:title="@string/parametre">
 
-        <item
-            android:id="@+id/nav_option"
-            android:icon="@drawable/image_option"
-            android:title="@string/option" />
 
-        <item
-            android:id="@+id/nav_langue"
-            android:icon="@drawable/image_langue"
-            android:title="@string/langue" />
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/image_accueil"
+                android:title="@string/home" />
+
+            <item
+                android:id="@+id/nav_option"
+                android:icon="@drawable/image_option"
+                android:title="@string/option" />
+
+            <item
+                android:id="@+id/nav_langue"
+                android:icon="@drawable/image_langue"
+                android:title="@string/langue" />
+
+
+        </item>
 
 
     </group>
 
     <group android:checkableBehavior="single">
 
-        <item
-            android:id="@+id/nav_login"
-            android:icon="@drawable/image_login"
-            android:title="@string/SeConnecter" />
-        <item
-            android:id="@+id/nav_profil"
-            android:icon="@drawable/image_profil"
-            android:title="@string/profil" />
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/image_logout"
-            android:title="@string/Sedeconnecter" />
+        <item android:title="@string/conenction">
+
+
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@drawable/image_login"
+                android:title="@string/SeConnecter" />
+            <item
+                android:id="@+id/nav_profil"
+                android:icon="@drawable/image_profil"
+                android:title="@string/profil" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/image_logout"
+                android:title="@string/Sedeconnecter" />
+
+
+        </item>
+
 
     </group>
 
     <item android:title="@string/communiquer">
 
-        <menu>
 
-            <item
-                android:id="@+id/nav_contact"
-                android:icon="@drawable/image_mail"
-                android:title="@string/contact" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/image_mail"
+            android:title="@string/contact" />
 
-        </menu>
 
     </item>
 </menu>

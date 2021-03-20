@@ -41,6 +41,12 @@
     <string name="langue">Langue</string>
     <string name="option">Option</string>
     <string name="contact">Nous contacter</string>
+    <string name="home">Accueil</string>
+    <string name="conenction">Connexion</string>
+    <string name="parametre">Paramètre</string>
+
+    <string name="navigation_drawer_ouverture">Ouvre le Menu</string>
+    <string name="navigation_drawer_fermeture">Ferme le Menu</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
