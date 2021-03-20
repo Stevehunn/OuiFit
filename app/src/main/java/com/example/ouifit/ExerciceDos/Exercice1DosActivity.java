@@ -12,6 +12,8 @@ import androidx.core.content.ContextCompat;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.R;
 
+import static com.example.ouifit.R.drawable.image_dos1;
+
 public class Exercice1DosActivity extends Activity {
 
     View screenView;
@@ -19,16 +21,15 @@ public class Exercice1DosActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercice_dos1);
-/*
-        screenView =findViewById(R.id.imageExoDos);
-        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(),image_dos1));
 
-*/
+        screenView = findViewById(R.id.imageExoDos);
+        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_dos1));
+
         //Bouton pour aller vers l'exercice 2
-        Button buttonSuivant = (Button)findViewById(R.id.btExoVersExo2Dos);
+        Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo2Dos);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton retour exo 1","execute");
+                Log.i("Bouton retour exo 1", "execute");
                 Intent i = new Intent(Exercice1DosActivity.this, Exercice2DosActivity.class);
                 startActivity(i);
             }

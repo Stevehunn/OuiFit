@@ -21,25 +21,25 @@ public class Exercice2AbdoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercice_abdo2);
 
-        screenView =findViewById(R.id.imageExoAbdo);
+        screenView = findViewById(R.id.imageExoAbdo);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_abdo2));
 
 
         //Bouton pour aller vers l'exercice 3
-        Button buttonSuivant = (Button)findViewById(R.id.btExoVersExo3Abdo);
+        Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo3Abdo);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 2","execute");
+                Log.i("Bouton exo 2", "execute");
                 Intent i = new Intent(Exercice2AbdoActivity.this, Exercice3AbdoActivity.class);
                 startActivity(i);
             }
         });
 
         //Bouton de rerour pour aller vers l'exercice 1
-        Button buttonRetour = (Button)findViewById(R.id.btRetourAbdoEx2);
+        Button buttonRetour = (Button) findViewById(R.id.btRetourAbdoEx2);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 2","execute");
+                Log.i("Bouton exo 2", "execute");
                 Intent i = new Intent(Exercice2AbdoActivity.this, Exercice1AbdoActivity.class);
                 startActivity(i);
             }

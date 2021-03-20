@@ -8,9 +8,9 @@
     <string name="strLogin">Identifiant :</string>
     <string name="strPassword">Mot de passe :</string>
 
-    <string name="exo1Abdo">Exercice Abdominaux</string>
-    <string name="exo2Bras">Exercice Bras</string>
-    <string name="exo3Dos">Exercice Dos</string>
+    <string name="exoAbdo">Exercice Abdominaux</string>
+    <string name="exoBras">Exercice Bras</string>
+    <string name="exoDos">Exercice Dos</string>
 
     <string name="exo1">Exercice 1</string>
     <string name="exo2">Exercice 2</string>

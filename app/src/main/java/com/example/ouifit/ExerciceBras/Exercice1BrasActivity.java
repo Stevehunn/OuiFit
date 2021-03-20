@@ -9,12 +9,9 @@ import android.widget.Button;
 
 import androidx.core.content.ContextCompat;
 
-import com.example.ouifit.ExerciceAbdo.Exercice1AbdoActivity;
-import com.example.ouifit.ExerciceAbdo.Exercice2AbdoActivity;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.R;
 
-import static com.example.ouifit.R.drawable.image_abdo1;
 import static com.example.ouifit.R.drawable.image_bras1;
 
 public class Exercice1BrasActivity extends Activity {
@@ -33,7 +30,7 @@ public class Exercice1BrasActivity extends Activity {
         Button buttonSuivant = (Button)findViewById(R.id.btExoVersExo2Bras);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton retour exo 1","execute");
+                Log.i("Bouton exo 2", "execute");
                 Intent i = new Intent(Exercice1BrasActivity.this, Exercice2BrasActivity.class);
                 startActivity(i);
             }
