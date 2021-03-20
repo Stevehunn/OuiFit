@@ -12,7 +12,7 @@ import androidx.core.content.ContextCompat;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.R;
 
-import static com.example.ouifit.R.drawable.image_abdo3;
+import static com.example.ouifit.R.drawable.image_bras3;
 
 public class Exercice3BrasActivity extends Activity {
 
@@ -23,7 +23,7 @@ public class Exercice3BrasActivity extends Activity {
         setContentView(R.layout.exercice_abdo3);
 
         screenView = findViewById(R.id.imageExoAbdo);
-        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_abdo3));
+        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_bras3));
 
 
         //Bouton pour aller vers le menu principal

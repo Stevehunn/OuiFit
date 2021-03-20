@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat;
 
 import com.example.ouifit.R;
 
-import static com.example.ouifit.R.drawable.image_abdo2;
+import static com.example.ouifit.R.drawable.image_bras2;
 
 public class Exercice2BrasActivity extends Activity {
 
@@ -22,7 +22,7 @@ public class Exercice2BrasActivity extends Activity {
         setContentView(R.layout.exercice_abdo2);
 
         screenView = findViewById(R.id.imageExoAbdo);
-        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_abdo2));
+        screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_bras2));
 
 
         //Bouton pour aller vers l'exercice 3
