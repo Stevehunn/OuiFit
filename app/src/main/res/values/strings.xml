@@ -48,9 +48,14 @@
     <string name="parametre">Paramètre</string>
     <string name="selectlanguage">Selectionnez la langue: </string>
 
+
     <string name="navigation_drawer_ouverture">Ouvre le Menu</string>
     <string name="navigation_drawer_fermeture">Ferme le Menu</string>
 
+    <string name="textcontact"> Afin de nous contacter, pour toute demande ou avis concernant l\'application nous vous laissons notre email qui est le suivant :</string>
+    <string name="email1">nicolas.bitaillou@gmail.com </string>
+    <string name="ou"> ou </string>
+    <string name="email2">jonas </string>
 
     <!-- TODO: Remove or change this placeholder text -->
 
