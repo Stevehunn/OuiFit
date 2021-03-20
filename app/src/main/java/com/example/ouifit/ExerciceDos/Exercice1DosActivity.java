@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
@@ -25,6 +26,8 @@ public class Exercice1DosActivity extends Activity {
         screenView = findViewById(R.id.imageExoAbdo);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_dos1));
 
+        TextView titleview = (TextView) findViewById(R.id.titreExo1);
+        titleview.setText(R.string.exoDos);
 
         //Bouton pour aller vers l'exercice 2
         Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo2Abdo);

@@ -11,6 +11,7 @@
         android:background="@drawable/image_retour" />
 
     <TextView
+        android:id="@+id/titreExo1"
         style="@style/titreMenu"
         android:text="@string/exoAbdo" />
 

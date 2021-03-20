@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
@@ -21,6 +22,9 @@ public class Exercice1BrasActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercice_abdo1);
+
+        TextView titleview = (TextView) findViewById(R.id.titreExo1);
+        titleview.setText(R.string.exoBras);
 
         screenView = findViewById(R.id.imageExoAbdo);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_bras1));
