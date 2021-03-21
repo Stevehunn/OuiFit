@@ -23,6 +23,7 @@ import com.example.ouifit.Menu.MenuCourseActivity;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.Menu.MenuStatActivity;
 import com.example.ouifit.MenuDeroulant.ContactActivity;
+import com.example.ouifit.MenuDeroulant.OptionActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -143,14 +144,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
 
             case R.id.nav_contact:
-                Intent i = new Intent(MainActivity.this, ContactActivity.class);
-                startActivity(i);
-                Toast.makeText(getApplicationContext(), "@strings/contact", Toast.LENGTH_SHORT).show();
+                Intent j = new Intent(MainActivity.this, ContactActivity.class);
+                startActivity(j);
+                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_home:
-                Intent j = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(j);
+                Intent k = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(k);
                 Toast.makeText(getApplicationContext(), "@strings/menu_principal", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_option:
+                Intent l = new Intent(MainActivity.this, OptionActivity.class);
+                startActivity(l);
+                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
