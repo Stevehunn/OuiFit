@@ -1,9 +1,11 @@
 package com.example.ouifit;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -22,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    MenuItem menuItem;
 
+
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawner_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        menuItem = findViewById(R.menu.menu_option);
 
         //Toolbar
         setSupportActionBar(toolbar);
@@ -89,12 +95,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*
+/*
         public boolean onNavigationItemSelected(MenuItem menuItem){
 
-            switch (menuItem.getItem()){
-                case R.id.nav_langue:
-                    Intent intent =new Intent(MainActivity.this, LangueActivity.class);
+            switch (menuItem.getItemId()){
+
+                case R.id.nav_contact:
+                    Intent intent2 =new Intent(MainActivity.this, ContactActivity.class);
+                    break;
+                case R.id.nav_option:
+                    Intent intent3 =new Intent(MainActivity.this, LangueActivity.class);
                     break;
             }
         }

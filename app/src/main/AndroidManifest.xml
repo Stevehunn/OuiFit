@@ -24,6 +24,7 @@
         <activity android:name=".MainConnectActivity"
             android:label="@string/app_name">
         </activity>
+
         <!--Activité pour les Menus -->
         <activity
             android:name=".Menu.MenuCourseActivity"
@@ -39,7 +40,7 @@
             android:name=".InscriptionActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".LangueActivity"
+            android:name=".ContactActivity"
             android:label="@string/app_name"></activity>
 
         <!--Activité pour les exercices des Abdominaux -->

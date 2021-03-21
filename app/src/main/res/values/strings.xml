@@ -4,7 +4,7 @@
     <string name="Courses"> Courses </string>
     <string name="Stat">Stats</string>
 
-    <string name="strConnect">Connection</string>
+    <string name="strConnect">Connexion</string>
     <string name="strLogin">Identifiant :</string>
     <string name="strPassword">Mot de passe :</string>
 
@@ -17,6 +17,7 @@
     <string name="exo3">Exercice 3</string>
 
     <string name="temps">Temps : </string>
+    <string name="repetition">Repetition : </string>
     <string name="temps1"> 30s</string>
     <string name="temps2"> 2x30s</string>
     <string name="temps3"> 60s</string>
@@ -44,7 +45,7 @@
     <string name="option">Option</string>
     <string name="contact">Nous contacter</string>
     <string name="home">Accueil</string>
-    <string name="conenction">Connexion</string>
+    <string name="connexion">Connexion</string>
     <string name="parametre">Paramètre</string>
     <string name="selectlanguage">Selectionnez la langue: </string>
 
