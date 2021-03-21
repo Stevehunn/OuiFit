@@ -99,9 +99,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(MenuItem menuItem){
 
             switch (menuItem.getItemId()){
-                case R.id.nav_langue:
-                    Intent intent =new Intent(MainActivity.this, LangueActivity.class);
-                    break;
+
                 case R.id.nav_contact:
                     Intent intent2 =new Intent(MainActivity.this, ContactActivity.class);
                     break;
