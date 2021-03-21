@@ -55,9 +55,16 @@
                 android:text="@string/Sinscription" />
 
             <Button
+                android:id="@+id/btVersConnection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/connexion" />
+
+            <Button
                 android:id="@+id/btversStat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="invisible"
                 android:text="@string/Stat" />
 
             <Button

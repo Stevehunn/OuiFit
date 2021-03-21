@@ -28,7 +28,7 @@
     <string name="boutonInscription">Sign up</string>
     <string name="InscriptionTitre">registration</string>
 
-    <string name="ConnectionTitre">Sign up</string>
+    <string name="ConnexionTitre">Sign up</string>
     <string name="SeConnecterSincrire">Sign in / Sign up</string>
     <string name="dejainscrit">Already sign up ?</string>
     <string name="SeConnecter">Sign in</string>

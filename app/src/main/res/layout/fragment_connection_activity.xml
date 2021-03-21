@@ -18,7 +18,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         style="@style/titreMenu"
         android:id="@+id/textView"
-        android:text="@string/ConnectionTitre"/>
+        android:text="@string/ConnexionTitre" />
 
 
     <LinearLayout

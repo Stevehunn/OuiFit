@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         menuItem = findViewById(R.menu.menu_option);
 
+        Button buttonStat = (Button) findViewById(R.id.btversStat);
+
         /*------------------------Toolbar-----------------------*/
         setSupportActionBar(toolbar);
 
@@ -72,11 +74,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Bouton pour aller vers la page connexion
+        Button buttonConnexion = (Button) findViewById(R.id.btVersConnection);
+        buttonConnexion.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.i("MainActivity", "connexion");
+                buttonStat.setVisibility(View.VISIBLE);
+                Intent i = new Intent(MainActivity.this, ConnexionActivity.class);
+                startActivity(i);
+            }
+        });
+
         //Bouton pour aller vers le menu Stats
-        Button buttonStat = (Button) findViewById(R.id.btversStat);
+
         buttonStat.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("MainActivity", "menu exercice");
+                Log.i("MainActivity", "menu stat");
                 Intent i = new Intent(MainActivity.this, MenuStatActivity.class);
                 startActivity(i);
             }
