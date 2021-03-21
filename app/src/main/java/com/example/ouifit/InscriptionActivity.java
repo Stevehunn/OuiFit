@@ -8,16 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class InscriptionActivity extends Activity {
+public class InscriptionActivity extends Activity implements  View.OnClickListener{
 
 
     private int identifiant =0;
-    public EditText nom;
-    public EditText email;
+    private EditText nom;
+    private EditText email;
     private EditText mdp1;
     private EditText mdp2;
     private Button btId;
-    private Button bouton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,20 +56,27 @@ public class InscriptionActivity extends Activity {
 
     }
 
+    @Override
     public void onClick(View view)
     {
+        //Si le clique est bien sur le bouton "S'inscrire"
         if(view.getId() == R.id.btId)
         {
+            //on récupère tout les champs
             String nomText = nom.getText().toString();
             String emailText = email.getText().toString();
             String MDP1Text = mdp1.getText().toString();
             String MDP2Text = mdp2.getText().toString();
+            //on vérifie si le MDP1 est le même que le MDP2
             boolean concordance = MDP1Text.equals(MDP2Text);
-            if (concordance)
+            boolean test = nomText.isEmpty()||emailText.isEmpty()||MDP1Text.isEmpty()||MDP2Text.isEmpty();
+            //création d'un nouveau sportif
+            if (concordance && !test)
             {
                 try {
                     identifiant++;
                     //ajout d'un nouvel utilisateur à la BDD
+                    BDD.openE();
                     BDD.maBDD.execSQL("Insert Into " + BDD.TABLE_NAME + "( " + BDD.IDENTIFIANT +", "+ BDD.NOM_PERSONNE +", "+ BDD.EMAIL +", "+ BDD.PASSWORD + ") " +
                             "VALUES ( '" + identifiant +"', '"+ nomText  +"', '"+ emailText +"', '"+  MDP1Text +"');" );
 
@@ -79,12 +85,17 @@ public class InscriptionActivity extends Activity {
                     email.setText(null);
                     mdp1.setText(null);
                     mdp2.setText(null);
-                    Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
+                    //renvoies à la page d'acceuil connecté
+                    Intent i = new Intent(InscriptionActivity.this, MainConnectActivity.class);
                     startActivity(i);
                 }
                 catch (Exception e) {
                     e.printStackTrace();
                 }
+            }
+            else
+            {
+
             }
         }
     }

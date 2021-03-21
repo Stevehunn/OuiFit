@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 public class BDD extends SQLiteOpenHelper {
     private static final String BDD_NOM = "InscritEtStats";
     public static SQLiteDatabase maBDD;
-    private int version =0;
+    private int version;
 
     //le nom de la table
     public static final String TABLE_NAME = "Inscrit";
@@ -34,15 +34,17 @@ public class BDD extends SQLiteOpenHelper {
 //requête de création de la BDD
     private static final String REQUETE_CREA_TABLE1 = "CREATE TABLE " + TABLE_NAME + " ( " + IDENTIFIANT +
             " integer primary key autoincrement, " + NOM_PERSONNE + " text not null, " + EMAIL + "text not null, " + PASSWORD + " text not null, "
-            + POIDS + " integer, " + TAILLE + " integer, " + TPS_ENTRAINEMENT + " integer, " + CALORIE_PERDU + " integer );";
+            + POIDS + " integer, " + TAILLE + " integer, " + TPS_ENTRAINEMENT + " integer , " + CALORIE_PERDU + " integer );";
 
-    private BDD baseHelper;
+    public static BDD baseHelper;
 
-    public BDD(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public BDD(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version)
+    {
         super(context, name, factory, version);
+        baseHelper = new BDD(context, BDD_NOM ,null, version);
     }
 
-    //Création d'une BDD avec deux tables
+    //Création d'une BDD avec une table
     @Override
     public void onCreate(SQLiteDatabase db)
     {
@@ -51,24 +53,24 @@ public class BDD extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+    {
+        db.execSQL("DROP table if exists " + TABLE_NAME + ";");
+        onCreate(db);
         version=newVersion;
     }
 
-    public void InscritAdaptateur(Context ctx)
-    {
-        baseHelper = new BDD(ctx, BDD_NOM ,null, version);
-    }
-
-    public SQLiteDatabase openE()
+    //ouverture de la bdd en mode écriture
+    public static SQLiteDatabase openE()
     {
         maBDD = baseHelper.getWritableDatabase();
         return maBDD;
     }
 
-    public void newInscrit()
+    //ouverture de la BDD en mode lecture seule
+    public static SQLiteDatabase openL()
     {
-        openE();
-
+        maBDD = baseHelper.getReadableDatabase();
+        return maBDD;
     }
 }
