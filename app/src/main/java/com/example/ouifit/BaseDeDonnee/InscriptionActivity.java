@@ -1,4 +1,4 @@
-package com.example.ouifit;
+package com.example.ouifit.BaseDeDonnee;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,10 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class InscriptionActivity extends Activity implements  View.OnClickListener{
+import com.example.ouifit.MainActivity;
+import com.example.ouifit.MainConnectActivity;
+import com.example.ouifit.R;
+
+public class InscriptionActivity extends Activity implements View.OnClickListener {
 
 
-    private int identifiant =0;
+    private int identifiant = 0;
     private EditText nom;
     private EditText email;
     private EditText mdp1;

@@ -17,9 +17,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.ouifit.BaseDeDonnee.ConnexionActivity;
+import com.example.ouifit.BaseDeDonnee.InscriptionActivity;
 import com.example.ouifit.Menu.MenuCourseActivity;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.Menu.MenuStatActivity;
+import com.example.ouifit.MenuDeroulant.ContactActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {

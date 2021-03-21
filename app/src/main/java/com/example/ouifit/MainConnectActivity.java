@@ -1,12 +1,13 @@
 package com.example.ouifit;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.ouifit.BaseDeDonnee.InscriptionActivity;
 import com.example.ouifit.Menu.MenuCourseActivity;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 

@@ -37,13 +37,13 @@
             android:label="@string/app_name"></activity>
 
         <activity
-            android:name=".InscriptionActivity"
+            android:name=".BaseDeDonnee.InscriptionActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".ConnexionActivity"
+            android:name=".BaseDeDonnee.ConnexionActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".ContactActivity"
+            android:name=".MenuDeroulant.ContactActivity"
             android:label="@string/app_name"></activity>
 
         <!--Activité pour les exercices des Abdominaux -->

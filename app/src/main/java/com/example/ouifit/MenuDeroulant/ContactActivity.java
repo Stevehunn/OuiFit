@@ -1,4 +1,4 @@
-package com.example.ouifit;
+package com.example.ouifit.MenuDeroulant;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.ouifit.MainActivity;
+import com.example.ouifit.R;
 
 public class ContactActivity extends Activity {
 
