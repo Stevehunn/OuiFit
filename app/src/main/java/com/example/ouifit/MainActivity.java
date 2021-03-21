@@ -19,6 +19,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.ouifit.Menu.MenuCourseActivity;
 import com.example.ouifit.Menu.MenuExercicesActivity;
+import com.example.ouifit.Menu.MenuStatActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -74,6 +75,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i("MainActivity", "inscription");
                 Intent i = new Intent(MainActivity.this, InscriptionActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //Bouton pour aller vers le menu Stats
+        Button buttonStat = (Button) findViewById(R.id.btversStat);
+        buttonStat.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.i("MainActivity", "menu exercice");
+                Intent i = new Intent(MainActivity.this, MenuStatActivity.class);
                 startActivity(i);
             }
         });
