@@ -2,13 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/image_accueil"
+            android:title="@string/home" />
+    </group>
+    <group android:checkableBehavior="single">
         <item android:title="@string/parametre">
 
-
-            <item
-                android:id="@+id/nav_home"
-                android:icon="@drawable/image_accueil"
-                android:title="@string/home" />
 
             <item
                 android:id="@+id/nav_option"
@@ -28,7 +30,7 @@
 
     <group android:checkableBehavior="single">
 
-        <item android:title="@string/conenction">
+        <item android:title="@string/connexion">
 
 
             <item
@@ -51,13 +53,13 @@
     </group>
 
     <item android:title="@string/communiquer">
+        <group android:checkableBehavior="single">
 
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/image_mail"
+                android:title="@string/contact" />
 
-        <item
-            android:id="@+id/nav_contact"
-            android:icon="@drawable/image_mail"
-            android:title="@string/contact" />
-
-
+        </group>
     </item>
 </menu>
