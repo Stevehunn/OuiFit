@@ -4,16 +4,20 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.ouifit.ExerciceAbdo.Exercice1AbdoActivity;
 import com.example.ouifit.Menu.MenuCourseActivity;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.google.android.material.navigation.NavigationView;
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_ouverture, R.string.navigation_drawer_fermeture);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
+        //navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
 
         /*
         //Bouton pour aller vers la page de connection
@@ -95,20 +99,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-/*
-        public boolean onNavigationItemSelected(MenuItem menuItem){
 
-            switch (menuItem.getItemId()){
 
-                case R.id.nav_contact:
-                    Intent intent2 =new Intent(MainActivity.this, ContactActivity.class);
-                    break;
-                case R.id.nav_option:
-                    Intent intent3 =new Intent(MainActivity.this, LangueActivity.class);
-                    break;
-            }
-        }
-*/
+
     }
+
+    @Override
+    public  void onBackPressed(){
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer((GravityCompat.START));
+        }
+        else{
+            super.onBackPressed();
+        }
+    }
+
+
+
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem){
+
+/*
+        switch (menuItem.getItemId()){
+
+            case R.id.nav_contact:
+                Intent i = new Intent(MainActivity.this, ContactActivity.class);
+                startActivity(i);
+                break;
+
+        }
+        */
+ return true;
+
+    }
+
 
 }
