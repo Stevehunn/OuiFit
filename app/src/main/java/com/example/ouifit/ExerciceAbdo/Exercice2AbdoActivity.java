@@ -28,6 +28,8 @@ public class Exercice2AbdoActivity extends Activity {
         TextView titleview = (TextView) findViewById(R.id.titreExo2);
         titleview.setText(R.string.exoAbdo);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton pour aller vers l'exercice 3
         Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo3);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {

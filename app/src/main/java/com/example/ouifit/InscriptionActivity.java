@@ -23,11 +23,13 @@ public class InscriptionActivity extends Activity implements  View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inscription);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton de retour pour aller vers le menu Principal
-        Button buttonRetour = (Button)findViewById(R.id.btRetourInscription);
+        Button buttonRetour = (Button) findViewById(R.id.btRetourInscription);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                 startActivity(i);
             }

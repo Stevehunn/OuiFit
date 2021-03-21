@@ -16,8 +16,10 @@ public class MenuStatActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_stat);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton de retour pour aller vers le menu principal
-        Button buttonRetour = (Button)findViewById(R.id.btRetourStat);
+        Button buttonRetour = (Button) findViewById(R.id.btRetourStat);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MenuStatActivity.this, MainActivity.class);

@@ -19,8 +19,10 @@ public class MenuExercicesActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_exercices);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton de retour pour aller vers le menu principal
-        Button buttonRetour = (Button)findViewById(R.id.btRetourEx);
+        Button buttonRetour = (Button) findViewById(R.id.btRetourEx);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MenuExercicesActivity.this, MainActivity.class);

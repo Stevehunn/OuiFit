@@ -29,6 +29,7 @@ public class Exercice1BrasActivity extends Activity {
         screenView = findViewById(R.id.imageExo);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_bras1));
 
+        /*------------------------BOUTON-----------------------*/
 
         //Bouton pour aller vers l'exercice 2
         Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo2);

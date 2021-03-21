@@ -29,6 +29,8 @@ public class Exercice3DosActivity extends Activity {
         TextView titleview = (TextView) findViewById(R.id.titreExo3);
         titleview.setText(R.string.exoDos);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton pour aller vers le menu principal
         Button buttonSuivant = (Button) findViewById(R.id.btExoVersMenu);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {

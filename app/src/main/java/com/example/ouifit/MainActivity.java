@@ -42,32 +42,25 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         menuItem = findViewById(R.menu.menu_option);
 
-        //Toolbar
+        /*------------------------Toolbar-----------------------*/
         setSupportActionBar(toolbar);
 
-        //Montrer ou cacher items
+
+        /*------------------------Montrer ou cacher items-----------------------*/
         Menu menu = navigationView.getMenu();
         menu.findItem(R.id.nav_logout).setVisible(false);
         menu.findItem(R.id.nav_profil).setVisible(false);
 
 
+        /*-----------------------Navigation View + Drawer-----------------------*/
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_ouverture, R.string.navigation_drawer_fermeture);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         //navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
 
-        /*
-        //Bouton pour aller vers la page de connection
-        Button buttonConnection = (Button) findViewById(R.id.btVersConnection);
-        buttonConnection.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.i("MainActivity", "connection");
-                Intent i = new Intent(MainActivity.this, ConnectionActivity.class);
-                startActivity(i);
-            }
-        });
-*/
+
+        /*------------------------BOUTON-----------------------*/
 
         //Bouton pour aller vers la page d'incription
         Button buttonInscription = (Button) findViewById(R.id.btversInscription);
@@ -108,8 +101,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
 
 
     }

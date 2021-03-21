@@ -14,6 +14,8 @@ public class ContactActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contact);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton de retour pour aller vers le menu Exercice
         Button buttonRetour = (Button) findViewById(R.id.btRetourEx1);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
