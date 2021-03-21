@@ -4,11 +4,11 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -17,7 +17,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.ouifit.ExerciceAbdo.Exercice1AbdoActivity;
 import com.example.ouifit.Menu.MenuCourseActivity;
 import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.google.android.material.navigation.NavigationView;
@@ -118,17 +117,23 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem){
 
-/*
-        switch (menuItem.getItemId()){
+
+        switch (menuItem.getItemId()) {
 
             case R.id.nav_contact:
                 Intent i = new Intent(MainActivity.this, ContactActivity.class);
                 startActivity(i);
+                Toast.makeText(getApplicationContext(), "@strings/contact", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_home:
+                Intent j = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(j);
+                Toast.makeText(getApplicationContext(), "@strings/menu_principal", Toast.LENGTH_SHORT).show();
                 break;
 
         }
-        */
- return true;
+
+        return true;
 
     }
 

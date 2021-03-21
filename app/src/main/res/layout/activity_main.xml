@@ -11,94 +11,95 @@
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
+<LinearLayout
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
+
+</LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/menu_option" />
+        app:menu="@menu/menu_option">
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!--
-        <Button
-            android:id="@+id/btVersConnection"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="@string/SeConnecter" />
--->
-    </RelativeLayout>
-
-    <TextView
-        style="@style/titre"
-        android:text="@string/app_name" />
-
+    </com.google.android.material.navigation.NavigationView>
 
     <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="70dp"
+        android:layout_width="match_parent"
         android:orientation="vertical">
 
-        <!--
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/Stat"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
--->
+            style="@style/titre"
+            android:text="@string/app_name" />
 
-        <Button
-            android:id="@+id/btversInscription"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Sinscription" />
-        <!--
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/Exercices"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-                    -->
-        <Button
-            android:id="@+id/btversExercice0"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Exercices" />
+            android:layout_height="match_parent"
+            android:layout_margin="70dp"
+            android:orientation="vertical">
 
-        <!--
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/Courses"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-            -->
+            <!--
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/Stat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    -->
 
-        <Button
-            android:id="@+id/btversCourse0"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Courses" />
+            <Button
+                android:id="@+id/btversInscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Sinscription" />
+            <!--
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/Exercices"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                        -->
+            <Button
+                android:id="@+id/btversExercice0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Exercices" />
+
+            <!--
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/Courses"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+                -->
+
+            <Button
+                android:id="@+id/btversCourse0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Courses" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
