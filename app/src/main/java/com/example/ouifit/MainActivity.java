@@ -22,7 +22,7 @@ import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.Menu.MenuStatActivity;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Variables
     DrawerLayout drawerLayout;
@@ -53,15 +53,23 @@ public class MainActivity extends AppCompatActivity {
         menu.findItem(R.id.nav_logout).setVisible(false);
         menu.findItem(R.id.nav_profil).setVisible(false);
 
+        /*utilisateur est connecté alors les boutons déconnexion et profil sont visible
+        if (){
+            menu.findItem(R.id.nav_logout).setVisible(true);
+            menu.findItem(R.id.nav_profil).setVisible(true);
+        }
+        */
+
 
         /*-----------------------Navigation View + Drawer-----------------------*/
+
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_ouverture, R.string.navigation_drawer_fermeture);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        //navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
+        navigationView.setNavigationItemSelectedListener(this);
 
-
+        navigationView.setCheckedItem(R.id.nav_home);
         /*------------------------BOUTON-----------------------*/
 
         //Bouton pour aller vers la page d'incription
@@ -119,17 +127,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public  void onBackPressed(){
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer((GravityCompat.START));
-        }
-        else{
+        } else {
             super.onBackPressed();
         }
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+
+            case R.id.nav_contact:
+                Intent i = new Intent(MainActivity.this, ContactActivity.class);
+                startActivity(i);
+                Toast.makeText(getApplicationContext(), "@strings/contact", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_home:
+                Intent j = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(j);
+                Toast.makeText(getApplicationContext(), "@strings/menu_principal", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
 
 
+/*
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem){
 
 
@@ -151,6 +177,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
 
     }
-
+*/
 
 }
