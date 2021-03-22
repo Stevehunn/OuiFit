@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btRetourEx"
+                style="@style/btRetour"
+                android:background="@drawable/image_retour" />
+
+            <TextView
+                style="@style/titreMenu"
+                android:text="@string/Exercices" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btexoAbdo"
+                    style="@style/btExercice"
+                    android:background="@drawable/image_abdos"
+                    android:text="@string/exoAbdo" />
+
+                <Button
+                    android:id="@+id/btexoBras"
+                    style="@style/btExercice"
+                    android:background="@drawable/image_bras"
+                    android:text="@string/exoBras" />
+
+                <Button
+                    android:id="@+id/btexoDos"
+                    style="@style/btExercice"
+                    android:background="@drawable/image_dos"
+                    android:text="@string/exoDos" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="5">
+
+                    <Button
+                        android:id="@+id/btversStat1"
+                        style="@style/btBasGauche"
+                        android:text="@string/Stat" />
+
+                    <Button
+                        android:id="@+id/btversCourse1"
+                        style="@style/btBasDroit"
+                        android:text="@string/Courses" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
