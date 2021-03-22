@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.ouifit.MainActivity;
 import com.example.ouifit.MainConnectActivity;
@@ -75,7 +76,33 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
             String MDP2Text = mdp2.getText().toString();
             //on vérifie si le MDP1 est le même que le MDP2
             boolean concordance = MDP1Text.equals(MDP2Text);
-            boolean test = nomText.isEmpty()||emailText.isEmpty()||MDP1Text.isEmpty()||MDP2Text.isEmpty();
+            boolean testNom = nomText.length()==0;
+            boolean testEmail = nomText.length()==0;
+            boolean testMDP1 = nomText.length()==0;
+            boolean testMDP2 = nomText.length()==0;
+            boolean test = testNom || testEmail||testMDP1||testMDP2;
+
+
+            if (testNom)
+            {
+                nom.setError("Vous devez saisir ce champ");
+            }
+            if (testEmail)
+            {
+                email.setError("Vous devez saisir ce champ");
+            }
+            if (testMDP1)
+             {
+                mdp1.setError("Vous devez saisir ce champ");
+             }
+            if (testMDP2)
+            {
+                mdp2.setError("Vous devez saisir ce champ");
+            }
+            if(!concordance)
+            {
+                mdp2.setError("Vos mots de passes doivent être identiques");
+            }
             //création d'un nouveau sportif
             if (concordance && !test)
             {
@@ -92,16 +119,16 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
                     mdp1.setText(null);
                     mdp2.setText(null);
                     //renvoies à la page d'acceuil connecté
-                    Intent i = new Intent(InscriptionActivity.this, MainConnectActivity.class);
+                    Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                     startActivity(i);
                     onPause();
                 }
                 catch (Exception e) {
                     e.printStackTrace();
                 }
-            } else {
-
             }
+
+
         }
     }
 

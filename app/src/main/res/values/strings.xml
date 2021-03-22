@@ -2,7 +2,7 @@
     <string name="app_name">OuiFit</string>
     <string name="menu_principal">Menu Principal</string>
     <string name="Exercices">Exercices</string>
-    <string name="Courses"> Courses </string>
+    <string name="Courses">"Courses "</string>
     <string name="Stat">Stats</string>
 
     <string name="strConnect">Connexion</string>

@@ -19,9 +19,9 @@ import android.widget.EditText;
  * create an instance of this fragment.
  */
 public class ConnectionFragment extends Fragment {
-    private EditText txtLogin;
-    private EditText txtPassword;
-    private Button btnConnect;
+     EditText txtLogin;
+     EditText txtPassword;
+     Button btnConnect;
 
     @Nullable
     @Override
