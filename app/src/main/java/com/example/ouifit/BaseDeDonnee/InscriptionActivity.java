@@ -80,13 +80,14 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
             String MDP2Text = mdp2.getText().toString();
             //on vérifie si le MDP1 est le même que le MDP2
             boolean concordance = MDP1Text.equals(MDP2Text);
+            //Champs de saisies sont vides
             boolean testNom = nomText.length()==0;
             boolean testEmail = nomText.length()==0;
             boolean testMDP1 = nomText.length()==0;
             boolean testMDP2 = nomText.length()==0;
             boolean test = testNom || testEmail||testMDP1||testMDP2;
 
-
+            //message d'erreur si les champs de saisies sont vides
             if (testNom)
             {
                 nom.setError("Vous devez saisir ce champ");
