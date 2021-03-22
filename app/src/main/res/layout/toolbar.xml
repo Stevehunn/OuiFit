@@ -4,8 +4,8 @@
     android:id="@+id/toolbar"
     android:layout_width="50dp"
     android:layout_height="50dp"
-    android:background="@drawable/image_menu"
     android:elevation="4dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
 
 </androidx.appcompat.widget.Toolbar>

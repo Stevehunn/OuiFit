@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">OuiFit</string>
+    <string name="menu_principal">Menu Principal</string>
     <string name="Exercices">Exercices</string>
     <string name="Courses"> Courses </string>
     <string name="Stat">Stats</string>
@@ -27,7 +28,7 @@
     <string name="boutonInscription">S\'inscrire</string>
     <string name="InscriptionTitre">Inscription</string>
 
-    <string name="ConnectionTitre">Se Connecter</string>
+    <string name="ConnexionTitre">Se Connecter</string>
     <string name="SeConnecterSincrire">S\'inscrire / Se Connecter</string>
     <string name="dejainscrit">Déjà inscrit ?</string>
     <string name="SeConnecter">Se Connecter</string>

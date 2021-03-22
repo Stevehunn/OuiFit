@@ -29,6 +29,7 @@ public class Exercice1BrasActivity extends Activity {
         screenView = findViewById(R.id.imageExo);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_bras1));
 
+        /*------------------------BOUTON-----------------------*/
 
         //Bouton pour aller vers l'exercice 2
         Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo2);
@@ -37,6 +38,7 @@ public class Exercice1BrasActivity extends Activity {
                 Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(Exercice1BrasActivity.this, Exercice2BrasActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -44,11 +46,18 @@ public class Exercice1BrasActivity extends Activity {
         Button buttonRetour = (Button) findViewById(R.id.btRetourEx1);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(Exercice1BrasActivity.this, MenuExercicesActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
+    }
+
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 
 }

@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConnectionFragment"
+    tools:context=".BaseDeDonnee.ConnectionFragment"
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btRetourConnection"
+        android:id="@+id/btRetourConnexion"
         android:layout_width="90px"
         android:layout_height="120px"
         android:background="@drawable/image_retour"
@@ -18,7 +18,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         style="@style/titreMenu"
         android:id="@+id/textView"
-        android:text="@string/ConnectionTitre"/>
+        android:text="@string/ConnexionTitre" />
 
 
     <LinearLayout

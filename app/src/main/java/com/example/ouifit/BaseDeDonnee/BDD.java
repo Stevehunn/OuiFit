@@ -1,4 +1,4 @@
-package com.example.ouifit;
+package com.example.ouifit.BaseDeDonnee;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

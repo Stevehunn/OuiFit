@@ -29,6 +29,8 @@ public class Exercice3DosActivity extends Activity {
         TextView titleview = (TextView) findViewById(R.id.titreExo3);
         titleview.setText(R.string.exoDos);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton pour aller vers le menu principal
         Button buttonSuivant = (Button) findViewById(R.id.btExoVersMenu);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +38,7 @@ public class Exercice3DosActivity extends Activity {
                 Log.i("Bouton exo 3", "execute");
                 Intent i = new Intent(Exercice3DosActivity.this, MenuExercicesActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -46,7 +49,14 @@ public class Exercice3DosActivity extends Activity {
                 Log.i("Bouton exo 3", "execute");
                 Intent i = new Intent(Exercice3DosActivity.this, Exercice2DosActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
+    }
+
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }

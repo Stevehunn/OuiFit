@@ -15,12 +15,15 @@ public class MenuCourseActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_course);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton de retour pour aller vers le menu principal
-        Button buttonRetour = (Button)findViewById(R.id.btRetourCourse);
+        Button buttonRetour = (Button) findViewById(R.id.btRetourCourse);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MenuCourseActivity.this, MainActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -30,6 +33,7 @@ public class MenuCourseActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(MenuCourseActivity.this, MenuStatActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -39,13 +43,17 @@ public class MenuCourseActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(MenuCourseActivity.this, MenuExercicesActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
 
+    }
 
-
-
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 
 }

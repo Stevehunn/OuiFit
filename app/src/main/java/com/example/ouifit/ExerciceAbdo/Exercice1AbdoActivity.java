@@ -29,6 +29,8 @@ public class Exercice1AbdoActivity extends Activity {
         TextView titleview = (TextView) findViewById(R.id.titreExo1);
         titleview.setText(R.string.exoAbdo);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton pour aller vers l'exercice 2
         Button buttonSuivant = (Button) findViewById(R.id.btExoVersExo2);
         buttonSuivant.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +38,7 @@ public class Exercice1AbdoActivity extends Activity {
                 Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(Exercice1AbdoActivity.this, Exercice2AbdoActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -43,11 +46,18 @@ public class Exercice1AbdoActivity extends Activity {
         Button buttonRetour = (Button) findViewById(R.id.btRetourEx1);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(Exercice1AbdoActivity.this, MenuExercicesActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
+    }
+
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 
 }

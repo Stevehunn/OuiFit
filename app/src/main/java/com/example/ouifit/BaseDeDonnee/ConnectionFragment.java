@@ -15,74 +15,38 @@ import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ConnectionFragment#//newInstance} factory method to
+ * Use the {@link ConnectionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class ConnectionFragment extends Fragment {
-    private EditText Login;
-    private EditText Password;
+    private EditText txtLogin;
+    private EditText txtPassword;
     private Button btnConnect;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstance) {
-        View rootView = inflater.inflate(R.layout.fragment_connection_activity, container, true);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstance){
+       View rootView = inflater.inflate(R.layout.fragment_connection_activity,container,true);
 
-        Login = (EditText) rootView.findViewById(R.id.login);
-        Password = (EditText) rootView.findViewById(R.id.password);
+       txtLogin =(EditText) rootView.findViewById(R.id.login);
+       txtPassword = (EditText) rootView.findViewById(R.id.password);
 
-        btnConnect = (Button) rootView.findViewById(R.id.btConnection);
-        btnConnect.setOnClickListener(btnConnectListener);
+       btnConnect = (Button) rootView.findViewById(R.id.btConnection);
+       btnConnect.setOnClickListener(btnConnectListener);
 
         return rootView;
     }
-
     private View.OnClickListener btnConnectListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 
-        }
-    };
-
-   /* @Override
-    public void onClick(View v) {
-
-        if (v.getId() == R.id.btnConnect) {
-            //on récupère tout les champs
-            String LoginText = login.getText().toString();
-            String passwordText = email.getText().toString();
-
-            //on vérifie si le MDP1 est le même que le MDP2
-            boolean concordance = MDP1Text.equals(MDP2Text);
-            //création d'un nouveau sportif
-            if (concordance) {
-                try {
-                    identifiant++;
-                    //ajout d'un nouvel utilisateur à la BDD
-                    BDD.openE();
-                    BDD.maBDD.execSQL("Insert Into " + BDD.TABLE_NAME + "( " + BDD.IDENTIFIANT + ", " + BDD.NOM_PERSONNE + ", " + BDD.EMAIL + ", " + BDD.PASSWORD + ") " +
-                            "VALUES ( '" + identifiant + "', '" + nomText + "', '" + emailText + "', '" + MDP1Text + "');");
-
-                    //remise à zéro des champs du formulaire
-                    nom.setText(null);
-                    email.setText(null);
-                    mdp1.setText(null);
-                    mdp2.setText(null);
-                    //renvoies à la page d'acceuil connecté
-                    Intent i = new Intent(InscriptionActivity.this, MainConnectActivity.class);
-                    startActivity(i);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
+            //TODO redirection vers MainActivity
+/*
             Intent i = new Intent(ConnectionFragment.this, MainActivity.class);
             startActivity(i);
-
+*/
         }
-    }*/
-
-}
+    };
 
 
 
@@ -166,3 +130,4 @@ public class ConnectionFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_connection_activity, container, false);
     }*/
+}

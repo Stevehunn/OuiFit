@@ -1,4 +1,4 @@
-package com.example.ouifit;
+package com.example.ouifit.BaseDeDonnee;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,10 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class InscriptionActivity extends Activity implements  View.OnClickListener{
+import com.example.ouifit.MainActivity;
+import com.example.ouifit.MainConnectActivity;
+import com.example.ouifit.R;
+
+public class InscriptionActivity extends Activity implements View.OnClickListener {
 
 
-    private int identifiant =0;
+    private int identifiant = 0;
     private EditText nom;
     private EditText email;
     private EditText mdp1;
@@ -23,11 +27,13 @@ public class InscriptionActivity extends Activity implements  View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inscription);
 
+        /*------------------------BOUTON-----------------------*/
+
         //Bouton de retour pour aller vers le menu Principal
-        Button buttonRetour = (Button)findViewById(R.id.btRetourInscription);
+        Button buttonRetour = (Button) findViewById(R.id.btRetourInscription);
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                 startActivity(i);
             }
@@ -88,18 +94,21 @@ public class InscriptionActivity extends Activity implements  View.OnClickListen
                     //renvoies à la page d'acceuil connecté
                     Intent i = new Intent(InscriptionActivity.this, MainConnectActivity.class);
                     startActivity(i);
+                    onPause();
                 }
                 catch (Exception e) {
                     e.printStackTrace();
                 }
-            }
-            else
-            {
+            } else {
 
             }
         }
     }
 
-
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 
 }
