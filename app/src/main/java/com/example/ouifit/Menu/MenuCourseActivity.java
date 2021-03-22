@@ -107,7 +107,7 @@ public class MenuCourseActivity extends Activity implements LocationListener {
 
         buttonStart.setVisibility(View.VISIBLE);
         buttonStop.setVisibility(View.INVISIBLE);
-        
+
 
     }
 
