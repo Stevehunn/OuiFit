@@ -128,7 +128,7 @@ public class MenuCourseActivity extends Activity implements LocationListener {
             @Override
             public void onMapReady(GoogleMap googleMap) {
                 MenuCourseActivity.this.googleMap = googleMap;
-                googleMap.moveCamera(CameraUpdateFactory.zoomBy(15));
+                googleMap.moveCamera(CameraUpdateFactory.zoomBy(20));
                 googleMap.setMyLocationEnabled(true);
                 googleMap.addMarker(new MarkerOptions().position(new LatLng(47.5860921, 1.3359475)).title("Blois"));
             }
