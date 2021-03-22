@@ -1,13 +1,11 @@
 package com.example.ouifit.BaseDeDonnee;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,28 +36,31 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
                 Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
 
         //Bouton pour aller vers la page connection
-        Button buttonVersConnection = (Button)findViewById(R.id.btConnection);
+        Button buttonVersConnection = (Button) findViewById(R.id.btVersConnexion);
         buttonVersConnection.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
-                if (v.getId()==R.id.btConnection)
-                {
-                    Intent i = new Intent(InscriptionActivity.this, ConnexionActivity.class);
-                    startActivity(i);
-                }
+                Log.i("Bouton exo 1", "execute");
+
+                //if (v.getId() == R.id.btConnection) {
+                Intent i = new Intent(InscriptionActivity.this, ConnexionActivity.class);
+                startActivity(i);
+                onPause();
+                //  }
             }
         });
 
+
         //Bouton pour aller vers la page MainConnectActivity
-        Button buttonVersMainConnect = (Button)findViewById(R.id.btId);
+        Button buttonVersMainConnect = (Button) findViewById(R.id.btId);
         buttonVersMainConnect.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("Bouton exo 1","execute");
+                Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                 startActivity(i);
             }
@@ -68,11 +69,9 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
     }
 
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
         //Si le clique est bien sur le bouton "S'inscrire"
-        if(view.getId() == R.id.btId)
-        {
+        if (view.getId() == R.id.btId) {
             //on récupère tout les champs
             String nomText = nom.getText().toString();
             String emailText = email.getText().toString();
@@ -81,40 +80,34 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
             //on vérifie si le MDP1 est le même que le MDP2
             boolean concordance = MDP1Text.equals(MDP2Text);
             //Champs de saisies sont vides
-            boolean testNom = nomText.length()==0;
-            boolean testEmail = nomText.length()==0;
-            boolean testMDP1 = nomText.length()==0;
-            boolean testMDP2 = nomText.length()==0;
-            boolean test = testNom || testEmail||testMDP1||testMDP2;
+            boolean testNom = nomText.length() == 0;
+            boolean testEmail = nomText.length() == 0;
+            boolean testMDP1 = nomText.length() == 0;
+            boolean testMDP2 = nomText.length() == 0;
+            boolean test = testNom || testEmail || testMDP1 || testMDP2;
 
             //message d'erreur si les champs de saisies sont vides
-            if (testNom)
-            {
+            if (testNom) {
                 nom.setError("Vous devez saisir ce champ");
             }
-            if (testEmail)
-            {
+            if (testEmail) {
                 email.setError("Vous devez saisir ce champ");
             }
-            if (testMDP1)
-             {
+            if (testMDP1) {
                 mdp1.setError("Vous devez saisir ce champ");
-             }
-            if (testMDP2)
-            {
+            }
+            if (testMDP2) {
                 mdp2.setError("Vous devez saisir ce champ");
             }
-            if(!concordance)
-            {
+            if (!concordance) {
                 mdp2.setError("Vos mots de passes doivent être identiques");
             }
             //création d'un nouveau sportif
-            if (concordance && !test)
-            {
+            if (concordance && !test) {
                 try {
                     identifiant++;
                     //ajout d'un nouvel utilisateur à la BDD
-                    BDD.maBDD.insertUser(nomText,emailText,MDP1Text);
+                    BDD.maBDD.insertUser(nomText, emailText, MDP1Text);
 
                     //remise à zéro des champs du formulaire
                     nom.setText(null);
@@ -126,8 +119,7 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
                     startActivity(i);
                     onPause();
 
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }

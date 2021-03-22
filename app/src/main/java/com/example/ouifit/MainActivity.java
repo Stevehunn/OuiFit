@@ -166,6 +166,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 onPause();
                 Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.nav_login:
+                Intent m = new Intent(MainActivity.this, ConnexionActivity.class);
+                startActivity(m);
+                onPause();
+                Toast.makeText(getApplicationContext(), "@strings/login", Toast.LENGTH_SHORT).show();
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
