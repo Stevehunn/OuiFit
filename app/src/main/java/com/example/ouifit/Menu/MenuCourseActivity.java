@@ -2,6 +2,7 @@ package com.example.ouifit.Menu;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -17,16 +18,28 @@ import androidx.core.app.ActivityCompat;
 
 import com.example.ouifit.MainActivity;
 import com.example.ouifit.R;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MenuCourseActivity extends Activity implements LocationListener {
 
     private static final int PERMS_CALL_ID = 1234;
     private LocationManager lm;
+    private MapFragment mapFragment;
+    private GoogleMap googleMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_course);
+
+        /*------------------------Fragment-----------------------*/
+        FragmentManager fragmentManager = getFragmentManager();
+        mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.map);
 
         /*------------------------BOUTON-----------------------*/
 
@@ -91,6 +104,7 @@ public class MenuCourseActivity extends Activity implements LocationListener {
         if (lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
             lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0, this);
         }
+        loadMap();
     }
 
     @Override
@@ -106,6 +120,19 @@ public class MenuCourseActivity extends Activity implements LocationListener {
         if (lm != null) {
             lm.removeUpdates(this);
         }
+    }
+
+    @SuppressWarnings("MissingPermission")
+    private void loadMap() {
+        mapFragment.getMapAsync(new OnMapReadyCallback() {
+            @Override
+            public void onMapReady(GoogleMap googleMap) {
+                MenuCourseActivity.this.googleMap = googleMap;
+                googleMap.moveCamera(CameraUpdateFactory.zoomBy(15));
+                googleMap.setMyLocationEnabled(true);
+                googleMap.addMarker(new MarkerOptions().position(new LatLng(47.5860921, 1.3359475)).title("Blois"));
+            }
+        });
     }
 
     @Override
@@ -128,6 +155,11 @@ public class MenuCourseActivity extends Activity implements LocationListener {
         double latitude = location.getLatitude();
         double longitude = location.getLongitude();
 
+
         Toast.makeText(this, "Location: " + latitude + "/" + longitude, Toast.LENGTH_LONG).show();
+        if (googleMap != null) {
+            LatLng googleLocation = new LatLng(latitude, longitude);
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(googleLocation));
+        }
     }
 }
