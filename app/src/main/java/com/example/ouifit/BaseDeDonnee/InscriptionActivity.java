@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.ouifit.MainActivity;
-import com.example.ouifit.MainConnectActivity;
 import com.example.ouifit.R;
 
 public class InscriptionActivity extends Activity implements View.OnClickListener {
@@ -56,7 +55,7 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
         buttonVersMainConnect.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("Bouton exo 1","execute");
-                Intent i = new Intent(InscriptionActivity.this, MainConnectActivity.class);
+                Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
