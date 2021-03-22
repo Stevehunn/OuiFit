@@ -29,4 +29,11 @@ public class ContactActivity extends Activity {
         });
 
     }
+
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
 }

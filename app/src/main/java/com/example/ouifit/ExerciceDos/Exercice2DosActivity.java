@@ -37,6 +37,7 @@ public class Exercice2DosActivity extends Activity {
                 Log.i("Bouton exo 2", "execute");
                 Intent i = new Intent(Exercice2DosActivity.this, Exercice3DosActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -47,8 +48,15 @@ public class Exercice2DosActivity extends Activity {
                 Log.i("Bouton exo 2", "execute");
                 Intent i = new Intent(Exercice2DosActivity.this, Exercice1DosActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
+    }
+
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }

@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ouifit">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OuiFit">
+        <!-- Sans Thème
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +24,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainConnectActivity"
-            android:label="@string/app_name">
-        </activity>
+        <activity
+            android:name=".MainConnectActivity"
+            android:label="@string/app_name"></activity>
 
         <!--Activité pour les Menus -->
         <activity
@@ -58,30 +61,29 @@
             android:label="@string/app_name"></activity>
         <activity
             android:name=".ExerciceAbdo.Exercice3AbdoActivity"
-            android:label="@string/app_name">
-        </activity>
+            android:label="@string/app_name"></activity>
 
         <!--Activité pour les exercices des Bras -->
-        <activity android:name=".ExerciceBras.Exercice1BrasActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity android:name=".ExerciceBras.Exercice2BrasActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity android:name=".ExerciceBras.Exercice3BrasActivity"
-            android:label="@string/app_name">
-        </activity>
+        <activity
+            android:name=".ExerciceBras.Exercice1BrasActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ExerciceBras.Exercice2BrasActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ExerciceBras.Exercice3BrasActivity"
+            android:label="@string/app_name"></activity>
 
         <!--Activité pour les exercices du Dos -->
-        <activity android:name=".ExerciceDos.Exercice1DosActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity android:name=".ExerciceDos.Exercice2DosActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity android:name=".ExerciceDos.Exercice3DosActivity"
-            android:label="@string/app_name">
-        </activity>
+        <activity
+            android:name=".ExerciceDos.Exercice1DosActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ExerciceDos.Exercice2DosActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ExerciceDos.Exercice3DosActivity"
+            android:label="@string/app_name"></activity>
 
 
     </application>

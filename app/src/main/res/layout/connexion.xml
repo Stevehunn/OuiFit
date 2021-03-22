@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btRetourConnection"
+        android:id="@+id/btRetourConnexion"
         android:layout_width="90px"
         android:layout_height="120px"
         android:background="@drawable/image_retour"

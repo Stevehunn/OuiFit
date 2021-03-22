@@ -45,6 +45,7 @@ public class MenuExercicesActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(MenuExercicesActivity.this, Exercice1BrasActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -54,6 +55,7 @@ public class MenuExercicesActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(MenuExercicesActivity.this, Exercice1DosActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -63,17 +65,25 @@ public class MenuExercicesActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(MenuExercicesActivity.this, MenuStatActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
         //Bouton pour aller vers le menu course
-        Button buttonCourse = (Button)findViewById(R.id.btversCourse1);
+        Button buttonCourse = (Button) findViewById(R.id.btversCourse1);
         buttonCourse.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MenuExercicesActivity.this, MenuCourseActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
+    }
+
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }

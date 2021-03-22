@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Log.i("MainActivity", "inscription");
                 Intent i = new Intent(MainActivity.this, InscriptionActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 buttonStat.setVisibility(View.VISIBLE);
                 Intent i = new Intent(MainActivity.this, ConnexionActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -104,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Log.i("MainActivity", "menu stat");
                 Intent i = new Intent(MainActivity.this, MenuStatActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -114,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Log.i("MainActivity", "menu exercice");
                 Intent i = new Intent(MainActivity.this, MenuExercicesActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -124,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Log.i("MainActivity", "menu course");
                 Intent i = new Intent(MainActivity.this, MenuCourseActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -146,16 +151,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_contact:
                 Intent j = new Intent(MainActivity.this, ContactActivity.class);
                 startActivity(j);
+                onPause();
                 Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_home:
                 Intent k = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(k);
+                onPause();
                 Toast.makeText(getApplicationContext(), "@strings/menu_principal", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_option:
                 Intent l = new Intent(MainActivity.this, OptionActivity.class);
                 startActivity(l);
+                onPause();
                 Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
         }
@@ -187,5 +195,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 */
+/*------------------------Cycle de vie de l'activité-----------------------*/
+protected void onPause() {
+    super.onPause();
+    finish();
+}
 
 }

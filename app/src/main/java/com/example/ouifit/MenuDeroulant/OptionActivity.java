@@ -11,4 +11,11 @@ public class OptionActivity extends Activity {
         setContentView(R.layout.option);
 
     }
+
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
 }

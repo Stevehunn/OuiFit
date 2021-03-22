@@ -94,18 +94,21 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
                     //renvoies à la page d'acceuil connecté
                     Intent i = new Intent(InscriptionActivity.this, MainConnectActivity.class);
                     startActivity(i);
+                    onPause();
                 }
                 catch (Exception e) {
                     e.printStackTrace();
                 }
-            }
-            else
-            {
+            } else {
 
             }
         }
     }
 
-
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 
 }
