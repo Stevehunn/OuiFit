@@ -25,7 +25,7 @@
 
     <string name="emailInscription">Email :</string>
     <string name="ConfirmPassword">Confirmez :</string>
-    <string name="boutonInscription">S\'inscrire</string>
+    <string name="boutonInscription">Valider</string>
     <string name="InscriptionTitre">Inscription</string>
 
     <string name="ConnexionTitre">Se Connecter</string>
@@ -58,6 +58,7 @@
     <string name="email1">nicolas.bitaillou@gmail.com </string>
     <string name="ou"> ou </string>
     <string name="email2">jonas.trochet37@gmail.com </string>
+    
 
     <!-- TODO: Remove or change this placeholder text -->
 
