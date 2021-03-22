@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.ouifit.MainActivity;
-import com.example.ouifit.MainConnectActivity;
 import com.example.ouifit.R;
 
 public class InscriptionActivity extends Activity implements View.OnClickListener {
@@ -55,7 +54,7 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
         buttonVersMainConnect.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("Bouton exo 1","execute");
-                Intent i = new Intent(InscriptionActivity.this, MainConnectActivity.class);
+                Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
@@ -92,7 +91,7 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
                     mdp1.setText(null);
                     mdp2.setText(null);
                     //renvoies à la page d'acceuil connecté
-                    Intent i = new Intent(InscriptionActivity.this, MainConnectActivity.class);
+                    Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                     startActivity(i);
                     onPause();
                 }

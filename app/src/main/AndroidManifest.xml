@@ -2,9 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ouifit">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permissio" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
 
     <application
         android:allowBackup="true"
@@ -13,7 +21,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OuiFit">
-        <!-- Sans Thème
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <!--
+         Sans Thème
         android:theme="@style/Theme.AppCompat.NoActionBar">
         -->
         <activity android:name=".MainActivity">
@@ -23,69 +44,55 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".MainConnectActivity"
-            android:label="@string/app_name"></activity>
-
-        <!--Activité pour les Menus -->
+        <!-- Activité pour les Menus -->
         <activity
             android:name=".Menu.MenuCourseActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".Menu.MenuExercicesActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".Menu.MenuStatActivity"
-            android:label="@string/app_name"></activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".BaseDeDonnee.InscriptionActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".BaseDeDonnee.ConnexionActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".MenuDeroulant.ContactActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".MenuDeroulant.OptionActivity"
-            android:label="@string/app_name"></activity>
-
-        <!--Activité pour les exercices des Abdominaux -->
+            android:label="@string/app_name" /> <!-- Activité pour les exercices des Abdominaux -->
         <activity
             android:name=".ExerciceAbdo.Exercice1AbdoActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".ExerciceAbdo.Exercice2AbdoActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".ExerciceAbdo.Exercice3AbdoActivity"
-            android:label="@string/app_name"></activity>
-
-        <!--Activité pour les exercices des Bras -->
+            android:label="@string/app_name" /> <!-- Activité pour les exercices des Bras -->
         <activity
             android:name=".ExerciceBras.Exercice1BrasActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".ExerciceBras.Exercice2BrasActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".ExerciceBras.Exercice3BrasActivity"
-            android:label="@string/app_name"></activity>
-
-        <!--Activité pour les exercices du Dos -->
+            android:label="@string/app_name" /> <!-- Activité pour les exercices du Dos -->
         <activity
             android:name=".ExerciceDos.Exercice1DosActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".ExerciceDos.Exercice2DosActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".ExerciceDos.Exercice3DosActivity"
-            android:label="@string/app_name"></activity>
-
-
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
