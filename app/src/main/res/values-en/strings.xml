@@ -37,6 +37,8 @@
     <string name="strNom">"Name : "</string>
     <string name="fini">Finish</string>
     <string name="valide">Validation</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
 
 
     <string name="communiquer">Communicate</string>

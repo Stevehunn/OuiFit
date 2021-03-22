@@ -27,6 +27,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MenuCourseActivity extends Activity implements LocationListener {
 
+    /*
+    ,OnMapReadyCallback,
+        GoogleMap.OnPolylineClickListener,
+        GoogleMap.OnPolygonClickListener
+     */
+
     private static final int PERMS_CALL_ID = 1234;
     private LocationManager lm;
     private MapFragment mapFragment;
@@ -42,6 +48,30 @@ public class MenuCourseActivity extends Activity implements LocationListener {
         mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.map);
 
         /*------------------------BOUTON-----------------------*/
+        Button buttonStart = (Button) findViewById(R.id.btStart);
+        Button buttonStop = (Button) findViewById(R.id.btStop);
+
+        //Bouton Start
+
+        buttonStart.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                buttonStart.setVisibility(View.INVISIBLE);
+                buttonStop.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+        //Bouton Stop
+
+        buttonStop.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                buttonStart.setVisibility(View.VISIBLE);
+                buttonStop.setVisibility(View.INVISIBLE);
+
+            }
+        });
 
         //Bouton de retour pour aller vers le menu principal
         Button buttonRetour = (Button) findViewById(R.id.btRetourCourse);
@@ -73,6 +103,11 @@ public class MenuCourseActivity extends Activity implements LocationListener {
             }
         });
 
+        /*------------------------Montrer ou cacher items-----------------------*/
+
+        buttonStart.setVisibility(View.VISIBLE);
+        buttonStop.setVisibility(View.INVISIBLE);
+        
 
     }
 
@@ -128,7 +163,7 @@ public class MenuCourseActivity extends Activity implements LocationListener {
             @Override
             public void onMapReady(GoogleMap googleMap) {
                 MenuCourseActivity.this.googleMap = googleMap;
-                googleMap.moveCamera(CameraUpdateFactory.zoomBy(20));
+                googleMap.moveCamera(CameraUpdateFactory.zoomBy(25));
                 googleMap.setMyLocationEnabled(true);
                 googleMap.addMarker(new MarkerOptions().position(new LatLng(47.5860921, 1.3359475)).title("Blois"));
             }
@@ -162,4 +197,46 @@ public class MenuCourseActivity extends Activity implements LocationListener {
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(googleLocation));
         }
     }
+
+    /**
+     * Manipulates the map when it's available.
+     * The API invokes this callback when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera.
+     * In this tutorial, we add polylines and polygons to represent routes and areas on the map.
+     */
+    /*
+    public void onMapReady(Location location,GoogleMap googleMap) {
+        double latitude = location.getLatitude();
+        double longitude = location.getLongitude();
+        // Add polylines to the map.
+        // Polylines are useful to show a route or some other connection between points.
+        Polyline polyline1 = googleMap.addPolyline(new PolylineOptions()
+                .clickable(true)
+                .add(
+                        new LatLng(latitude, longitude)
+
+                ));
+
+        // Set listeners for click events.
+        googleMap.setOnPolylineClickListener(this);
+        googleMap.setOnPolygonClickListener(this);
+    }
+
+
+    @Override
+    public void onPolygonClick(Polygon polygon) {
+
+    }
+
+    @Override
+    public void onPolylineClick(Polyline polyline) {
+
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+    }
+    */
+
 }
