@@ -9,10 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.ouifit.MainActivity;
 import com.example.ouifit.R;
 
-public class InscriptionActivity extends Activity implements View.OnClickListener {
+public class InscriptionActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private int identifiant = 0;
@@ -39,17 +41,20 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
             }
         });
 
-/*
+
         //Bouton pour aller vers la page connection
         Button buttonVersConnection = (Button)findViewById(R.id.btConnection);
         buttonVersConnection.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("Bouton exo 1","execute");
-                Intent i = new Intent(InscriptionActivity.this, ConnectionActivity.class);
-                startActivity(i);
+                if (v.getId()==R.id.btConnection)
+                {
+                    Intent i = new Intent(InscriptionActivity.this, ConnexionActivity.class);
+                    startActivity(i);
+                }
             }
         });
-*/
+
         //Bouton pour aller vers la page MainConnectActivity
         Button buttonVersMainConnect = (Button)findViewById(R.id.btId);
         buttonVersMainConnect.setOnClickListener(new View.OnClickListener() {
@@ -108,9 +113,7 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
                 try {
                     identifiant++;
                     //ajout d'un nouvel utilisateur à la BDD
-                    BDD.openE();
-                    BDD.maBDD.execSQL("Insert Into " + BDD.TABLE_NAME + "( " + BDD.IDENTIFIANT +", "+ BDD.NOM_PERSONNE +", "+ BDD.EMAIL +", "+ BDD.PASSWORD + ") " +
-                            "VALUES ( '" + identifiant +"', '"+ nomText  +"', '"+ emailText +"', '"+  MDP1Text +"');" );
+                    BDD.maBDD.insertUser(nomText,emailText,MDP1Text);
 
                     //remise à zéro des champs du formulaire
                     nom.setText(null);
@@ -121,6 +124,7 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
                     Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                     startActivity(i);
                     onPause();
+
                 }
                 catch (Exception e) {
                     e.printStackTrace();

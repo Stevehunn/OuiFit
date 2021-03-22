@@ -2,19 +2,38 @@ package com.example.ouifit.BaseDeDonnee;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ouifit.MainActivity;
 import com.example.ouifit.R;
 
-public class ConnexionActivity extends Activity {
+public class ConnexionActivity extends AppCompatActivity implements View.OnClickListener{
+    EditText login;
+    EditText password;
+    Button btnConnect;
+    String NOM_PERSONNE = "Prénom";
+    String TABLE_NAME = "Inscrit";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.connexion);
+
+        login = (EditText) findViewById(R.id.login);
+        password = (EditText) findViewById(R.id.password);
+        BDD.maBDD= new BDD(this);
+
+
+
 
         /*------------------------BOUTON-----------------------*/
 
@@ -29,11 +48,52 @@ public class ConnexionActivity extends Activity {
             }
         });
 
+
+
+    }
+
+    public void onClick (View view)
+    {
+        btnConnect = (Button) findViewById(R.id.btConnection);
+        if(view.getId() == R.id.btConnection)
+        {
+            String txtLogin = login.getText().toString();
+            String txtPassword = password.getText().toString();
+            test(txtLogin,txtPassword);
+            String strSql = "Select " + BDD.NOM_PERSONNE + ", "+ BDD.PASSWORD + " from " + BDD.TABLE_NAME +
+                    " where " + BDD.NOM_PERSONNE + " = '" + txtLogin +
+                    "' AND " + BDD.PASSWORD + " = '" + txtPassword + "';";
+            //if()
+
+
+        }
     }
 
     /*------------------------Cycle de vie de l'activité-----------------------*/
     protected void onPause() {
         super.onPause();
         finish();
+    }
+
+    //test pour voir si les champs sont remplis
+    public boolean test (String txtLogin, String txtPassword)
+    {
+        int etapes = 2;
+        boolean res =false;
+       if (txtLogin.length()==0)
+       {
+           login.setError("Vous devez saisir ce champ");
+           etapes--;
+       }
+
+       if (txtPassword.length()==0)
+       {
+           password.setError("Vous devez saisir ce champ");
+           etapes--;
+       }
+       if (etapes==2)
+           return true;
+       else
+           return false;
     }
 }

@@ -3,13 +3,14 @@ package com.example.ouifit.BaseDeDonnee;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
 public class BDD extends SQLiteOpenHelper {
     private static final String BDD_NOM = "InscritEtStats";
-    public static SQLiteDatabase maBDD;
-    private int version;
+    public static BDD maBDD;
+    public static final int DATABASE_VERSION =1;
 
     //le nom de la table
     public static final String TABLE_NAME = "Inscrit";
@@ -32,45 +33,49 @@ public class BDD extends SQLiteOpenHelper {
     private static final int CALORIE_PERDU_ID = 7;
 
 //requête de création de la BDD
-    private static final String REQUETE_CREA_TABLE1 = "CREATE TABLE " + TABLE_NAME + " ( " + IDENTIFIANT +
-            " integer primary key autoincrement, " + NOM_PERSONNE + " text not null, " + EMAIL + "text not null, " + PASSWORD + " text not null, "
-            + POIDS + " integer, " + TAILLE + " integer, " + TPS_ENTRAINEMENT + " integer , " + CALORIE_PERDU + " integer );";
+    private static final String REQUETE_CREA_TABLE1 = "CREATE TABLE " + TABLE_NAME + " ( "
+        + IDENTIFIANT + " integer primary key autoincrement, "
+        + NOM_PERSONNE + " text not null, "
+        + EMAIL + "text not null, "
+        + PASSWORD + " text not null, "
+        + POIDS + " integer, "
+        + TAILLE + " integer, "
+        + TPS_ENTRAINEMENT + " integer , "
+        + CALORIE_PERDU + " integer );";
 
     public static BDD baseHelper;
 
-    public BDD(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version)
+    public BDD(Context context)
     {
-        super(context, name, factory, version);
-        baseHelper = new BDD(context, BDD_NOM ,null, version);
+        super(context, BDD_NOM, null, DATABASE_VERSION);
+        baseHelper = new BDD(context);
     }
+
 
     //Création d'une BDD avec une table
     @Override
     public void onCreate(SQLiteDatabase db)
     {
         db.execSQL(REQUETE_CREA_TABLE1);
-        version++;
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
         db.execSQL("DROP table if exists " + TABLE_NAME + ";");
-        onCreate(db);
-        version=newVersion;
+        this.onCreate(db);
+
     }
 
-    //ouverture de la bdd en mode écriture
-    public static SQLiteDatabase openE()
+    public void insertUser(String login, String email, String password)
     {
-        maBDD = baseHelper.getWritableDatabase();
-        return maBDD;
-    }
-
-    //ouverture de la BDD en mode lecture seule
-    public static SQLiteDatabase openL()
-    {
-        maBDD = baseHelper.getReadableDatabase();
-        return maBDD;
+        String strSQL = "Insert Into " + TABLE_NAME + " ( "
+                + NOM_PERSONNE + ", "
+                + EMAIL + ", "
+                + PASSWORD + ", VALUES ('"
+                + login + "', '"
+                + email + "',' '"
+                + password +"')";
+        this.getWritableDatabase().execSQL(strSQL);
     }
 }
