@@ -28,9 +28,6 @@ public class ConnexionActivity extends Activity {
         password = (EditText) findViewById(R.id.password);
         BDD.maBDD = new BDD(this);
 
-
-
-
         /*------------------------BOUTON-----------------------*/
 
         //Bouton de retour pour aller vers le menu Exercice
