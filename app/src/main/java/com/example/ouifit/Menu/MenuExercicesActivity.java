@@ -27,6 +27,7 @@ public class MenuExercicesActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(MenuExercicesActivity.this, MainActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 
@@ -36,6 +37,7 @@ public class MenuExercicesActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(MenuExercicesActivity.this, Exercice1AbdoActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 

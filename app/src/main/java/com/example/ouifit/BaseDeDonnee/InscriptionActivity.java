@@ -63,6 +63,7 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
                 Log.i("Bouton exo 1", "execute");
                 Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                 startActivity(i);
+                onPause();
             }
         });
 

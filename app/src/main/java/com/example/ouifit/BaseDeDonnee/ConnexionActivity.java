@@ -80,6 +80,7 @@ public class ConnexionActivity extends Activity {
                             Intent i = new Intent(ConnexionActivity.this, InscriptionActivity.class);
                             Toast.makeText(ConnexionActivity.this, "Vous allez être redirigé vers la page d'inscription", Toast.LENGTH_LONG).show();
                             startActivity(i);
+                            onPause();
 
                         }
                     } else {

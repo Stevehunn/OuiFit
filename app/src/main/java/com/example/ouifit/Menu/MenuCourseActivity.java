@@ -48,11 +48,11 @@ public class MenuCourseActivity extends Activity implements LocationListener {
         mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.map);
 
         /*------------------------BOUTON-----------------------*/
+
         Button buttonStart = (Button) findViewById(R.id.btStart);
         Button buttonStop = (Button) findViewById(R.id.btStop);
 
         //Bouton Start
-
         buttonStart.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -63,7 +63,6 @@ public class MenuCourseActivity extends Activity implements LocationListener {
         });
 
         //Bouton Stop
-
         buttonStop.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
