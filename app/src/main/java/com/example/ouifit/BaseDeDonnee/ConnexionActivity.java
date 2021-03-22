@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -59,13 +60,25 @@ public class ConnexionActivity extends AppCompatActivity implements View.OnClick
         {
             String txtLogin = login.getText().toString();
             String txtPassword = password.getText().toString();
-            test(txtLogin,txtPassword);
             String strSql = "Select " + BDD.NOM_PERSONNE + ", "+ BDD.PASSWORD + " from " + BDD.TABLE_NAME +
                     " where " + BDD.NOM_PERSONNE + " = '" + txtLogin +
                     "' AND " + BDD.PASSWORD + " = '" + txtPassword + "';";
-            //if()
-
-
+            Cursor cursor;
+            if(test(txtLogin,txtPassword) == true)
+            {
+                cursor = BDD.maBDD.getReadableDatabase().rawQuery(strSql,null);
+                cursor.moveToFirst();
+                if(!cursor.isAfterLast())
+                {
+                    Intent i = new Intent (ConnexionActivity.this, MainActivity.class);
+                    startActivity(i);
+                } else
+                {
+                    Intent i = new Intent ( ConnexionActivity.this, InscriptionActivity.class);
+                    Toast.makeText(ConnexionActivity.this, "Vous allez être redirigé vers la page d'inscription", Toast.LENGTH_LONG);
+                    startActivity(i);
+                }
+            }
         }
     }
 
