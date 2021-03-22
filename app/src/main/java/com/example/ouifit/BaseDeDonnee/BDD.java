@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 public class BDD extends SQLiteOpenHelper {
     private static final String BDD_NOM = "InscritEtStats";
     public static BDD maBDD;
-    public static final int DATABASE_VERSION =1;
+    public static final int DATABASE_VERSION =2;
 
     //le nom de la table
     public static final String TABLE_NAME = "Inscrit";
@@ -39,9 +39,9 @@ public class BDD extends SQLiteOpenHelper {
         + EMAIL + "text not null, "
         + PASSWORD + " text not null, "
         + POIDS + " integer, "
-        + TAILLE + " integer, "
-        + TPS_ENTRAINEMENT + " integer , "
-        + CALORIE_PERDU + " integer );";
+        + TAILLE + " integer,"
+        + TPS_ENTRAINEMENT + " integer, "
+        + CALORIE_PERDU + " integer);";
 
     public static BDD baseHelper;
 
@@ -57,25 +57,31 @@ public class BDD extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db)
     {
         db.execSQL(REQUETE_CREA_TABLE1);
+        Log.i("DATABASE", "onCreate invoquée");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
         db.execSQL("DROP table if exists " + TABLE_NAME + ";");
+        Log.i("DATABASE", "onUpgrade invoquée");
         this.onCreate(db);
 
     }
-
+    //méthode pour ajouter un nouvel utilisateur à la BDD
     public void insertUser(String login, String email, String password)
     {
         String strSQL = "Insert Into " + TABLE_NAME + " ( "
                 + NOM_PERSONNE + ", "
                 + EMAIL + ", "
-                + PASSWORD + ", VALUES ('"
+                + PASSWORD + ") VALUES ('"
                 + login + "', '"
                 + email + "',' '"
                 + password +"')";
+        //en écriture
         this.getWritableDatabase().execSQL(strSQL);
+        this.close();
+        Log.i("DATABASE", "insertUser invoquée");
+
     }
 }
