@@ -17,8 +17,6 @@ public class ConnexionActivity extends Activity {
     EditText login;
     EditText password;
     Button btnConnect;
-    String NOM_PERSONNE = "Prénom";
-    String TABLE_NAME = "Inscrit";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,11 +55,13 @@ public class ConnexionActivity extends Activity {
                     Cursor cursor;
                     Log.i("CONNECTION", "onUpgrade invoquée");
 
-                    //on effectue les tests primaires
+                    //si les test primaires sont correct
                     if (test(txtLogin, txtPassword)) {
                         //on pose la requête
                         cursor = BDD.maBDD.getReadableDatabase().rawQuery(strSql, null);
                         cursor.moveToFirst();
+
+
                         //Si la requête renvoit quelque chose => l'utilisateur est inscrit, et son mdp et son login sont les bons
                         if (!cursor.isAfterLast()) {
                             //remise des champs du formulaire à leur état d'origine
@@ -82,8 +82,6 @@ public class ConnexionActivity extends Activity {
                         }
                     } else {
                         //remise des champs du formulaire à leur état d'origine
-                        login.setText(null);
-                        password.setText(null);
                         Toast.makeText(getApplicationContext(), "Vous devez remplir tout les champs de saisies.", Toast.LENGTH_SHORT).show();
 
                     }
@@ -164,7 +162,7 @@ public class ConnexionActivity extends Activity {
         }
 
         if (txtPassword.length() == 0) {
-            password.setError("Vous devez saisir ce champ");
+            password.setError("");
             etapes--;
         }
         if (etapes == 2)

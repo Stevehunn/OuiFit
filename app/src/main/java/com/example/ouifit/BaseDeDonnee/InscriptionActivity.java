@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,20 +16,41 @@ import com.example.ouifit.R;
 public class InscriptionActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private int identifiant = 0;
     private EditText nom;
     private EditText email;
     private EditText mdp1;
     private EditText mdp2;
     private Button btId;
+    private BDD myDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inscription);
 
-        BDD.maBDD = new BDD(this);
-        BDD.maBDD.insertUser("Jonas", "jonas.trochet37@gmail.com" , "2323jojo");
+        btId = (Button) findViewById(R.id.btId);
+        btId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nom = (EditText) findViewById(R.id.strIdInscription);
+                email = (EditText) findViewById(R.id.strMailInscription) ;
+                mdp1 = (EditText) findViewById(R.id.strMdp1);
+                mdp2 = (EditText) findViewById(R.id.strMdp2);
+
+                String nomText = nom.getText().toString();
+                String emailText = email.getText().toString();
+                String mdp1Text = mdp1.getText().toString();
+                String mdp2Text = mdp2.getText().toString();
+
+                myDatabase= new BDD(getApplicationContext());
+                if (test(nomText,emailText,mdp1Text,mdp2Text))
+                {
+                    myDatabase.insertUser(nomText, emailText , mdp1Text);
+                    Log.i("DATABASE" , "User create");
+                }
+            }
+        });
+
 
         /*------------------------BOUTON-----------------------*/
 
@@ -109,7 +131,6 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
             //création d'un nouveau sportif
             if (concordance && !test) {
                 try {
-                    identifiant++;
                     //ajout d'un nouvel utilisateur à la BDD
                     BDD.maBDD.insertUser(nomText, emailText, MDP1Text);
 
@@ -138,4 +159,37 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
         finish();
     }
 
+    public boolean test(String txtLogin, String textEmail, String textMdp1, String textMdp2)
+    {
+        if (txtLogin.length() != 0 && textEmail.length() != 0 && textMdp1.length() != 0 && textMdp2.length() != 0 && textMdp1.equals(textMdp2))
+        {
+            return true;
+        }
+        else
+        {
+            if (txtLogin.length() == 0)
+            {
+            nom.setError("Vous devez saisir ce champ");
+
+            }
+            if (textEmail.length() == 0)
+            {
+                email.setError("Vous devez saisir ce champ");
+            }
+            if (textMdp1.length() == 0 )
+            {
+                mdp1.setError("Vous devez saisir ce champ");
+            }
+            if (textMdp2.length() == 0)
+            {
+                mdp2.setError("Vous devez saisir ce champ");
+            }
+            if (!textMdp1.equals(textMdp2))
+            {
+                Toast.makeText(this,"Vos mots de passes doivent être identiques", Toast.LENGTH_LONG);
+            }
+            return false;
+       }
+
+    }
 }
