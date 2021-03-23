@@ -26,8 +26,17 @@ public class Exercice3DosActivity extends Activity {
         screenView = findViewById(R.id.imageExo);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_dos3));
 
+        /*------------------------Changement des TexView en fonction des pages chargés-----------------------*/
+
         TextView titleview = (TextView) findViewById(R.id.titreExo3);
         titleview.setText(R.string.exoDos);
+
+        TextView questionview = (TextView) findViewById(R.id.question3);
+        questionview.setText(R.string.temps);
+
+        TextView reponseview = (TextView) findViewById(R.id.reponse3);
+        reponseview.setText(R.string.temps1);
+
 
         /*------------------------BOUTON-----------------------*/
 

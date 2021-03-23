@@ -19,9 +19,10 @@
 
     <string name="temps">Time : </string>
     <string name="repetition">Repetition : </string>
+    <string name="repetition1"> 10 times </string>
+    <string name="repetition2"> 20 times </string>
     <string name="temps1"> 30s</string>
-    <string name="temps2"> 2x30s</string>
-    <string name="temps3"> 60s</string>
+    <string name="temps2"> 60s</string>
 
     <string name="emailInscription">Email :</string>
     <string name="ConfirmPassword">Confirmation :</string>
