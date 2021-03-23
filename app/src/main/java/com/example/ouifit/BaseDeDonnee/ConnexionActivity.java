@@ -75,7 +75,7 @@ public class ConnexionActivity extends Activity {
                             login.setText(null);
                             password.setText(null);
                             Intent i = new Intent(ConnexionActivity.this, InscriptionActivity.class);
-                            Toast.makeText(ConnexionActivity.this, "Vous allez être redirigé vers la page d'inscription", Toast.LENGTH_LONG).show();
+                            Toast.makeText(ConnexionActivity.this, "Vous avez été redirigé vers la page d'inscription", Toast.LENGTH_LONG).show();
                             startActivity(i);
                             onPause();
 

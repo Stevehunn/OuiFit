@@ -78,10 +78,11 @@ public class BDD extends SQLiteOpenHelper {
                 + PASSWORD + ") VALUES ('"
                 + login + "', '"
                 + email + "', '"
-                + password +"')";
+                + password +"');";
         //en écriture
         this.getWritableDatabase().execSQL(strSQL);
         Log.i("DATABASE", "insertUser invoquée");
+        this.close();
 
     }
 }
