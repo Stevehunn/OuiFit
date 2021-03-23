@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    /*------------------------Methode pour le Menu-----------------------*/
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -182,34 +183,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-
-/*
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem){
-
-
-        switch (menuItem.getItemId()) {
-
-            case R.id.nav_contact:
-                Intent i = new Intent(MainActivity.this, ContactActivity.class);
-                startActivity(i);
-                Toast.makeText(getApplicationContext(), "@strings/contact", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_home:
-                Intent j = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(j);
-                Toast.makeText(getApplicationContext(), "@strings/menu_principal", Toast.LENGTH_SHORT).show();
-                break;
-
-        }
-
-        return true;
-
+    /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
-*/
-/*------------------------Cycle de vie de l'activité-----------------------*/
-protected void onPause() {
-    super.onPause();
-    finish();
-}
 
 }

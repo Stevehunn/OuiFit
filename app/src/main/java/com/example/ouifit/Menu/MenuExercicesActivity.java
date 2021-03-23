@@ -133,7 +133,7 @@ public class MenuExercicesActivity extends Activity implements NavigationView.On
         finish();
     }
 
-
+    /*------------------------Methode pour le Menu-----------------------*/
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {

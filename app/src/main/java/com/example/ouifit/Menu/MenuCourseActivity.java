@@ -237,46 +237,7 @@ public class MenuCourseActivity extends Activity implements LocationListener, Na
         }
     }
 
-    /**
-     * Manipulates the map when it's available.
-     * The API invokes this callback when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera.
-     * In this tutorial, we add polylines and polygons to represent routes and areas on the map.
-     */
-    /*
-    public void onMapReady(Location location,GoogleMap googleMap) {
-        double latitude = location.getLatitude();
-        double longitude = location.getLongitude();
-        // Add polylines to the map.
-        // Polylines are useful to show a route or some other connection between points.
-        Polyline polyline1 = googleMap.addPolyline(new PolylineOptions()
-                .clickable(true)
-                .add(
-                        new LatLng(latitude, longitude)
-
-                ));
-
-        // Set listeners for click events.
-        googleMap.setOnPolylineClickListener(this);
-        googleMap.setOnPolygonClickListener(this);
-    }
-
-
-    @Override
-    public void onPolygonClick(Polygon polygon) {
-
-    }
-
-    @Override
-    public void onPolylineClick(Polyline polyline) {
-
-    }
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-
-    }
-    */
+    /*------------------------Methode pour le Menu-----------------------*/
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -318,6 +279,48 @@ public class MenuCourseActivity extends Activity implements LocationListener, Na
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+    /**
+     * Manipulates the map when it's available.
+     * The API invokes this callback when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera.
+     * In this tutorial, we add polylines and polygons to represent routes and areas on the map.
+     */
+    /*
+    public void onMapReady(Location location,GoogleMap googleMap) {
+        double latitude = location.getLatitude();
+        double longitude = location.getLongitude();
+        // Add polylines to the map.
+        // Polylines are useful to show a route or some other connection between points.
+        Polyline polyline1 = googleMap.addPolyline(new PolylineOptions()
+                .clickable(true)
+                .add(
+                        new LatLng(latitude, longitude)
+
+                ));
+
+        // Set listeners for click events.
+        googleMap.setOnPolylineClickListener(this);
+        googleMap.setOnPolygonClickListener(this);
+    }
+
+
+    @Override
+    public void onPolygonClick(Polygon polygon) {
+
+    }
+
+    @Override
+    public void onPolylineClick(Polyline polyline) {
+
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+    }
+    */
 
 
 }

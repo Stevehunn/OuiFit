@@ -63,6 +63,20 @@
     <string name="email2">jonas.trochet37@gmail.com </string>
 
 
+    <string name="mois1">Janvier </string>
+    <string name="mois2">Février</string>
+    <string name="mois3">Mars</string>
+    <string name="mois4">Avril </string>
+    <string name="mois5">Mai </string>
+    <string name="mois6">Juin </string>
+    <string name="mois7">Juillet </string>
+    <string name="mois8">Aout </string>
+    <string name="mois9">Septembre</string>
+    <string name="mois10">Octobre </string>
+    <string name="mois11">Novembre</string>
+    <string name="mois12">Décembre </string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>

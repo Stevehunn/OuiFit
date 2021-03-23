@@ -33,7 +33,14 @@ public class MenuStatActivity extends Activity implements NavigationView.OnNavig
     Toolbar toolbar;
     MenuItem menuItem;
     BDD ourBDD;
-
+    /*
+    BarChart barChart;
+    int poids =100;
+    int poids2 =97;
+    int poids3 =94;
+    int poids4 =90;
+    int poids5 =80;
+*/
 
     @SuppressLint("ResourceType")
     @Override
@@ -45,7 +52,42 @@ public class MenuStatActivity extends Activity implements NavigationView.OnNavig
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
         menuItem = findViewById(R.menu.menu_option);
-        
+        //barChart =(BarChart) findViewById(R.id.bargraph);
+
+        /*------------------------Graph-----------------------
+        ArrayList<BarEntry> barEntries = new ArrayList<>();
+        barEntries.add(new BarEntry(poids ,0));
+        barEntries.add(new BarEntry(poids2 ,1));
+        barEntries.add(new BarEntry(poids3 ,3));
+        barEntries.add(new BarEntry(poids4 ,4));
+        barEntries.add(new BarEntry(poids5 ,5));
+        BarDataSet barDataSet =new BarDataSet(barEntries,"Dates");
+
+        ArrayList<String> theDates =new ArrayList<>();
+        theDates.add("Janvier");
+        theDates.add("Février");
+        theDates.add("Mars");
+        theDates.add("Avril");
+        theDates.add("Mai");
+        theDates.add("Juin");
+
+
+        Dates.add("Juillet");
+        Dates.add("Aout");
+        Dates.add("Septembre");
+        Dates.add("Octobre");
+        Dates.add("Novembre");
+        Dates.add("Décembre");
+
+
+        BarData theData = new BarData((IBarDataSet) theDates,barDataSet);
+        barChart.setData(theData);
+
+        barChart.setTouchEnabled(true);
+        barChart.setDragEnabled(true);
+        barChart.setScaleEnabled(true);
+*/
+
         /*------------------------Montrer ou cacher items-----------------------*/
         Menu menu = navigationView.getMenu();
         menu.findItem(R.id.nav_logout).setVisible(false);
@@ -99,7 +141,7 @@ public class MenuStatActivity extends Activity implements NavigationView.OnNavig
         finish();
     }
 
-
+    /*------------------------Methode pour le Menu-----------------------*/
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {

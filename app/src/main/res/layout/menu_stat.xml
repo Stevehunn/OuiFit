@@ -38,44 +38,43 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            style="@style/titreMenuBlanc"
+            android:text="@string/Stat" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <TextView
-                style="@style/titreMenuBlanc"
-                android:text="@string/Stat" />
-
-            <LinearLayout
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bargraph"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="500dp">
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:orientation="horizontal"
-                android:weightSum="5">
-
-                <Button
-                    android:id="@+id/btversExercice3"
-                    style="@style/btBasGauche"
-                    android:text="@string/Exercices" />
-
-                <Button
-                    android:id="@+id/btversCourse3"
-                    style="@style/btBasDroit"
-                    android:text="@string/Courses" />
-
-
-            </LinearLayout>
+            </com.github.mikephil.charting.charts.BarChart>
 
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/btversExercice3"
+                style="@style/btBasGauche"
+                android:text="@string/Exercices" />
+
+            <Button
+                android:id="@+id/btversCourse3"
+                style="@style/btBasDroit"
+                android:text="@string/Courses" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 
