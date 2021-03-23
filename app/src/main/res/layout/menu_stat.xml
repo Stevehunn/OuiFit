@@ -44,7 +44,7 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/titreMenu"
+                style="@style/titreMenuBlanc"
                 android:text="@string/Stat" />
 
             <LinearLayout
