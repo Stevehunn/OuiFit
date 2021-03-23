@@ -27,6 +27,9 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inscription);
 
+        BDD.maBDD = new BDD(this);
+        BDD.maBDD.insertUser("Jonas", "jonas.trochet37@gmail.com" , "2323jojo");
+
         /*------------------------BOUTON-----------------------*/
 
         //Bouton de retour pour aller vers le menu Principal

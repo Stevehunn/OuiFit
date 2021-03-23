@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 public class BDD extends SQLiteOpenHelper {
     private static final String BDD_NOM = "InscritEtStats";
     public static BDD maBDD;
-    public static final int DATABASE_VERSION =2;
+    public static final int DATABASE_VERSION =3;
 
     //le nom de la table
     public static final String TABLE_NAME = "Inscrit";
@@ -48,7 +48,7 @@ public class BDD extends SQLiteOpenHelper {
     public BDD(Context context)
     {
         super(context, BDD_NOM, null, DATABASE_VERSION);
-        baseHelper = new BDD(context);
+        //baseHelper = new BDD(context);
     }
 
 
@@ -59,7 +59,7 @@ public class BDD extends SQLiteOpenHelper {
         db.execSQL(REQUETE_CREA_TABLE1);
         Log.i("DATABASE", "onCreate invoquée");
     }
-
+//Amélioration d'une BDD
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {

@@ -2,6 +2,7 @@ package com.example.ouifit;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -17,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.ouifit.BaseDeDonnee.BDD;
 import com.example.ouifit.BaseDeDonnee.ConnexionActivity;
 import com.example.ouifit.BaseDeDonnee.InscriptionActivity;
 import com.example.ouifit.Menu.MenuCourseActivity;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
     MenuItem menuItem;
+    BDD ourBDD;
 
 
     @SuppressLint("ResourceType")
@@ -52,10 +55,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
 
 
+
         /*------------------------Montrer ou cacher items-----------------------*/
         Menu menu = navigationView.getMenu();
         menu.findItem(R.id.nav_logout).setVisible(false);
         menu.findItem(R.id.nav_profil).setVisible(false);
+
 
         /*utilisateur est connecté alors les boutons déconnexion et profil sont visible
         if (){
