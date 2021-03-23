@@ -25,8 +25,16 @@ public class Exercice2AbdoActivity extends Activity {
         screenView = findViewById(R.id.imageExo);
         screenView.setBackground(ContextCompat.getDrawable(getApplicationContext(), image_abdo2));
 
+        /*------------------------Changement des TexView en fonction des pages chargés-----------------------*/
+
         TextView titleview = (TextView) findViewById(R.id.titreExo2);
         titleview.setText(R.string.exoAbdo);
+
+        TextView questionview = (TextView) findViewById(R.id.question2);
+        questionview.setText(R.string.repetition);
+
+        TextView reponseview = (TextView) findViewById(R.id.reponse2);
+        reponseview.setText(R.string.repetition2);
 
         /*------------------------BOUTON-----------------------*/
 
