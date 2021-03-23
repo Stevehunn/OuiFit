@@ -5,7 +5,7 @@
     android:background="@drawable/image_header"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="10dp">
 
     <TextView
         style="@style/titreMenu"

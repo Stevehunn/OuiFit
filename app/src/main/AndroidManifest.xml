@@ -32,10 +32,7 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
 
-        <!--
-         Sans Thème
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        -->
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
