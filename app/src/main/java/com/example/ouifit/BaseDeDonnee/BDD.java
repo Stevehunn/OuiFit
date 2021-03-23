@@ -1,6 +1,7 @@
 package com.example.ouifit.BaseDeDonnee;
 
 import android.content.Context;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -8,9 +9,9 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 public class BDD extends SQLiteOpenHelper {
-    private static final String BDD_NOM = "InscritEtStats";
+    private static final String BDD_NOM = "InscritEtStats.db";
     public static BDD maBDD;
-    public static final int DATABASE_VERSION =3;
+    public static final int DATABASE_VERSION =2;
 
     //le nom de la table
     public static final String TABLE_NAME = "Inscrit";
@@ -19,7 +20,7 @@ public class BDD extends SQLiteOpenHelper {
     private static final int IDENTIFIANT_ID = 0;
     public static final String NOM_PERSONNE = "Prénom";
     private static final int NOM_PERSONNE_ID = 1;
-    public static final String EMAIL = "Adresse email";
+    public static final String EMAIL = "Adresse_email";
     private static final int EMAIL_ID = 2;
     public static final String PASSWORD = "Password";
     private static final int PASSWORD_ID = 3;
@@ -27,23 +28,13 @@ public class BDD extends SQLiteOpenHelper {
     private static final int POIDS_ID= 4;
     private static final String TAILLE ="Taille";
     private static final int TAILLE_ID = 5;
-    private static final String TPS_ENTRAINEMENT = "Temps d'entraînement par semaine";
+    private static final String TPS_ENTRAINEMENT = "Temps_Entraînement_Par_Semaine";
     private static final int TPS_ENTRAINEMENT_ID = 6;
-    private static final String CALORIE_PERDU = "Calorie perdu par semaine";
+    private static final String CALORIE_PERDU = "Calorie_Perdu_Par_Semaine";
     private static final int CALORIE_PERDU_ID = 7;
 
 //requête de création de la BDD
-    private static final String REQUETE_CREA_TABLE1 = "CREATE TABLE " + TABLE_NAME + " ( "
-        + IDENTIFIANT + " integer primary key autoincrement, "
-        + NOM_PERSONNE + " text not null, "
-        + EMAIL + "text not null, "
-        + PASSWORD + " text not null, "
-        + POIDS + " integer, "
-        + TAILLE + " integer,"
-        + TPS_ENTRAINEMENT + " integer, "
-        + CALORIE_PERDU + " integer);";
 
-    public static BDD baseHelper;
 
     public BDD(Context context)
     {
@@ -56,16 +47,26 @@ public class BDD extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db)
     {
-        db.execSQL(REQUETE_CREA_TABLE1);
+        String REQUETE_CREA_TABLE = "create table " + TABLE_NAME + " ( "
+                + IDENTIFIANT + " integer primary key autoincrement, "
+                + NOM_PERSONNE + " text not null, "
+                + EMAIL + "text not null, "
+                + PASSWORD + " text not null, "
+                + POIDS + " integer, "
+                + TAILLE + " integer,"
+                + TPS_ENTRAINEMENT + " integer, "
+                + CALORIE_PERDU + " integer)";
+        db.execSQL(REQUETE_CREA_TABLE);
         Log.i("DATABASE", "onCreate invoquée");
     }
 //Amélioration d'une BDD
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-        db.execSQL("DROP table if exists " + TABLE_NAME + ";");
-        Log.i("DATABASE", "onUpgrade invoquée");
+        String strSql = "drop table " + TABLE_NAME;
+        db.execSQL(strSql);
         this.onCreate(db);
+        Log.i("DATABASE", "onUpgrade invoquée");
 
     }
     //méthode pour ajouter un nouvel utilisateur à la BDD
@@ -76,12 +77,12 @@ public class BDD extends SQLiteOpenHelper {
                 + EMAIL + ", "
                 + PASSWORD + ") VALUES ('"
                 + login + "', '"
-                + email + "',' '"
-                + password +"')";
+                + email + "', '"
+                + password +"');";
         //en écriture
         this.getWritableDatabase().execSQL(strSQL);
-        this.close();
         Log.i("DATABASE", "insertUser invoquée");
+        this.close();
 
     }
 }
