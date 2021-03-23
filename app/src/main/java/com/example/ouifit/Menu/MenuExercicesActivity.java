@@ -48,10 +48,6 @@ public class MenuExercicesActivity extends Activity implements NavigationView.On
         toolbar = findViewById(R.id.toolbar);
         menuItem = findViewById(R.menu.menu_option);
 
-        /*------------------------Toolbar-----------------------*/
-        //setSupportActionBar(toolbar);
-
-
         /*------------------------Montrer ou cacher items-----------------------*/
         Menu menu = navigationView.getMenu();
         menu.findItem(R.id.nav_logout).setVisible(false);

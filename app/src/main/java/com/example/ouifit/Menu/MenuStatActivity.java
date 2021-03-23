@@ -45,11 +45,7 @@ public class MenuStatActivity extends Activity implements NavigationView.OnNavig
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
         menuItem = findViewById(R.menu.menu_option);
-
-        /*------------------------Toolbar-----------------------*/
-        //setSupportActionBar(toolbar);
-
-
+        
         /*------------------------Montrer ou cacher items-----------------------*/
         Menu menu = navigationView.getMenu();
         menu.findItem(R.id.nav_logout).setVisible(false);
