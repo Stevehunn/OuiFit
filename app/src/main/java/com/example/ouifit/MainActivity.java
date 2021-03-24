@@ -183,6 +183,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+
     /*------------------------Cycle de vie de l'activité-----------------------*/
     protected void onPause() {
         super.onPause();

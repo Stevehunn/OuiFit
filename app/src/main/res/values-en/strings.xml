@@ -45,7 +45,10 @@
     <string name="communiquer">Communicate</string>
     <string name="profil">Profil</string>
     <string name="Sedeconnecter">Logout</string>
-    <string name="langue">Langue</string>
+    <string name="langue">Language</string>
+    <string name="selectedlanguage">Select a language</string>
+    <string name="Francais">French</string>
+    <string name="Anglais">English</string>
     <string name="option">Option</string>
     <string name="contact">Contact us</string>
     <string name="home">Home</string>

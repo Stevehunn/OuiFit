@@ -21,6 +21,30 @@
                 style="@style/titreMenu"
                 android:text="@string/option" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/temps"
+                    android:text="@string/langue" />
+
+                <Button
+                    android:id="@+id/btLangue1"
+                    style="@style/btBasGauche"
+                    android:text="@string/Francais" />
+
+                <Button
+                    android:id="@+id/btLangue2"
+                    style="@style/btBasDroit"
+                    android:text="@string/Anglais" />
+
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>
