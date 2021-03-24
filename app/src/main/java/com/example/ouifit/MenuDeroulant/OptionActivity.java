@@ -73,16 +73,20 @@ public class OptionActivity extends Activity implements AdapterView.OnItemSelect
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if (parent.getItemAtPosition(position).equals(0)) {
-            String text = parent.getItemAtPosition(position).toString();
-            Toast.makeText(parent.getContext(), text, Toast.LENGTH_LONG).show();
-            LocaleHelper.setLocale(this, "fr"); //for french;
+
+        switch (position) {
+            case 0:
+                String text = parent.getItemAtPosition(position).toString();
+                Toast.makeText(parent.getContext(), text, Toast.LENGTH_LONG).show();
+                LocaleHelper.setLocale(this, "fr"); //for french
+                break;
+            case 1:
+                String text2 = parent.getItemAtPosition(position).toString();
+                Toast.makeText(parent.getContext(), text2, Toast.LENGTH_LONG).show();
+                LocaleHelper.setLocale(this, "en"); //for english;
+                break;
         }
-        if (parent.getItemAtPosition(position).equals(1)) {
-            String text = parent.getItemAtPosition(position).toString();
-            Toast.makeText(parent.getContext(), text, Toast.LENGTH_LONG).show();
-            LocaleHelper.setLocale(this, "en"); //for english;
-        }
+       
     }
 
     @Override
