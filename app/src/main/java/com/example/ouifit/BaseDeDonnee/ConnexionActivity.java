@@ -14,6 +14,8 @@ import com.example.ouifit.MainActivity;
 import com.example.ouifit.R;
 
 public class ConnexionActivity extends Activity {
+
+    /*------------------------Variables-----------------------*/
     EditText login;
     EditText password;
     Button btnConnect;

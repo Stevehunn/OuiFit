@@ -15,7 +15,7 @@ import com.example.ouifit.R;
 
 public class InscriptionActivity extends AppCompatActivity {
 
-
+    /*------------------------Variables-----------------------*/
     private EditText nom;
     private EditText email;
     private EditText mdp1;
@@ -27,8 +27,9 @@ public class InscriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inscription);
+
         nom = (EditText) findViewById(R.id.strIdInscription);
-        email = (EditText) findViewById(R.id.strMailInscription) ;
+        email = (EditText) findViewById(R.id.strMailInscription);
         mdp1 = (EditText) findViewById(R.id.strMdp1);
         mdp2 = (EditText) findViewById(R.id.strMdp2);
 
@@ -43,17 +44,15 @@ public class InscriptionActivity extends AppCompatActivity {
                 String mdp1Text = mdp1.getText().toString();
                 String mdp2Text = mdp2.getText().toString();
 
-                myDatabase= new BDD(getApplicationContext());
-                if (test(nomText,emailText,mdp1Text,mdp2Text))
-                {
-                    myDatabase.insertUser(nomText, emailText , mdp1Text);
+                myDatabase = new BDD(getApplicationContext());
+                if (test(nomText, emailText, mdp1Text, mdp2Text)) {
+                    myDatabase.insertUser(nomText, emailText, mdp1Text);
                     myDatabase.close();
-                    Log.i("DATABASE" , "User create");
-                    Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
+                    Log.i("DATABASE", "User create");
+                    Intent i = new Intent(InscriptionActivity.this, ConnexionActivity.class);
                     startActivity(i);
-                }
-                else
-                    Toast.makeText(getApplicationContext(),"Vous devez compléter le formulaire correctement" , Toast.LENGTH_LONG).show();
+                } else
+                    Toast.makeText(getApplicationContext(), "Vous devez compléter le formulaire correctement", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -107,39 +106,31 @@ public class InscriptionActivity extends AppCompatActivity {
         finish();
     }
 
-    public boolean test(String txtLogin, String textEmail, String textMdp1, String textMdp2)
-    {
-        if (txtLogin.length() != 0 && textEmail.length() != 0 && textMdp1.length() != 0 && textMdp2.length() != 0 && textMdp1.equals(textMdp2))
-        {
+    /*------------------------Test Validation enregistrement-----------------------*/
+    public boolean test(String txtLogin, String textEmail, String textMdp1, String textMdp2) {
+        if (txtLogin.length() != 0 && textEmail.length() != 0 && textMdp1.length() != 0 && textMdp2.length() != 0 && textMdp1.equals(textMdp2)) {
             return true;
-        }
-        else
-        {
-            if (txtLogin.length() == 0)
-            {
-            nom.setError("Vous devez saisir ce champ");
+        } else {
+            if (txtLogin.length() == 0) {
+                nom.setError("Vous devez saisir ce champ");
 
             }
-            if (textEmail.length() == 0)
-            {
+            if (textEmail.length() == 0) {
                 email.setError("Vous devez saisir ce champ");
             }
-            if (textMdp1.length() == 0 )
-            {
+            if (textMdp1.length() == 0) {
                 mdp1.setError("Vous devez saisir ce champ");
             }
-            if (textMdp2.length() == 0)
-            {
+            if (textMdp2.length() == 0) {
                 mdp2.setError("Vous devez saisir ce champ");
             }
-            if (!textMdp1.equals(textMdp2))
-            {
+            if (!textMdp1.equals(textMdp2)) {
                 mdp1.setText(null);
                 mdp2.setText(null);
-                Toast.makeText(this,"Vos mots de passes doivent être identiques", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Vos mots de passes doivent être identiques", Toast.LENGTH_LONG).show();
             }
             return false;
-       }
+        }
 
     }
 }

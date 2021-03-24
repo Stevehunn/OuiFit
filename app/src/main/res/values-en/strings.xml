@@ -25,7 +25,7 @@
     <string name="temps2"> 60s</string>
 
     <string name="emailInscription">Email :</string>
-    <string name="ConfirmPassword">Confirmation :</string>
+    <string name="ConfirmPassword">Confirm password :</string>
     <string name="boutonInscription">Validate</string>
     <string name="InscriptionTitre">Registration</string>
 
