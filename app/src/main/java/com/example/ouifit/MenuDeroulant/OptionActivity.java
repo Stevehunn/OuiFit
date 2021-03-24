@@ -26,7 +26,7 @@ public class OptionActivity extends Activity implements AdapterView.OnItemSelect
 
         LocaleHelper.setLocale(this,"en"); //for english;
 */
-        /*------------------------Spinner-----------------------*/
+        /*------------------------Spinner changer de langue-----------------------*/
         Spinner spinner = (Spinner) findViewById(R.id.select_language);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -71,6 +71,7 @@ public class OptionActivity extends Activity implements AdapterView.OnItemSelect
         finish();
     }
 
+    /*------------------------Spinner changer de langue-----------------------*/
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -86,7 +87,7 @@ public class OptionActivity extends Activity implements AdapterView.OnItemSelect
                 LocaleHelper.setLocale(this, "en"); //for english;
                 break;
         }
-       
+
     }
 
     @Override

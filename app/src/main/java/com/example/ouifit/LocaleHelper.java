@@ -9,6 +9,9 @@ import android.preference.PreferenceManager;
 
 import java.util.Locale;
 
+/*
+ * Persistance des Données -> Langue
+ */
 
 public class LocaleHelper {
 
