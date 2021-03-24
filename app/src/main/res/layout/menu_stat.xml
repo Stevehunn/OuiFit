@@ -45,14 +45,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <!--
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/bargraph"
+                            android:layout_width="match_parent"
+                            android:layout_height="500dp">
 
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/bargraph"
-                android:layout_width="match_parent"
-                android:layout_height="500dp">
-
-            </com.github.mikephil.charting.charts.BarChart>
-
+                        </com.github.mikephil.charting.charts.BarChart>
+            -->
 
         </LinearLayout>
 
