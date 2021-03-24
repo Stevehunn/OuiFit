@@ -79,6 +79,10 @@
     <string name="mois11">Novembre</string>
     <string name="mois12">Décembre </string>
 
+    <string-array name="select_language">
+        <item>French</item>
+        <item>English</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
 

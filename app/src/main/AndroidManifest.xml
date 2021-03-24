@@ -54,7 +54,6 @@
             android:name=".BaseDeDonnee.InscriptionActivity"
             android:label="@string/app_name" />
         <activity
-
             android:name=".BaseDeDonnee.ConnexionActivity"
             android:label="@string/app_name" />
         <activity
