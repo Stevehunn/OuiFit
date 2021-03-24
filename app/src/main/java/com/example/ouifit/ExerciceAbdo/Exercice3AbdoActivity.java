@@ -1,6 +1,5 @@
 package com.example.ouifit.ExerciceAbdo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.ouifit.Menu.MenuExercicesActivity;
@@ -15,7 +15,7 @@ import com.example.ouifit.R;
 
 import static com.example.ouifit.R.drawable.image_abdo3;
 
-public class Exercice3AbdoActivity extends Activity {
+public class Exercice3AbdoActivity extends AppCompatActivity {
 
     View screenView;
 

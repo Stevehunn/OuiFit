@@ -1,6 +1,5 @@
 package com.example.ouifit.ExerciceBras;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,13 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.ouifit.R;
 
 import static com.example.ouifit.R.drawable.image_bras2;
 
-public class Exercice2BrasActivity extends Activity {
+public class Exercice2BrasActivity extends AppCompatActivity {
 
     View screenView;
 
