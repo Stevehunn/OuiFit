@@ -1,12 +1,17 @@
 package com.example.ouifit.BaseDeDonnee;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.strictmode.SqliteObjectLeakedViolation;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+
+import com.example.ouifit.ExerciceAbdo.Exercice1AbdoActivity;
 
 public class BDD extends SQLiteOpenHelper {
     private static final String BDD_NOM = "InscritEtStats.db";
@@ -20,7 +25,7 @@ public class BDD extends SQLiteOpenHelper {
     private static final int IDENTIFIANT_ID = 0;
     public static final String NOM_PERSONNE = "Prénom";
     private static final int NOM_PERSONNE_ID = 1;
-    public static final String EMAIL = "Adresse_email";
+    public static final String EMAIL = "Email";
     private static final int EMAIL_ID = 2;
     public static final String PASSWORD = "Password";
     private static final int PASSWORD_ID = 3;
@@ -28,9 +33,9 @@ public class BDD extends SQLiteOpenHelper {
     private static final int POIDS_ID= 4;
     private static final String TAILLE ="Taille";
     private static final int TAILLE_ID = 5;
-    private static final String TPS_ENTRAINEMENT = "Temps_Entraînement_Par_Semaine";
+    private static final String TPS_ENTRAINEMENT = "TempsEntraînementParSemaine";
     private static final int TPS_ENTRAINEMENT_ID = 6;
-    private static final String CALORIE_PERDU = "Calorie_Perdu_Par_Semaine";
+    private static final String CALORIE_PERDU = "CaloriePerduParSemaine";
     private static final int CALORIE_PERDU_ID = 7;
 
 //requête de création de la BDD
@@ -47,42 +52,41 @@ public class BDD extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db)
     {
-        String REQUETE_CREA_TABLE = "create table " + TABLE_NAME + " ( "
-                + IDENTIFIANT + " integer primary key autoincrement, "
+        String REQUETE_CREA_TABLE = "Create table Inscrit ( "
+                + "Identifiant integer primary key autoincrement, "
                 + NOM_PERSONNE + " text not null, "
-                + EMAIL + "text not null, "
+                + "Email text not null, "
                 + PASSWORD + " text not null, "
                 + POIDS + " integer, "
-                + TAILLE + " integer,"
+                + TAILLE + " integer, "
                 + TPS_ENTRAINEMENT + " integer, "
                 + CALORIE_PERDU + " integer)";
         db.execSQL(REQUETE_CREA_TABLE);
-        Log.i("DATABASE", "onCreate invoquée");
+        Log.i("DATABASE", "onCreate invoked");
     }
 //Amélioration d'une BDD
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-        String strSql = "drop table " + TABLE_NAME;
+        String strSql = "drop table Inscrit";
         db.execSQL(strSql);
         this.onCreate(db);
         Log.i("DATABASE", "onUpgrade invoquée");
 
     }
-    //méthode pour ajouter un nouvel utilisateur à la BDD
+    /*------------Méthode pour ajouter un nouvel utilisateur à la BDD----------*/
     public void insertUser(String login, String email, String password)
     {
-        String strSQL = "Insert Into " + TABLE_NAME + " ( "
+        String strSQL = "Insert into Inscrit ( "
                 + NOM_PERSONNE + ", "
                 + EMAIL + ", "
                 + PASSWORD + ") VALUES ('"
                 + login + "', '"
                 + email + "', '"
-                + password +"');";
+                + password +"')";
         //en écriture
         this.getWritableDatabase().execSQL(strSQL);
         Log.i("DATABASE", "insertUser invoquée");
-        this.close();
 
     }
 }

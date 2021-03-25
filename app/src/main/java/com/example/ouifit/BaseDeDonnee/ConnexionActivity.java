@@ -46,9 +46,7 @@ public class ConnexionActivity extends AppCompatActivity {
         btnConnect.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                btnConnect = (Button) findViewById(R.id.btConnexion);
 
-                if (v.getId() == R.id.btConnexion) {
                     String txtLogin = login.getText().toString();
                     String txtPassword = password.getText().toString();
                     //requête pour voir si l'utilisateurs qui rentre ses données est présent dans la BDD
@@ -56,15 +54,13 @@ public class ConnexionActivity extends AppCompatActivity {
                             " where " + BDD.NOM_PERSONNE + " = '" + txtLogin +
                             "' AND " + BDD.PASSWORD + " = '" + txtPassword + "';";
                     Cursor cursor;
-                    Log.i("CONNECTION", "onUpgrade invoquée");
+                    Log.i("CONNECTION", "Select invoked");
 
-                    //si les test primaires sont correct
+                    //si les tests primaires sont correct
                     if (test(txtLogin, txtPassword)) {
                         //on pose la requête
-                        cursor = BDD.maBDD.getReadableDatabase().rawQuery(strSql, null);
+                        cursor =  BDD.maBDD.getReadableDatabase().rawQuery(strSql, null);
                         cursor.moveToFirst();
-
-
                         //Si la requête renvoit quelque chose => l'utilisateur est inscrit, et son mdp et son login sont les bons
                         if (!cursor.isAfterLast()) {
                             //remise des champs du formulaire à leur état d'origine
@@ -78,7 +74,7 @@ public class ConnexionActivity extends AppCompatActivity {
                             login.setText(null);
                             password.setText(null);
                             Intent i = new Intent(ConnexionActivity.this, InscriptionActivity.class);
-                            Toast.makeText(ConnexionActivity.this, "Vous avez été redirigé vers la page d'inscription", Toast.LENGTH_LONG).show();
+                            Toast.makeText(ConnexionActivity.this, "Vous avez été redirigé vers la page d'inscription car vous n'êtes pas inscrit", Toast.LENGTH_LONG).show();
                             startActivity(i);
                             onPause();
 
@@ -90,7 +86,7 @@ public class ConnexionActivity extends AppCompatActivity {
                     }
                 }
 
-            }
+
         });
 
     }
@@ -157,21 +153,17 @@ public class ConnexionActivity extends AppCompatActivity {
 
     //test pour voir si les champs sont remplis
     public boolean test(String txtLogin, String txtPassword) {
-        int etapes = 2;
-        boolean res = false;
-        if (txtLogin.length() == 0) {
-            login.setError("Vous devez saisir ce champ");
-            etapes--;
+        if(txtLogin.length()!=0 && txtPassword.length()!=0)
+            return true;
+        else {
+            if (txtLogin.length() == 0)
+                login.setError("Vous devez saisir ce champ");
+            if (txtPassword.length() == 0)
+                password.setError("Vous devez saisir ce champ");
+            return false;
         }
 
-        if (txtPassword.length() == 0) {
-            password.setError("");
-            etapes--;
-        }
-        if (etapes == 2)
-            return true;
-        else
-            return false;
+
     }
 
 

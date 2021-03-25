@@ -35,7 +35,7 @@
     <string name="SeConnecter">Se Connecter</string>
     <string name="Sinscription">S\'inscrire</string>
     <string name="suivant">Suivant</string>
-    <string name="strNom">"Nom : "</string>
+    <string name="strNom">Nom : </string>
     <string name="fini">Fini</string>
     <string name="valide">Valider</string>
     <string name="start">Lancer</string>
