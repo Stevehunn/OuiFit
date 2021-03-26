@@ -1,5 +1,6 @@
 package com.example.ouifit.BaseDeDonnee;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -16,6 +17,12 @@ import com.example.ouifit.ExerciceBras.Exercice1BrasActivity;
 import com.example.ouifit.MainActivity;
 import com.example.ouifit.R;
 
+import static com.example.ouifit.BaseDeDonnee.BDD.BDD_NOM;
+import static com.example.ouifit.BaseDeDonnee.BDD.DATABASE_VERSION;
+import static com.example.ouifit.BaseDeDonnee.BDD.EMAIL;
+import static com.example.ouifit.BaseDeDonnee.BDD.NOM_PERSONNE;
+import static com.example.ouifit.BaseDeDonnee.BDD.PASSWORD;
+
 public class InscriptionActivity extends AppCompatActivity {
 
     /*------------------------Variables-----------------------*/
@@ -24,7 +31,8 @@ public class InscriptionActivity extends AppCompatActivity {
     private EditText mdp1;
     private EditText mdp2;
     private Button btInscription;
-    private BDD myDatabase ;
+    public static BDD myDatabase ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

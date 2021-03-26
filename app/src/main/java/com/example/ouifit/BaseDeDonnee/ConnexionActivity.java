@@ -27,7 +27,6 @@ public class ConnexionActivity extends AppCompatActivity {
 
         login = (EditText) findViewById(R.id.login);
         password = (EditText) findViewById(R.id.password);
-        BDD.maBDD = new BDD(this);
 
         /*------------------------BOUTON-----------------------*/
 
@@ -59,7 +58,7 @@ public class ConnexionActivity extends AppCompatActivity {
                     //si les tests primaires sont correct
                     if (test(txtLogin, txtPassword)) {
                         //on pose la requête
-                        cursor =  BDD.maBDD.getReadableDatabase().rawQuery(strSql, null);
+                        cursor =  (InscriptionActivity.myDatabase).getReadableDatabase().rawQuery(strSql, null);
                         cursor.moveToFirst();
                         //Si la requête renvoit quelque chose => l'utilisateur est inscrit, et son mdp et son login sont les bons
                         if (!cursor.isAfterLast()) {
@@ -79,6 +78,7 @@ public class ConnexionActivity extends AppCompatActivity {
                             onPause();
 
                         }
+                        cursor.close();
                     } else {
                         //remise des champs du formulaire à leur état d'origine
                         Toast.makeText(getApplicationContext(), "Vous devez remplir tout les champs de saisies.", Toast.LENGTH_SHORT).show();
