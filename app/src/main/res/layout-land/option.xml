@@ -7,16 +7,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/btRetourOption"
+                style="@style/btRetour"
+                android:background="@drawable/image_retour" />
+
             <TextView
                 style="@style/titreMenu"
                 android:text="@string/option" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/temps"
+                    android:text="@string/langue" />
+
+                <Spinner
+                    android:id="@+id/select_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btValide"
+                    style="@style/btBasDroit"
+                    android:text="@string/valide" />
+
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>
