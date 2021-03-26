@@ -1,8 +1,6 @@
 package com.example.ouifit.BaseDeDonnee;
 
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,16 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ouifit.ExerciceAbdo.Exercice1AbdoActivity;
-import com.example.ouifit.ExerciceBras.Exercice1BrasActivity;
 import com.example.ouifit.MainActivity;
 import com.example.ouifit.R;
-
-import static com.example.ouifit.BaseDeDonnee.BDD.BDD_NOM;
-import static com.example.ouifit.BaseDeDonnee.BDD.DATABASE_VERSION;
-import static com.example.ouifit.BaseDeDonnee.BDD.EMAIL;
-import static com.example.ouifit.BaseDeDonnee.BDD.NOM_PERSONNE;
-import static com.example.ouifit.BaseDeDonnee.BDD.PASSWORD;
 
 public class InscriptionActivity extends AppCompatActivity {
 
@@ -108,6 +98,7 @@ public class InscriptionActivity extends AppCompatActivity {
     /*------------------------Test Validation enregistrement-----------------------*/
     public boolean test(String txtLogin, String textEmail, String textMdp1, String textMdp2) {
         if (txtLogin.length() != 0 && textEmail.length() != 0 && textMdp1.length() != 0 && textMdp2.length() != 0 && textMdp1.compareTo(textMdp2)==0) {
+            Toast.makeText(getApplicationContext(), "Vous êtes inscrit", Toast.LENGTH_LONG).show();
             return true;
         } else {
        // if (txtLogin.length() == 0 || textEmail.length() ==0 || textMdp1.length()==0 || textMdp2.length()==0||textMdp1.compareTo(textMdp2) == 0){

@@ -78,6 +78,7 @@ public class ConnexionActivity extends AppCompatActivity {
                             onPause();
 
                         }
+                        Toast.makeText(getApplicationContext(), "Vous êtes connecté", Toast.LENGTH_LONG).show();
                         cursor.close();
                     } else {
                         //remise des champs du formulaire à leur état d'origine
