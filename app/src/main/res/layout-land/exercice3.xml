@@ -32,12 +32,12 @@
 
             <TextView
                 android:id="@+id/question3"
-                style="@style/temps"
+                style="@style/normaltext"
                 android:text="@string/temps" />
 
             <TextView
                 android:id="@+id/reponse3"
-                style="@style/temps"
+                style="@style/normaltext"
                 android:text="@string/temps1" />
         </LinearLayout>
 

@@ -19,7 +19,7 @@
 
             <TextView
                 style="@style/titreMenu"
-                android:text="@string/option" />
+                android:text="@string/langue" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,8 +28,9 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/temps"
-                    android:text="@string/langue" />
+                    style="@style/normaltext"
+                    android:layout_margin="15dp"
+                    android:text="@string/selectedlanguage" />
 
                 <Spinner
                     android:id="@+id/select_language"
@@ -38,7 +39,8 @@
 
                 <Button
                     android:id="@+id/btValide"
-                    style="@style/btBasDroit"
+                    style="@style/btSuivant"
+                    android:layout_margin="10dp"
                     android:text="@string/valide" />
 
 

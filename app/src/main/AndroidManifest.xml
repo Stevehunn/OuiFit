@@ -63,6 +63,9 @@
         <activity
             android:name=".MenuDeroulant.OptionActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name=".MenuDeroulant.ProfilActivity"
+            android:label="@string/app_name" />
 
         <!-- Activité pour les exercices des Abdominaux -->
         <activity

@@ -15,7 +15,7 @@
             <item
                 android:id="@+id/nav_option"
                 android:icon="@drawable/image_option"
-                android:title="@string/option" />
+                android:title="@string/langue" />
 
         </item>
 

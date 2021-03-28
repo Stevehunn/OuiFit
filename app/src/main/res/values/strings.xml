@@ -35,7 +35,7 @@
     <string name="SeConnecter">Se Connecter</string>
     <string name="Sinscription">S\'inscrire</string>
     <string name="suivant">Suivant</string>
-    <string name="strNom">"Nom : "</string>
+    <string name="strNom">Nom : </string>
     <string name="fini">Fini</string>
     <string name="valide">Valider</string>
     <string name="start">Lancer</string>
@@ -55,6 +55,10 @@
     <string name="connexion">Connexion</string>
     <string name="parametre">Paramètre</string>
     <string name="selectlanguage">Selectionnez la langue: </string>
+    <string name="sauvegarder">Sauvegarder </string>
+
+    <string name="poids">Poids : </string>
+    <string name="calorie">Calorie perdu : </string>
 
 
     <string name="navigation_drawer_ouverture">Ouvre le Menu</string>

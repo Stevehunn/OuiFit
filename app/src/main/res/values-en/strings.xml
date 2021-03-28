@@ -35,7 +35,7 @@
     <string name="SeConnecter">Sign in</string>
     <string name="Sinscription">Sign up</string>
     <string name="suivant">Next</string>
-    <string name="strNom">"Name : "</string>
+    <string name="strNom">Name : </string>
     <string name="fini">Finish</string>
     <string name="valide">Validation</string>
     <string name="start">Start</string>
@@ -55,6 +55,10 @@
     <string name="connexion">Connection</string>
     <string name="parametre">Settings</string>
     <string name="selectlanguage">Select your language: </string>
+    <string name="sauvegarder">Save </string>
+
+    <string name="poids">Weight : </string>
+    <string name="calorie">Calorie lost : </string>
 
 
     <string name="navigation_drawer_ouverture">Open the Menu</string>
