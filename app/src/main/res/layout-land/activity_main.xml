@@ -40,13 +40,13 @@
 
         <TextView
             style="@style/titre"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="25dp"
             android:text="@string/app_name" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="70dp"
+            android:layout_margin="25dp"
             android:orientation="vertical">
 
             <Button
