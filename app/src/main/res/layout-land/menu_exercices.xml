@@ -55,19 +55,19 @@
 
                 <Button
                     android:id="@+id/btexoAbdo"
-                    style="@style/btExercice"
+                    style="@style/btExercicePaysage"
                     android:background="@drawable/image_abdos"
                     android:text="@string/exoAbdo" />
 
                 <Button
                     android:id="@+id/btexoBras"
-                    style="@style/btExercice"
+                    style="@style/btExercicePaysage"
                     android:background="@drawable/image_bras"
                     android:text="@string/exoBras" />
 
                 <Button
                     android:id="@+id/btexoDos"
-                    style="@style/btExercice"
+                    style="@style/btExercicePaysage"
                     android:background="@drawable/image_dos"
                     android:text="@string/exoDos" />
 
@@ -78,12 +78,12 @@
 
                     <Button
                         android:id="@+id/btversStat1"
-                        style="@style/btBasGauche"
+                        style="@style/btBasGauchePaysage"
                         android:text="@string/Stat" />
 
                     <Button
                         android:id="@+id/btversCourse1"
-                        style="@style/btBasDroit"
+                        style="@style/btBasDroitPaysage"
                         android:text="@string/Courses" />
 
                 </LinearLayout>

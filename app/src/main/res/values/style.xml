@@ -67,11 +67,30 @@
         <item name="android:theme">@style/Theme.OuiFit</item>
     </style>
 
+    <style name="btExercicePaysage">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">500dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:theme">@style/Theme.OuiFit</item>
+    </style>
+
     <style name="btBasGauche">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginRight">10dp</item>
         <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:theme">@style/Theme.OuiFit</item>
+    </style>
+
+    <style name="btBasGauchePaysage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">80dp</item>
         <item name="android:layout_weight">2</item>
         <item name="android:theme">@style/Theme.OuiFit</item>
     </style>
@@ -86,6 +105,16 @@
         <item name="android:theme">@style/Theme.OuiFit</item>
     </style>
 
+    <style name="btBasDroitPaysage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:theme">@style/Theme.OuiFit</item>
+    </style>
+
     <style name="btSuivant">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -94,10 +123,6 @@
 
 
     </style>
-
-
-
-
 
 
 </resources>
