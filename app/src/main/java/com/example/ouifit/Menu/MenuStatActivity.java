@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -93,13 +94,20 @@ public class MenuStatActivity extends Activity implements NavigationView.OnNavig
         menu.findItem(R.id.nav_logout).setVisible(false);
         menu.findItem(R.id.nav_profil).setVisible(false);
 
-
-        /*utilisateur est connecté alors les boutons déconnexion et profil sont visible
-        if (){
+        //l'utilisateur est connecté donc le menu affiche "déconnexion" et "profil"
+        if (ConnexionActivity.getConnecter(ConnexionActivity.isConnecter) == true){
             menu.findItem(R.id.nav_logout).setVisible(true);
             menu.findItem(R.id.nav_profil).setVisible(true);
+            menu.findItem(R.id.nav_login).setVisible(false);
+            Log.i("bouton" , "les boutons sont visibles");
         }
-        */
+        //il est deconnecté alors seul le bouton "se connecter" est visible
+        else
+        {
+            menu.findItem(R.id.nav_logout).setVisible(false);
+            menu.findItem(R.id.nav_profil).setVisible(false);
+            menu.findItem(R.id.nav_login).setVisible(true);
+        }
 
         /*-----------------------Navigation View + Drawer-----------------------*/
 
@@ -179,6 +187,13 @@ public class MenuStatActivity extends Activity implements NavigationView.OnNavig
                 onPause();
                 Toast.makeText(getApplicationContext(), "@strings/login", Toast.LENGTH_SHORT).show();
                 break;
+            /*case R.id.nav_logout :
+                Intent n = new Intent(.this, MainActivity.class);
+                startActivity(n);
+                onPause();
+                Toast.makeText(getApplicationContext(),"Déconnecté", Toast.LENGTH_SHORT).show();
+                ConnexionActivity.isConnecter = false;
+                break;*/
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

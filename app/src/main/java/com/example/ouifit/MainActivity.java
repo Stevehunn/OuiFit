@@ -61,18 +61,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         menu.findItem(R.id.nav_profil).setVisible(false);
 
 
-        /* l'utilisateur est connecté alors les boutons déconnexion et profil sont visible*/
+        /* l'utilisateur est connecté alors les boutons déconnexion et profil ainsi que stat sont visible*/
         if (ConnexionActivity.getConnecter(ConnexionActivity.isConnecter) == true){
             menu.findItem(R.id.nav_logout).setVisible(true);
             menu.findItem(R.id.nav_profil).setVisible(true);
             menu.findItem(R.id.nav_login).setVisible(false);
+            buttonStat.setVisibility(View.VISIBLE);
             Log.i("bouton" , "les boutons sont visibles");
         }
+        /*il est deconnecté alors seul le bouton "se connecter" est visible*/
         else
         {
             menu.findItem(R.id.nav_logout).setVisible(false);
             menu.findItem(R.id.nav_profil).setVisible(false);
             menu.findItem(R.id.nav_login).setVisible(true);
+            buttonStat.setVisibility(View.INVISIBLE);
         }
 
 
@@ -105,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         buttonConnexion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("MainActivity", "connexion");
-                buttonStat.setVisibility(View.VISIBLE);
+
                 Intent i = new Intent(MainActivity.this, ConnexionActivity.class);
                 startActivity(i);
                 onPause();
