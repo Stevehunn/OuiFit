@@ -48,6 +48,7 @@ public class InscriptionActivity extends AppCompatActivity {
                 if (test(nomText, emailText, mdp1Text, mdp2Text)) {
                     myDatabase.insertUser(nomText, emailText, mdp1Text);
                     myDatabase.close();
+                    ConnexionActivity.isConnecter=true;
                     Log.i("DATABASE", "User create");
                     Intent i = new Intent(InscriptionActivity.this, MainActivity.class);
                     startActivity(i);

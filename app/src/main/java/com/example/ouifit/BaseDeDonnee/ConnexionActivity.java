@@ -69,24 +69,23 @@ public class ConnexionActivity extends AppCompatActivity {
                             isConnecter = true;
                             Intent i = new Intent(ConnexionActivity.this, MainActivity.class);
                             startActivity(i);
+                            Toast.makeText(getApplicationContext(), "Vous êtes connecté", Toast.LENGTH_LONG).show();
+
                         } else //si elle ne renvoit rien, => l'utilisateur n'est pas inscrit
                         {
                             //remise des champs du formulaire à leur état d'origine
                             login.setText(null);
                             password.setText(null);
-                            isConnecter = false;
                             Intent i = new Intent(ConnexionActivity.this, InscriptionActivity.class);
                             Toast.makeText(ConnexionActivity.this, "Vous avez été redirigé vers la page d'inscription car vous n'êtes pas inscrit", Toast.LENGTH_LONG).show();
                             startActivity(i);
+                            isConnecter = false;
                             onPause();
-
                         }
-                        Toast.makeText(getApplicationContext(), "Vous êtes connecté", Toast.LENGTH_LONG).show();
                         cursor.close();
                     } else {
                         //remise des champs du formulaire à leur état d'origine
                         Toast.makeText(getApplicationContext(), "Vous devez remplir tout les champs de saisies.", Toast.LENGTH_SHORT).show();
-
                     }
                 }
 

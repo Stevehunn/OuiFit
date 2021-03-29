@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             menu.findItem(R.id.nav_login).setVisible(true);
             buttonStat.setVisibility(View.INVISIBLE);
             buttonConnexion.setVisibility(View.VISIBLE);
-
         }
 
 
