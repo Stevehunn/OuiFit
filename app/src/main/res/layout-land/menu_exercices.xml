@@ -32,58 +32,63 @@
 
     </com.google.android.material.navigation.NavigationView>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            style="@style/titreMenuBlanc"
-            android:text="@string/Exercices" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btexoAbdo"
-                style="@style/btExercice"
-                android:background="@drawable/image_abdos"
-                android:text="@string/exoAbdo" />
-
-            <Button
-                android:id="@+id/btexoBras"
-                style="@style/btExercice"
-                android:background="@drawable/image_bras"
-                android:text="@string/exoBras" />
-
-            <Button
-                android:id="@+id/btexoDos"
-                style="@style/btExercice"
-                android:background="@drawable/image_dos"
-                android:text="@string/exoDos" />
+            <TextView
+                style="@style/titreMenuBlanc"
+                android:text="@string/Exercices" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="5">
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btversStat1"
-                    style="@style/btBasGauche"
-                    android:text="@string/Stat" />
+                    android:id="@+id/btexoAbdo"
+                    style="@style/btExercice"
+                    android:background="@drawable/image_abdos"
+                    android:text="@string/exoAbdo" />
 
                 <Button
-                    android:id="@+id/btversCourse1"
-                    style="@style/btBasDroit"
-                    android:text="@string/Courses" />
+                    android:id="@+id/btexoBras"
+                    style="@style/btExercice"
+                    android:background="@drawable/image_bras"
+                    android:text="@string/exoBras" />
 
+                <Button
+                    android:id="@+id/btexoDos"
+                    style="@style/btExercice"
+                    android:background="@drawable/image_dos"
+                    android:text="@string/exoDos" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="5">
+
+                    <Button
+                        android:id="@+id/btversStat1"
+                        style="@style/btBasGauche"
+                        android:text="@string/Stat" />
+
+                    <Button
+                        android:id="@+id/btversCourse1"
+                        style="@style/btBasDroit"
+                        android:text="@string/Courses" />
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-
+    </ScrollView>
 </androidx.drawerlayout.widget.DrawerLayout>

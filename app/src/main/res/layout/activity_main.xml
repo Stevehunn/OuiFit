@@ -26,62 +26,67 @@
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:headerLayout="@layout/header"
         android:layout_gravity="start"
+        app:headerLayout="@layout/header"
         app:menu="@menu/menu_option">
 
     </com.google.android.material.navigation.NavigationView>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-        <TextView
-            style="@style/titre"
-            android:layout_marginTop="60dp"
-            android:text="@string/app_name" />
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="70dp"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btversInscription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Sinscription" />
 
-            <Button
-                android:id="@+id/btVersConnection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/connexion" />
+            <TextView
+                style="@style/titre"
+                android:layout_marginTop="60dp"
+                android:text="@string/app_name" />
 
-            <Button
-                android:id="@+id/btversStat"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:text="@string/Stat" />
+                android:layout_height="match_parent"
+                android:layout_margin="70dp"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btversExercice0"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Exercices" />
+                <Button
+                    android:id="@+id/btversInscription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Sinscription" />
+
+                <Button
+                    android:id="@+id/btVersConnection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connexion" />
+
+                <Button
+                    android:id="@+id/btversStat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Stat"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btversExercice0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Exercices" />
 
 
-            <Button
-                android:id="@+id/btversCourse0"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Courses" />
+                <Button
+                    android:id="@+id/btversCourse0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Courses" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 </androidx.drawerlayout.widget.DrawerLayout>
