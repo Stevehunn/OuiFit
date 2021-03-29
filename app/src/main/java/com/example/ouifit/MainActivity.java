@@ -61,12 +61,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         menu.findItem(R.id.nav_profil).setVisible(false);
 
 
-        /*utilisateur est connecté alors les boutons déconnexion et profil sont visible
-        if (){
+        /* l'utilisateur est connecté alors les boutons déconnexion et profil sont visible*/
+        if (ConnexionActivity.getConnecter(ConnexionActivity.isConnecter) == true){
             menu.findItem(R.id.nav_logout).setVisible(true);
             menu.findItem(R.id.nav_profil).setVisible(true);
+            menu.findItem(R.id.nav_login).setVisible(false);
+            Log.i("bouton" , "les boutons sont visibles");
         }
-        */
+        else
+        {
+            menu.findItem(R.id.nav_logout).setVisible(false);
+            menu.findItem(R.id.nav_profil).setVisible(false);
+            menu.findItem(R.id.nav_login).setVisible(true);
+        }
+
 
 
         /*-----------------------Navigation View + Drawer-----------------------*/
@@ -189,6 +197,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 onPause();
                 Toast.makeText(getApplicationContext(), "@strings/login", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.nav_logout :
+                Intent n = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(n);
+                onPause();
+                Toast.makeText(getApplicationContext(),"Déconnecté", Toast.LENGTH_SHORT).show();
+                ConnexionActivity.isConnecter = false;
+                break;
+
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

@@ -20,6 +20,7 @@ public class ConnexionActivity extends AppCompatActivity {
     EditText login;
     EditText password;
     Button btnConnect;
+    public static boolean isConnecter;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +66,7 @@ public class ConnexionActivity extends AppCompatActivity {
                             //remise des champs du formulaire à leur état d'origine
                             login.setText(null);
                             password.setText(null);
+                            isConnecter = true;
                             Intent i = new Intent(ConnexionActivity.this, MainActivity.class);
                             startActivity(i);
                         } else //si elle ne renvoit rien, => l'utilisateur n'est pas inscrit
@@ -72,6 +74,7 @@ public class ConnexionActivity extends AppCompatActivity {
                             //remise des champs du formulaire à leur état d'origine
                             login.setText(null);
                             password.setText(null);
+                            isConnecter = false;
                             Intent i = new Intent(ConnexionActivity.this, InscriptionActivity.class);
                             Toast.makeText(ConnexionActivity.this, "Vous avez été redirigé vers la page d'inscription car vous n'êtes pas inscrit", Toast.LENGTH_LONG).show();
                             startActivity(i);
@@ -90,6 +93,11 @@ public class ConnexionActivity extends AppCompatActivity {
 
         });
 
+    }
+
+    public static boolean getConnecter (boolean test)
+    {
+        return test;
     }
 
     /*@Override

@@ -23,7 +23,7 @@ public class ProfilActivity extends Activity {
         buttonRetour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("Bouton retour profil", "execute");
-                Intent i = new Intent(ProfilActivity.this, MainActivity.class);
+                Intent i = new Intent(  ProfilActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
