@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         menuItem = findViewById(R.menu.menu_option);
 
         Button buttonStat = (Button) findViewById(R.id.btversStat);
+        Button buttonInscription = (Button) findViewById(R.id.btversInscription);
+        Button buttonConnexion = (Button) findViewById(R.id.btVersConnection);
 
         /*------------------------Toolbar-----------------------*/
         setSupportActionBar(toolbar);
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             menu.findItem(R.id.nav_profil).setVisible(true);
             menu.findItem(R.id.nav_login).setVisible(false);
             buttonStat.setVisibility(View.VISIBLE);
+            buttonConnexion.setVisibility(View.INVISIBLE);
             Log.i("bouton" , "les boutons sont visibles");
         }
         /*il est deconnecté alors seul le bouton "se connecter" est visible*/
@@ -76,6 +79,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             menu.findItem(R.id.nav_profil).setVisible(false);
             menu.findItem(R.id.nav_login).setVisible(true);
             buttonStat.setVisibility(View.INVISIBLE);
+            buttonConnexion.setVisibility(View.VISIBLE);
+
         }
 
 
@@ -93,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         /*------------------------BOUTON-----------------------*/
 
         //Bouton pour aller vers la page d'incription
-        Button buttonInscription = (Button) findViewById(R.id.btversInscription);
+
         buttonInscription.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("MainActivity", "inscription");
@@ -104,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
         //Bouton pour aller vers la page connexion
-        Button buttonConnexion = (Button) findViewById(R.id.btVersConnection);
         buttonConnexion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("MainActivity", "connexion");
