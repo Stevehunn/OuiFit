@@ -25,6 +25,7 @@ import com.example.ouifit.Menu.MenuExercicesActivity;
 import com.example.ouifit.Menu.MenuStatActivity;
 import com.example.ouifit.MenuDeroulant.ContactActivity;
 import com.example.ouifit.MenuDeroulant.OptionActivity;
+import com.example.ouifit.MenuDeroulant.ProfilActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -203,6 +204,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 onPause();
                 Toast.makeText(getApplicationContext(), "@strings/login", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.nav_profil :
+                Intent o = new Intent(MainActivity.this, ProfilActivity.class);
+                startActivity(o);
+                onPause();
+                Toast.makeText(getApplicationContext(), "Accés au profil", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.nav_logout :
                 Intent n = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(n);
@@ -210,6 +217,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(getApplicationContext(),"Déconnecté", Toast.LENGTH_SHORT).show();
                 ConnexionActivity.isConnecter = false;
                 break;
+
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);

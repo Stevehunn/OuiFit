@@ -25,9 +25,9 @@ public class BDD extends SQLiteOpenHelper {
     public static final String EMAIL = "Email";
     public static final String PASSWORD = "Password";
     public static final String POIDS = "Poids";
-    private static final String TAILLE ="Taille";
-    private static final String TPS_ENTRAINEMENT = "TempsEntraînementParSemaine";
-    private static final String CALORIE_PERDU = "CaloriePerduParSemaine";
+    public static final String TAILLE ="Taille";
+    public static final String TPS_ENTRAINEMENT = "TempsEntraînementParSemaine";
+    public static final String CALORIE_PERDU = "CaloriePerduParSemaine";
 
     public static BDD maBDD;
 
@@ -85,4 +85,6 @@ public class BDD extends SQLiteOpenHelper {
         Log.i("DATABASE", "insertUser invoquée");
 
     }
+
+
 }

@@ -42,9 +42,28 @@
                     style="@style/normaltext"
                     android:text="@string/strNom" />
 
+                <EditText
+                    style="@style/normaltext"
+                    android:layout_width="match_parent"
+                    android:id="@+id/identifiant"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
                 <TextView
                     style="@style/normaltext"
-                    android:text="name user" />
+                    android:text="@string/emailInscription" />
+
+                <EditText
+                    style="@style/normaltext"
+                    android:id="@+id/EmailProfil"
+                    android:layout_width="match_parent" />
 
             </LinearLayout>
 
@@ -58,9 +77,44 @@
                     style="@style/normaltext"
                     android:text="@string/poids" />
 
+                <EditText
+                    style="@style/normaltext"
+                    android:id="@+id/poidsProfil"
+                    android:layout_width="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
                 <TextView
                     style="@style/normaltext"
-                    android:text="weight" />
+                    android:text="@string/taille" />
+
+                <EditText
+                    style="@style/normaltext"
+                    android:id="@+id/tailleProfil"
+                    android:layout_width="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/normaltext"
+                    android:text="@string/temps" />
+
+                <TextView
+                    style="@style/normaltext"
+                    android:id="@+id/TpsEntrainementProfil"
+                    android:layout_width="match_parent" />
 
             </LinearLayout>
 
@@ -76,7 +130,9 @@
 
                 <TextView
                     style="@style/normaltext"
-                    android:text="user calorie lost" />
+                    android:id="@+id/caloriePerduProfil"
+                    android:layout_width="match_parent"
+                    />
 
             </LinearLayout>
 

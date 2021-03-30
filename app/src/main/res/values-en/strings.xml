@@ -59,6 +59,8 @@
 
     <string name="poids">Weight : </string>
     <string name="calorie">Calorie lost : </string>
+    <string name="taille">Size : </string>
+
 
 
     <string name="navigation_drawer_ouverture">Open the Menu</string>

@@ -59,7 +59,7 @@
 
     <string name="poids">Poids : </string>
     <string name="calorie">Calorie perdu : </string>
-
+    <string name="taille">Taille : </string>
 
     <string name="navigation_drawer_ouverture">Ouvre le Menu</string>
     <string name="navigation_drawer_fermeture">Ferme le Menu</string>
@@ -82,6 +82,7 @@
     <string name="mois10">Octobre </string>
     <string name="mois11">Novembre</string>
     <string name="mois12">Décembre </string>
+
 
 
     <string-array name="select_language">

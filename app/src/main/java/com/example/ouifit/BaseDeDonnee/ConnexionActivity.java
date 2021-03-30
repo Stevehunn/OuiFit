@@ -1,4 +1,4 @@
-package com.example.ouifit.BaseDeDonnee;
+ package com.example.ouifit.BaseDeDonnee;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -53,12 +53,14 @@ public class ConnexionActivity extends AppCompatActivity {
                     String strSql = "Select " + BDD.NOM_PERSONNE + ", " + BDD.PASSWORD + " from " + BDD.TABLE_NAME +
                             " where " + BDD.NOM_PERSONNE + " = '" + txtLogin +
                             "' AND " + BDD.PASSWORD + " = '" + txtPassword + "';";
+
                     Cursor cursor;
                     Log.i("CONNECTION", "Select invoked");
 
                     //si les tests primaires sont correct
                     if (test(txtLogin, txtPassword)) {
                         //on pose la requête
+
                         cursor =  (InscriptionActivity.myDatabase).getReadableDatabase().rawQuery(strSql, null);
                         cursor.moveToFirst();
                         //Si la requête renvoit quelque chose => l'utilisateur est inscrit, et son mdp et son login sont les bons
