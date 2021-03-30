@@ -76,7 +76,7 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
         String strSql = "Select " + POIDS + " from " + TABLE_NAME + " Where " + IDENTIFIANT + " = " + BDD.getId();
         Cursor cursor = (InscriptionActivity.myDatabase).getReadableDatabase().rawQuery(strSql, null);
         cursor.moveToFirst();
-        
+
         // int i =-1;
         //si le cursor n'est pas au dernier emplacement alors il contient quelque chose
         /*if (!cursor.isAfterLast()) {
