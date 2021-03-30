@@ -3,7 +3,6 @@ package com.example.ouifit.Menu;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -179,10 +178,26 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
     }
 
     /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onResume() {
+        super.onResume();
+    }
+
     protected void onPause() {
         super.onPause();
-        finish();
     }
+
+    protected void onStop() {
+        super.onStop();
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 
     /*------------------------Methode pour le Menu-----------------------*/
     @Override

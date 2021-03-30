@@ -156,14 +156,30 @@ public class ConnexionActivity extends AppCompatActivity {
     }
 */
     /*------------------------Cycle de vie de l'activit&eacute;-----------------------*/
+    protected void onResume() {
+        super.onResume();
+    }
+
     protected void onPause() {
         super.onPause();
-        finish();
     }
+
+    protected void onStop() {
+        super.onStop();
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 
     //test pour voir si les champs sont remplis
     public boolean test(String txtLogin, String txtPassword) {
-        if(txtLogin.length()!=0 && txtPassword.length()!=0)
+        if (txtLogin.length() != 0 && txtPassword.length() != 0)
             return true;
         else {
             if (txtLogin.length() == 0)

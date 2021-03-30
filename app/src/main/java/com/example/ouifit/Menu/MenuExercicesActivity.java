@@ -136,9 +136,24 @@ public class MenuExercicesActivity extends Activity implements NavigationView.On
     }
 
     /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onResume() {
+        super.onResume();
+    }
+
     protected void onPause() {
         super.onPause();
-        finish();
+    }
+
+    protected void onStop() {
+        super.onStop();
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     /*------------------------Methode pour le Menu-----------------------*/

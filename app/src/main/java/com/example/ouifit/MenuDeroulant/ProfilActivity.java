@@ -3,7 +3,6 @@ package com.example.ouifit.MenuDeroulant;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,17 +14,12 @@ import com.example.ouifit.BaseDeDonnee.InscriptionActivity;
 import com.example.ouifit.MainActivity;
 import com.example.ouifit.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.example.ouifit.BaseDeDonnee.BDD.CALORIE_PERDU;
 import static com.example.ouifit.BaseDeDonnee.BDD.EMAIL;
 import static com.example.ouifit.BaseDeDonnee.BDD.IDENTIFIANT;
 import static com.example.ouifit.BaseDeDonnee.BDD.NOM_PERSONNE;
 import static com.example.ouifit.BaseDeDonnee.BDD.POIDS;
 import static com.example.ouifit.BaseDeDonnee.BDD.TABLE_NAME;
 import static com.example.ouifit.BaseDeDonnee.BDD.TAILLE;
-import static com.example.ouifit.BaseDeDonnee.BDD.TPS_ENTRAINEMENT;
 
 public class ProfilActivity extends Activity {
 
@@ -86,7 +80,7 @@ public class ProfilActivity extends Activity {
                 (InscriptionActivity.myDatabase).getWritableDatabase().update(TABLE_NAME, contentValues
                         ,strWhere,null);
                 (InscriptionActivity.myDatabase).close();
-                Log.i("DATABASE" , "update invoked");
+                Log.i("DATABASE", "update invoked");
                 Intent i = new Intent(ProfilActivity.this, MainActivity.class);
                 startActivity(i);
             }
@@ -95,10 +89,26 @@ public class ProfilActivity extends Activity {
     }
 
     /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onResume() {
+        super.onResume();
+    }
+
     protected void onPause() {
         super.onPause();
-        finish();
     }
+
+    protected void onStop() {
+        super.onStop();
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 
 //    public void insertStat(EditText nom, EditText mail, EditText poids, EditText taille)
 //    {

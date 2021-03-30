@@ -91,18 +91,34 @@ public class InscriptionActivity extends AppCompatActivity {
 
 
     /*------------------------Cycle de vie de l'activité-----------------------*/
+    protected void onResume() {
+        super.onResume();
+    }
+
     protected void onPause() {
         super.onPause();
-        finish();
     }
+
+    protected void onStop() {
+        super.onStop();
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 
     /*------------------------Test Validation enregistrement-----------------------*/
     public boolean test(String txtLogin, String textEmail, String textMdp1, String textMdp2) {
-        if (txtLogin.length() != 0 && textEmail.length() != 0 && textMdp1.length() != 0 && textMdp2.length() != 0 && textMdp1.compareTo(textMdp2)==0) {
+        if (txtLogin.length() != 0 && textEmail.length() != 0 && textMdp1.length() != 0 && textMdp2.length() != 0 && textMdp1.compareTo(textMdp2) == 0) {
             Toast.makeText(getApplicationContext(), "Vous êtes inscrit", Toast.LENGTH_LONG).show();
             return true;
         } else {
-       // if (txtLogin.length() == 0 || textEmail.length() ==0 || textMdp1.length()==0 || textMdp2.length()==0||textMdp1.compareTo(textMdp2) == 0){
+            // if (txtLogin.length() == 0 || textEmail.length() ==0 || textMdp1.length()==0 || textMdp2.length()==0||textMdp1.compareTo(textMdp2) == 0){
             if (txtLogin.length() == 0) {
                 nom.setError("Vous devez saisir ce champ");
             }
