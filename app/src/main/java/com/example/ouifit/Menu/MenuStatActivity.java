@@ -70,22 +70,26 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
         menuItem = findViewById(R.menu.menu_option);
+
         graph = (GraphView) findViewById(R.id.line_graph1);
-        String[] mois = {"Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août", "Septembre","Octobre","Novembre","Décembre"};
+
+        //String[] mois = {"Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août", "Septembre","Octobre","Novembre","Décembre"};
         //barChart =(BarChart) findViewById(R.id.bargraph);
         String strSql = "Select " + POIDS + " from " + TABLE_NAME + " Where "+ IDENTIFIANT + " = " + BDD.getId();
         Cursor cursor = (InscriptionActivity.myDatabase).getReadableDatabase().rawQuery(strSql,null);
         cursor.moveToFirst();
         int i =-1;
+        //si le cursor n'est pas au dernier emplacement alors il contient quelque chose
         if (!cursor.isAfterLast()) {
-        LineGraphSeries<DataPoint> lineGraphSeries;
-        while (!cursor.isAfterLast())
-        {
-            i++;
-            lineGraphSeries = new LineGraphSeries<>(new DataPoint[] {
-                    new DataPoint(new Date().getTime(), cursor.getInt(i))});
+             LineGraphSeries<DataPoint> lineGraphSeries = new LineGraphSeries<>();
+            while (!cursor.isAfterLast()) {
+                i++;
+                //tant que le curseur n'est pas sur le dernier taquet, il crée des DataPoint
+                lineGraphSeries = new LineGraphSeries<>(new DataPoint[] {
+                    new DataPoint(new Date().getTime(), cursor.getInt(i))
+                 });
+            }
             graph.addSeries(lineGraphSeries);
-        }
 
         }
 
