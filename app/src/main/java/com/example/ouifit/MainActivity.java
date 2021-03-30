@@ -120,7 +120,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
         //Bouton pour aller vers le menu Stats
-
         buttonStat.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("MainActivity", "menu stat");
