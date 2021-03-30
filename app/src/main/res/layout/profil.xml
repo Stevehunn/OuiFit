@@ -40,7 +40,7 @@
 
                 <TextView
                     style="@style/normaltext"
-                    android:text="@string/strNom" />
+                    android:text="@string/strLogin" />
 
                 <EditText
                     style="@style/normaltext"

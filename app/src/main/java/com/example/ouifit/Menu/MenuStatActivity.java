@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -49,7 +50,7 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
     MenuItem menuItem;
     BDD ourBDD;
     GraphView graph;
-    EditText text;
+    TextView text;
 
     /*
     BarChart barChart;
@@ -72,7 +73,7 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
         menuItem = findViewById(R.menu.menu_option);
 
         graph = (GraphView) findViewById(R.id.line_graph1);
-
+        /*----------------Graph avec les données non fonctionnels----------*/
         //String[] mois = {"Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août", "Septembre","Octobre","Novembre","Décembre"};
         //barChart =(BarChart) findViewById(R.id.bargraph);
         String strSql = "Select " + POIDS + " from " + TABLE_NAME + " Where "+ IDENTIFIANT + " = " + BDD.getId();
@@ -80,7 +81,7 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
         cursor.moveToFirst();
         int i =-1;
         //si le cursor n'est pas au dernier emplacement alors il contient quelque chose
-        if (!cursor.isAfterLast()) {
+        /*if (!cursor.isAfterLast()) {
              LineGraphSeries<DataPoint> lineGraphSeries = new LineGraphSeries<>();
             while (!cursor.isAfterLast()) {
                 i++;
@@ -91,7 +92,16 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
             }
             graph.addSeries(lineGraphSeries);
 
-        }
+
+
+        }*/
+        /*----------- Graph sans les données--------*/
+        LineGraphSeries<DataPoint> lineGraphSeries = new LineGraphSeries<>(new DataPoint[]{
+                new DataPoint(0,5),
+                new DataPoint(1,15),
+                new DataPoint(2,20)
+        });
+        graph.addSeries(lineGraphSeries);
 
         /*------------------------Graph-----------------------
         ArrayList<BarEntry> barEntries = new ArrayList<>();
