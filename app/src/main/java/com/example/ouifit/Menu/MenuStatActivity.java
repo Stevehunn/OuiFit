@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,8 +31,6 @@ import com.google.android.material.navigation.NavigationView;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
-
-import java.util.Date;
 
 import static com.example.ouifit.BaseDeDonnee.BDD.IDENTIFIANT;
 import static com.example.ouifit.BaseDeDonnee.BDD.POIDS;
@@ -76,10 +73,11 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
         /*----------------Graph avec les données non fonctionnels----------*/
         //String[] mois = {"Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août", "Septembre","Octobre","Novembre","Décembre"};
         //barChart =(BarChart) findViewById(R.id.bargraph);
-        String strSql = "Select " + POIDS + " from " + TABLE_NAME + " Where "+ IDENTIFIANT + " = " + BDD.getId();
-        Cursor cursor = (InscriptionActivity.myDatabase).getReadableDatabase().rawQuery(strSql,null);
+        String strSql = "Select " + POIDS + " from " + TABLE_NAME + " Where " + IDENTIFIANT + " = " + BDD.getId();
+        Cursor cursor = (InscriptionActivity.myDatabase).getReadableDatabase().rawQuery(strSql, null);
         cursor.moveToFirst();
-        int i =-1;
+        
+        // int i =-1;
         //si le cursor n'est pas au dernier emplacement alors il contient quelque chose
         /*if (!cursor.isAfterLast()) {
              LineGraphSeries<DataPoint> lineGraphSeries = new LineGraphSeries<>();

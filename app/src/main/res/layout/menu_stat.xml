@@ -5,7 +5,6 @@
     android:id="@+id/drawner_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image_fond"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".Menu.MenuStatActivity"
@@ -42,7 +41,7 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/titreMenuBlanc"
+                style="@style/titreMenu"
                 android:text="@string/Stat" />
 
             <LinearLayout
@@ -58,20 +57,19 @@
 
                             </com.github.mikephil.charting.charts.BarChart>
                 -->
+
+                <TextView
+                    style="@style/titreMenuBlanc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/VotreCPoids" />
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/line_graph1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip" />
+
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/VotreCPoids"
-                style="@style/titreMenuBlanc"/>
-
-            <com.jjoe64.graphview.GraphView
-                android:layout_width="match_parent"
-                android:layout_height="200dip"
-                android:id="@+id/line_graph1"
-                />
 
             <LinearLayout
                 android:layout_width="match_parent"

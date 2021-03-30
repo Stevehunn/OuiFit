@@ -5,7 +5,6 @@
     android:id="@+id/drawner_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image_fond"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".Menu.MenuStatActivity"
@@ -43,7 +42,7 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/titreMenuBlanc"
+                style="@style/titreMenu"
                 android:text="@string/Stat" />
 
             <LinearLayout
