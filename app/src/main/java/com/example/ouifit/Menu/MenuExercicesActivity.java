@@ -151,6 +151,7 @@ public class MenuExercicesActivity extends Activity implements NavigationView.On
         }
     }
 
+    /*----------- Gestion du menu déroulant dans les exercices-------------*/
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
@@ -159,25 +160,21 @@ public class MenuExercicesActivity extends Activity implements NavigationView.On
                 Intent j = new Intent(MenuExercicesActivity.this, ContactActivity.class);
                 startActivity(j);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_home:
                 Intent k = new Intent(MenuExercicesActivity.this, MainActivity.class);
                 startActivity(k);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/menu_principal", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_option:
                 Intent l = new Intent(MenuExercicesActivity.this, OptionActivity.class);
                 startActivity(l);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_login:
                 Intent m = new Intent(MenuExercicesActivity.this, ConnexionActivity.class);
                 startActivity(m);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/login", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_logout :
                 Intent n = new Intent(MenuExercicesActivity.this, MainActivity.class);

@@ -176,6 +176,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    /*----------- Gestion du menu déroulant dans l'écran d'acceuil-------------*/
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
@@ -184,31 +185,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent j = new Intent(MainActivity.this, ContactActivity.class);
                 startActivity(j);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_home:
                 Intent k = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(k);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/menu_principal", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_option:
                 Intent l = new Intent(MainActivity.this, OptionActivity.class);
                 startActivity(l);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_login:
                 Intent m = new Intent(MainActivity.this, ConnexionActivity.class);
                 startActivity(m);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/login", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_profil :
                 Intent o = new Intent(MainActivity.this, ProfilActivity.class);
                 startActivity(o);
                 onPause();
-                Toast.makeText(getApplicationContext(), "Accés au profil", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_logout :
                 Intent n = new Intent(MainActivity.this, MainActivity.class);

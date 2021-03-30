@@ -60,6 +60,8 @@
     <string name="poids">Poids : </string>
     <string name="calorie">Calorie perdu : </string>
     <string name="taille">Taille : </string>
+    <string name="VotreCPoids">Votre courbe de poids :</string>
+
 
 
     <string name="navigation_drawer_ouverture">Ouvre le Menu</string>

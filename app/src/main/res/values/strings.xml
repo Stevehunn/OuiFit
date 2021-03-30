@@ -82,7 +82,7 @@
     <string name="mois10">Octobre </string>
     <string name="mois11">Novembre</string>
     <string name="mois12">Décembre </string>
-
+    <string name="VotreCPoids">Votre courbe de poids :</string>
 
 
     <string-array name="select_language">

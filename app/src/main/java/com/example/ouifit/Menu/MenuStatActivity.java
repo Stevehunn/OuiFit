@@ -2,6 +2,7 @@ package com.example.ouifit.Menu;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,14 +22,23 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.ouifit.BaseDeDonnee.BDD;
 import com.example.ouifit.BaseDeDonnee.ConnexionActivity;
+import com.example.ouifit.BaseDeDonnee.InscriptionActivity;
 import com.example.ouifit.MainActivity;
 import com.example.ouifit.MenuDeroulant.ContactActivity;
 import com.example.ouifit.MenuDeroulant.OptionActivity;
+import com.example.ouifit.MenuDeroulant.ProfilActivity;
 import com.example.ouifit.R;
 import com.google.android.material.navigation.NavigationView;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+
+import java.util.Date;
+
+import static com.example.ouifit.BaseDeDonnee.BDD.IDENTIFIANT;
+import static com.example.ouifit.BaseDeDonnee.BDD.POIDS;
+import static com.example.ouifit.BaseDeDonnee.BDD.TABLE_NAME;
+
 
 public class MenuStatActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -61,21 +71,24 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
         menuItem = findViewById(R.menu.menu_option);
-//        graph = (GraphView) findViewById(R.id.line_graph1);
-//        String[] mois = {"Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août", "Septembre","Octobre","Novembre","Décembre"};
-//        //barChart =(BarChart) findViewById(R.id.bargraph);
-//        LineGraphSeries<DataPoint> lineGraphSeries = new LineGraphSeries<>(new DataPoint[]{
-//                new DataPoint(mois[1], 52),
-//                new DataPoint(1,65),
-//                new DataPoint(2,66),
-//                new DataPoint(3,40)
-//        });
-//        graph.addSeries(lineGraphSeries);
-//        lineGraphSeries.setBackgroundColor(Color.WHITE);
-//        lineGraphSeries.setColor(Color.WHITE);
-//        lineGraphSeries.setTitle("Line Chart");
-//        lineGraphSeries.setThickness(4);
-//        lineGraphSeries.setDataPointsRadius(11);
+        graph = (GraphView) findViewById(R.id.line_graph1);
+        String[] mois = {"Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août", "Septembre","Octobre","Novembre","Décembre"};
+        //barChart =(BarChart) findViewById(R.id.bargraph);
+        String strSql = "Select " + POIDS + " from " + TABLE_NAME + " Where "+ IDENTIFIANT + " = " + BDD.getId();
+        Cursor cursor = (InscriptionActivity.myDatabase).getReadableDatabase().rawQuery(strSql,null);
+        cursor.moveToFirst();
+        int i =-1;
+        if (!cursor.isAfterLast()) {
+        LineGraphSeries<DataPoint> lineGraphSeries;
+        while (!cursor.isAfterLast())
+        {
+            i++;
+            lineGraphSeries = new LineGraphSeries<>(new DataPoint[] {
+                    new DataPoint(new Date().getTime(), cursor.getInt(i))});
+            graph.addSeries(lineGraphSeries);
+        }
+
+        }
 
         /*------------------------Graph-----------------------
         ArrayList<BarEntry> barEntries = new ArrayList<>();
@@ -181,6 +194,15 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
         }
     }
 
+//    public void insertData(){
+//        long xValue = new Date().getTime();
+//        String strSql = "select " + POIDS +
+//                " from "+ TABLE_NAME +
+//                " where " + IDENTIFIANT + " = " + BDD.();
+//    }
+
+
+    /*----------- Gestion du menu déroulant dans les statistiques-------------*/
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
@@ -189,33 +211,34 @@ public class MenuStatActivity extends AppCompatActivity implements NavigationVie
                 Intent j = new Intent(MenuStatActivity.this, ContactActivity.class);
                 startActivity(j);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_home:
                 Intent k = new Intent(MenuStatActivity.this, MainActivity.class);
                 startActivity(k);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/menu_principal", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_option:
                 Intent l = new Intent(MenuStatActivity.this, OptionActivity.class);
                 startActivity(l);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_login:
                 Intent m = new Intent(MenuStatActivity.this, ConnexionActivity.class);
                 startActivity(m);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/login", Toast.LENGTH_SHORT).show();
                 break;
-            /*case R.id.nav_logout :
-                Intent n = new Intent(.this, MainActivity.class);
+            case R.id.nav_logout :
+                Intent n = new Intent(MenuStatActivity.this, MainActivity.class);
                 startActivity(n);
                 onPause();
                 Toast.makeText(getApplicationContext(),"Déconnecté", Toast.LENGTH_SHORT).show();
                 ConnexionActivity.isConnecter = false;
-                break;*/
+                break;
+            case R.id.nav_profil :
+                Intent o = new Intent(MenuStatActivity.this, ProfilActivity.class);
+                startActivity(o);
+                onPause();
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

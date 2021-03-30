@@ -21,7 +21,7 @@ public class InscriptionActivity extends AppCompatActivity {
     private EditText mdp1;
     private EditText mdp2;
     private Button btInscription;
-    public static BDD myDatabase ;
+    public static BDD myDatabase;
 
 
     @Override

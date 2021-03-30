@@ -254,7 +254,7 @@ public class MenuCourseActivity extends Activity implements LocationListener, Na
             super.onBackPressed();
         }
     }
-
+/*----------- Gestion du menu déroulant dans la course-------------*/
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
@@ -263,25 +263,21 @@ public class MenuCourseActivity extends Activity implements LocationListener, Na
                 Intent j = new Intent(MenuCourseActivity.this, ContactActivity.class);
                 startActivity(j);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_home:
                 Intent k = new Intent(MenuCourseActivity.this, MainActivity.class);
                 startActivity(k);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/menu_principal", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_option:
                 Intent l = new Intent(MenuCourseActivity.this, OptionActivity.class);
                 startActivity(l);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/option", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_login:
                 Intent m = new Intent(MenuCourseActivity.this, ConnexionActivity.class);
                 startActivity(m);
                 onPause();
-                Toast.makeText(getApplicationContext(), "@strings/login", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_logout :
                 Intent n = new Intent(MenuCourseActivity.this, MainActivity.class);

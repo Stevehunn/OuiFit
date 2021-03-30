@@ -46,7 +46,7 @@ public class ConnexionActivity extends AppCompatActivity {
         btnConnect.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-
+                    InscriptionActivity.myDatabase = new BDD(getApplicationContext());
                     String txtLogin = login.getText().toString();
                     String txtPassword = password.getText().toString();
                     //requête pour voir si l'utilisateurs qui rentre ses données est présent dans la BDD

@@ -2,6 +2,7 @@ package com.example.ouifit.BaseDeDonnee;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -30,6 +31,12 @@ public class BDD extends SQLiteOpenHelper {
     public static final String CALORIE_PERDU = "CaloriePerduParSemaine";
 
     public static BDD maBDD;
+
+    private static int id;
+
+    public static int getId() {
+        return id;
+    }
 
     public BDD(Context context)
     {
@@ -85,6 +92,5 @@ public class BDD extends SQLiteOpenHelper {
         Log.i("DATABASE", "insertUser invoquée");
 
     }
-
 
 }
