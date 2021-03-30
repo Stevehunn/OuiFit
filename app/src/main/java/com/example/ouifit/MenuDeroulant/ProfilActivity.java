@@ -46,8 +46,8 @@ public class ProfilActivity extends Activity {
         Email = (EditText) findViewById(R.id.EmailProfil);
         Poids = (EditText) findViewById(R.id.poidsProfil);
         Taille = (EditText) findViewById(R.id.tailleProfil);
-        Calorie = (TextView) findViewById(R.id.caloriePerduProfil);
-        TpsEntrainement = (TextView) findViewById(R.id.TpsEntrainementProfil);
+//      Calorie = (TextView) findViewById(R.id.caloriePerduProfil);
+//      TpsEntrainement = (TextView) findViewById(R.id.TpsEntrainementProfil);
 //
         /*------------------------BOUTON-----------------------*/
 

@@ -1,18 +1,20 @@
 package com.example.ouifit.Menu;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -24,8 +26,11 @@ import com.example.ouifit.MenuDeroulant.ContactActivity;
 import com.example.ouifit.MenuDeroulant.OptionActivity;
 import com.example.ouifit.R;
 import com.google.android.material.navigation.NavigationView;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
-public class MenuStatActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
+public class MenuStatActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     /*------------------------Variables-----------------------*/
@@ -34,6 +39,9 @@ public class MenuStatActivity extends Activity implements NavigationView.OnNavig
     Toolbar toolbar;
     MenuItem menuItem;
     BDD ourBDD;
+    GraphView graph;
+    EditText text;
+
     /*
     BarChart barChart;
     int poids =100;
@@ -53,7 +61,21 @@ public class MenuStatActivity extends Activity implements NavigationView.OnNavig
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
         menuItem = findViewById(R.menu.menu_option);
-        //barChart =(BarChart) findViewById(R.id.bargraph);
+//        graph = (GraphView) findViewById(R.id.line_graph1);
+//        String[] mois = {"Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août", "Septembre","Octobre","Novembre","Décembre"};
+//        //barChart =(BarChart) findViewById(R.id.bargraph);
+//        LineGraphSeries<DataPoint> lineGraphSeries = new LineGraphSeries<>(new DataPoint[]{
+//                new DataPoint(mois[1], 52),
+//                new DataPoint(1,65),
+//                new DataPoint(2,66),
+//                new DataPoint(3,40)
+//        });
+//        graph.addSeries(lineGraphSeries);
+//        lineGraphSeries.setBackgroundColor(Color.WHITE);
+//        lineGraphSeries.setColor(Color.WHITE);
+//        lineGraphSeries.setTitle("Line Chart");
+//        lineGraphSeries.setThickness(4);
+//        lineGraphSeries.setDataPointsRadius(11);
 
         /*------------------------Graph-----------------------
         ArrayList<BarEntry> barEntries = new ArrayList<>();

@@ -101,40 +101,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
 
-                <TextView
-                    style="@style/normaltext"
-                    android:text="@string/temps" />
-
-                <TextView
-                    style="@style/normaltext"
-                    android:id="@+id/TpsEntrainementProfil"
-                    android:layout_width="match_parent" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/normaltext"
-                    android:text="@string/calorie" />
-
-                <TextView
-                    style="@style/normaltext"
-                    android:id="@+id/caloriePerduProfil"
-                    android:layout_width="match_parent"
-                    />
-
-            </LinearLayout>
 
 
             <Button
